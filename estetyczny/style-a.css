@@ -58,3 +58,41 @@ body.dark {
   --circle-chosen-bg:     #ebdbb2;
   --overlay-bg:           rgba(0,0,0,0.7);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESET: box-sizing, focus-visible, html/body baseline
+
+   Focus ring tylko dla keyboard nav (focus-visible, nie focus).
+   Tinos z Google Fonts: legalny zamiennik Times New Roman (SIL OFL).
+   ═════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+button:focus-visible,
+.variant:focus-visible,
+.tf-cell:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+html, body {
+  min-height: 100vh;
+  background: var(--bg-page);
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+#app:focus { outline: none; }
+
+.site-link { text-decoration: none; color: inherit; }
+.site-link:hover { text-decoration: underline; }
+
+.lbl-short { display: none; }
