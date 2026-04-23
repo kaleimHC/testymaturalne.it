@@ -52,10 +52,13 @@
   function clearProgress() { localStorage.removeItem(STORAGE_KEY); }
 
   // ═══════════════════════════════════════════════════════════════════════
-  // DOM HELPERS: swapContent
+  // DOM HELPERS: swapContent i renderKaTeX
   //
-  // fade out -> DOM swap -> fade in. Guard _swapBusy żeby szybkie
-  // kliknięcia nie strzeliły dwóch równoległych przejść.
+  // swapContent: fade out -> DOM swap -> fade in. Guard _swapBusy żeby
+  // szybkie kliknięcia nie strzeliły dwóch równoległych przejść.
+  // renderKaTeX: HACK: TreeWalker przepisuje \$ na placeholder zanim
+  // KaTeX dostanie tekst, potem z powrotem. Inaczej KaTeX widzi \$ jako
+  // otwierający delimiter i się sypie. Brzydkie. Działa.
   // ═══════════════════════════════════════════════════════════════════════
 
   var _swapBusy = false;
@@ -76,6 +79,23 @@
         });
       });
     }, SWAP_FADE_MS);
+  }
+
+  function renderKaTeX() {
+    if (typeof renderMathInElement !== 'function') return;
+    var PH = '', tw = document.createTreeWalker(app, NodeFilter.SHOW_TEXT), n;
+    while ((n = tw.nextNode())) {
+      if (n.nodeValue.indexOf('\\$') !== -1) n.nodeValue = n.nodeValue.replace(/\\\$/g, PH);
+    }
+    renderMathInElement(app, {
+      delimiters: [{ left: '$', right: '$', display: false }],
+      throwOnError: false,
+      ignoredTags: ['pre', 'code', 'script', 'style', 'textarea']
+    });
+    tw = document.createTreeWalker(app, NodeFilter.SHOW_TEXT);
+    while ((n = tw.nextNode())) {
+      if (n.nodeValue.indexOf(PH) !== -1) n.nodeValue = n.nodeValue.split(PH).join('$');
+    }
   }
 
   function renderQuestion() {}
