@@ -98,6 +98,81 @@
     }
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // TEXT PARSING: surowy string z JSON -> HTML gotowy do DOM
+  //
+  // Pipe tables (|col|) -> <table>, SQL keywords -> <pre>,
+  // ≥3 krótkie linie -> <pre>, ^^ -> wyśrodkowanie.
+  // ═══════════════════════════════════════════════════════════════════════
+
+  // escapeHtml: HTML entities, żeby nikt nie wstrzyknął <script>.
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // mdTable: pipe-table -> <table>. Pusty lewy-górny nagłówek -> pierwsza
+  // kolumna danych dostaje <th scope="row"> (styl Excel-owy).
+  function mdTable(lines) {
+    var rows = lines
+      .filter(function(l) { return !/^\s*\|[\s:|\-]+\|\s*$/.test(l); })
+      .map(function(l) { return l.split('|').slice(1,-1).map(function(c){ return escapeHtml(c.trim()); }); });
+    if (!rows.length) return '';
+    var rowHdr = rows[0].length > 0 && rows[0][0] === '';
+    return '<table class="q-table"><thead><tr>' +
+      rows[0].map(function(c){ return '<th>' + c + '</th>'; }).join('') +
+      '</tr></thead><tbody>' +
+      rows.slice(1).map(function(row){
+        return '<tr>' + row.map(function(c, ci){
+          return (rowHdr && ci === 0) ? '<th scope="row">' + c + '</th>' : '<td>' + c + '</td>';
+        }).join('') + '</tr>';
+      }).join('') +
+      '</tbody></table>';
+  }
+
+  // renderText: parser jednorazowego przejścia, linia po linii.
+  //
+  // Zbiera segmenty, mapuje na HTML na końcu. Typy: 'table', 'code',
+  // 'center', 'text'. Żadnego backtracku. Żadnych regexpów na całości.
+  function renderText(raw) {
+    var lines = raw.split('\n'), segs = [], i = 0;
+    while (i < lines.length) {
+      var line = lines[i], tr = line.trim();
+      if (tr.charAt(0) === '|') {
+        var block = []; while (i < lines.length && lines[i].trim().charAt(0) === '|') block.push(lines[i++]);
+        segs.push({ t: 'table', l: block }); continue;
+      }
+      if (tr.slice(0, 2) === '^^') { segs.push({ t: 'center', l: [tr.slice(2).trim()] }); i++; continue; }
+      if (/^(SELECT|FROM|WHERE|GROUP|HAVING|ORDER|INSERT|UPDATE|DELETE|JOIN)\b/i.test(tr)) {
+        var block = [line]; i++;
+        while (i < lines.length && lines[i].trim()) block.push(lines[i++]);
+        segs.push({ t: 'code', l: block }); continue;
+      }
+      if (tr && tr.length < CODE_LINE_MAX) {
+        var j = i, block = [];
+        while (j < lines.length && (lines[j].trim() === '' || lines[j].trim().length < CODE_LINE_MAX)) block.push(lines[j++]);
+        var nonEmpty = block.filter(function(l){ return l.trim(); }).length;
+        if (nonEmpty >= CODE_BLOCK_MIN_ROWS) {
+          while (block.length && !block[0].trim()) block.shift();
+          while (block.length && !block[block.length-1].trim()) block.pop();
+          segs.push({ t: 'code', l: block }); i = j; continue;
+        }
+      }
+      var last = segs[segs.length-1];
+      if (!last || last.t !== 'text') { segs.push({ t: 'text', l: [] }); last = segs[segs.length-1]; }
+      last.l.push(line); i++;
+    }
+    return segs.map(function(s) {
+      if (s.t === 'table') return mdTable(s.l);
+      if (s.t === 'center') return '<p class="q-center">' + escapeHtml(s.l[0]) + '</p>';
+      if (s.t === 'code') return '<pre class="code-block">' + escapeHtml(s.l.join('\n')) + '</pre>';
+      var paras = [[]];
+      s.l.forEach(function(l){ if (!l.trim()) paras.push([]); else paras[paras.length-1].push(escapeHtml(l)); });
+      return paras.filter(function(p){ return p.length; }).map(function(p){ return p.join('<br>'); }).join('<br>');
+    }).join('');
+  }
+
   function renderQuestion() {}
   function showSummary() {}
 
