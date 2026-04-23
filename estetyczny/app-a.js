@@ -51,6 +51,33 @@
 
   function clearProgress() { localStorage.removeItem(STORAGE_KEY); }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // DOM HELPERS: swapContent
+  //
+  // fade out -> DOM swap -> fade in. Guard _swapBusy żeby szybkie
+  // kliknięcia nie strzeliły dwóch równoległych przejść.
+  // ═══════════════════════════════════════════════════════════════════════
+
+  var _swapBusy = false;
+  var _prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function swapContent(fn) {
+    if (_swapBusy || _prefersReducedMotion) { fn(); app.focus(); return; }
+    _swapBusy = true;
+    app.style.transition = 'opacity ' + SWAP_FADE_MS + 'ms ease';
+    app.style.opacity = '0';
+    setTimeout(function () {
+      fn();
+      app.focus();
+      _swapBusy = false;
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          app.style.transition = 'opacity ' + NAV_OUT_MS + 'ms ease';
+          app.style.opacity = '1';
+        });
+      });
+    }, SWAP_FADE_MS);
+  }
+
   function renderQuestion() {}
   function showSummary() {}
 
