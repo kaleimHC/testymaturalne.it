@@ -33,11 +33,30 @@
     return arr;
   }
 
+  function saveProgress() {
+    var data = {
+      questionOrder: state.questions.map(function (q) { return q.id; }),
+      current: state.current,
+      answers: state.answers
+    };
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
+  }
+
+  function loadProgress() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function clearProgress() { localStorage.removeItem(STORAGE_KEY); }
+
   function renderQuestion() {}
   function showSummary() {}
 
   function nextQuestion() {
     state.current++;
+    saveProgress();
     renderQuestion();
   }
 
@@ -46,7 +65,16 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var all = data.filter(function (q) { return q.typ === 'abcd' || q.typ === 'tf'; });
-        state.questions = shuffle(all);
+        var saved = loadProgress();
+        if (saved && saved.questionOrder) {
+          var idMap = {};
+          all.forEach(function (q) { idMap[q.id] = q; });
+          state.questions = saved.questionOrder.map(function (id) { return idMap[id]; }).filter(Boolean);
+          state.current = saved.current || 0;
+          state.answers = saved.answers || {};
+        } else {
+          state.questions = shuffle(all);
+        }
         renderQuestion();
       });
   }
