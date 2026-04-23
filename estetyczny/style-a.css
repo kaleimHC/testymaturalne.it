@@ -1,0 +1,60 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ZMIENNE: paleta wariantu Estetycznego (Gruvbox)
+
+   :root = jasny motyw (default). body.dark = ciemny.
+   Konwencja: --bg-* tła · --color-* tekst · --border-* ramki
+              --btn-* przyciski · --tile-* kafelki summary.
+   ═════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:              #f5f0e8;
+  --bg-sheet:             #fdfcf8;
+  --bg-hover:             #f0ece0;
+  --color-ink:            #0a0a0a;
+  --color-muted:          #666666;
+  --color-dim:            #6a6a6a;
+  --color-selected-border:#555555;
+  --border-main:          #0a0a0a;
+  --border-light:         #cccccc;
+  --bg-correct:           #eef5ec;
+  --color-correct:        #2e7d32;
+  --bg-incorrect:         #f7eceb;
+  --color-incorrect:      #c62828;
+  --tile-correct:         #2e7d32;
+  --tile-incorrect:       #c62828;
+  --tile-text:            #ffffff;
+  --btn-primary-bg:       #0a0a0a;
+  --btn-primary-color:    #fdfcf8;
+  --btn-primary-hover:    #333333;
+  --btn-secondary-bg:     #fdfcf8;
+  --btn-secondary-border: #0a0a0a;
+  --btn-secondary-hover:  #f0ece0;
+  --circle-chosen-bg:     #0a0a0a;
+  --overlay-bg:           rgba(0,0,0,0.45);
+}
+
+body.dark {
+  --bg-page:              #282828;
+  --bg-sheet:             #32302f;
+  --bg-hover:             #3c3836;
+  --color-ink:            #ebdbb2;
+  --color-muted:          #a89984;
+  --color-dim:            #a89984;
+  --color-selected-border:#665c54;
+  --border-main:          #504945;
+  --border-light:         #3c3836;
+  --bg-correct:           rgba(140,187,38,0.15);
+  --color-correct:        #8cbb26;
+  --bg-incorrect:         rgba(251,73,52,0.15);
+  --color-incorrect:      #fb4934;
+  --tile-correct:         #8cbb26;
+  --tile-incorrect:       #fb4934;
+  --tile-text:            #1d2021;
+  --btn-primary-bg:       #d79921;
+  --btn-primary-color:    #1d2021;
+  --btn-primary-hover:    #b57614;
+  --btn-secondary-bg:     #32302f;
+  --btn-secondary-border: #504945;
+  --btn-secondary-hover:  #3c3836;
+  --circle-chosen-bg:     #ebdbb2;
+  --overlay-bg:           rgba(0,0,0,0.7);
+}
