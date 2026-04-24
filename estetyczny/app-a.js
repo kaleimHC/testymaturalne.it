@@ -218,11 +218,25 @@
 
     html += '<div class="question-body">' + renderText(q.tresc) + '</div>';
 
+    if (q.typ === 'abcd') {
+      html += renderABCDHtml(q);
+      html += '<div class="actions single">';
+      html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
+      html += '</div>';
+    }
+
+    html += '<div class="cke-footer">';
+    html += '<span>Arkusz egzaminacyjny CKE</span>';
+    html += '<div class="foot-theme"><span class="foot-jasny">JASNY</span> | <span class="foot-ciemny">CIEMNY</span></div>';
+    html += '</div>';
+
     html += '</div>';
 
     swapContent(function () {
       app.innerHTML = html;
       renderKaTeX();
+      var prev = state.answers[q.id];
+      if (prev && q.typ === 'abcd') restoreABCD(q, prev);
     });
   }
 
@@ -302,6 +316,49 @@
       }
       renderQuestion();
     });
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // ABCD: render wariantów, kliknięcie, feedback correct/incorrect, restore
+  // ─────────────────────────────────────────────────────────────────────
+
+  function renderABCDHtml(q) {
+    var html = '<div class="variants">';
+    ['A', 'B', 'C', 'D'].forEach(function (letter) {
+      if (!q.odpowiedzi[letter]) return;
+      html += '<div class="variant" data-choice="' + letter + '">';
+      html += '<span class="variant-key">' + letter + '.</span>';
+      html += '<span class="variant-text">' + escapeHtml(q.odpowiedzi[letter]) + '</span>';
+      html += '</div>';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  function applyABCDClasses(q, choice, isCorrect) {
+    app.querySelectorAll('.variant').forEach(function (el) {
+      el.classList.add('locked');
+      if (el.dataset.choice === q.poprawna) el.classList.add('correct');
+      if (el.dataset.choice === choice && !isCorrect) el.classList.add('incorrect');
+      if (el.dataset.choice === choice) el.classList.add('selected');
+    });
+  }
+
+  function handleABCD(choice) {
+    var q = state.questions[state.current];
+    if (state.answers[q.id]) return;
+    var isCorrect = choice === q.poprawna;
+    applyABCDClasses(q, choice, isCorrect);
+    state.answers[q.id] = { given: choice, correct: isCorrect, timestamp: Date.now() };
+    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('nextBtn').removeAttribute('aria-disabled');
+    saveProgress();
+  }
+
+  function restoreABCD(q, prev) {
+    applyABCDClasses(q, prev.given, prev.correct);
+    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('nextBtn').removeAttribute('aria-disabled');
   }
 
   init();
