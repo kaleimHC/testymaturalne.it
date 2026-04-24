@@ -254,3 +254,94 @@ body.pg-out { animation: pgOut 200ms ease forwards !important; }
   .lbl-long  { display: none; }
   .lbl-short { display: inline; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ABCD VARIANTS: warianty odpowiedzi A/B/C/D
+
+   .variant: klikalna belka. Po kliknięciu: .locked (pointer-events none)
+   + .correct albo .incorrect na wybranym wariancie.
+   ═════════════════════════════════════════════════════════════════════ */
+.variants { margin-bottom: 24px; }
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border: 1.5px solid var(--border-main);
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  background: var(--bg-sheet);
+  transition: background 120ms;
+}
+
+.variant:hover:not(.locked) { background: var(--bg-hover); }
+.variant-key { font-weight: 700; width: 24px; flex-shrink: 0; }
+.variant.selected  { background: var(--bg-hover); border-color: var(--color-selected-border); }
+.variant.correct   { background: var(--bg-correct); border-color: var(--color-correct); }
+.variant.incorrect { background: var(--bg-incorrect); border-color: var(--color-incorrect); }
+.variant.locked    { pointer-events: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   ACTIONS: przyciski Sprawdź / Następne (grid 2-kolumnowy lub 1)
+   ───────────────────────────────────────────────────────────────────── */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.actions.single { grid-template-columns: 1fr; }
+
+.btn-check,
+.btn-next {
+  padding: 14px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid var(--btn-secondary-border);
+  transition: opacity 150ms, background 120ms;
+}
+
+.btn-check { background: var(--btn-secondary-bg); color: var(--color-ink); }
+.btn-next  { background: var(--btn-primary-bg);   color: var(--btn-primary-color); border-color: var(--btn-primary-bg); }
+
+.btn-check:disabled,
+.btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.btn-check:hover:not(:disabled) { background: var(--btn-secondary-hover); }
+.btn-next:hover:not(:disabled)  { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   CKE FOOTER: stopka z napisem + przełącznik motywu na mobile
+   ───────────────────────────────────────────────────────────────────── */
+.cke-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-main);
+  padding-top: 10px;
+  font-size: 11px;
+  color: var(--color-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.foot-theme {
+  display: none;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--color-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+}
+.foot-theme span { cursor: pointer; }
+body:not(.dark) .foot-jasny { font-weight: 700; color: var(--color-ink); }
+body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
