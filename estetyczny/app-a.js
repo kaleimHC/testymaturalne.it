@@ -197,14 +197,59 @@
           app.innerHTML = '<p style="padding:20px">Brak dostępnych pytań.</p>';
           return;
         }
-        state.questions = shuffle(filtered);
-        state.current = 0;
-        state.answers = {};
-        renderQuestion();
+        var saved = loadProgress();
+        if (saved && saved.questionOrder && Object.keys(saved.answers).length > 0) {
+          showResumeDialog(filtered, saved);
+        } else {
+          state.questions = shuffle(filtered);
+          state.current = 0;
+          state.answers = {};
+          renderQuestion();
+        }
       })
       .catch(function () {
         app.innerHTML = '<p style="padding:20px">Nie udało się załadować pytań. Sprawdź połączenie i odśwież stronę.</p>';
       });
+  }
+
+  // showResumeDialog: modal "masz zapisaną sesję, kontynuować?"
+  //
+  // TAK: odtwarza kolejność pytań z localStorage, nowe dorzuca na koniec.
+  // NIE: clearProgress, shuffle, start od zera.
+  function showResumeDialog(filtered, saved) {
+    var count = Object.keys(saved.answers).length;
+    app.innerHTML =
+      '<div class="dialog-overlay">' +
+        '<div class="dialog-box">' +
+          '<p>Masz zapisaną sesję (' + count + '/' + saved.questionOrder.length + ' pytań).<br>Kontynuować?</p>' +
+          '<div class="dialog-buttons">' +
+            '<button class="primary" data-resume="yes">Kontynuuj</button>' +
+            '<button data-resume="no">Od nowa</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    app.addEventListener('click', function handler(e) {
+      var btn = e.target.closest('[data-resume]');
+      if (!btn) return;
+      app.removeEventListener('click', handler);
+      if (btn.dataset.resume === 'yes') {
+        var idMap = {};
+        filtered.forEach(function (q) { idMap[q.id] = q; });
+        var ordered = [];
+        saved.questionOrder.forEach(function (id) { if (idMap[id]) ordered.push(idMap[id]); });
+        filtered.forEach(function (q) { if (saved.questionOrder.indexOf(q.id) === -1) ordered.push(q); });
+        state.questions = ordered;
+        state.current = saved.current;
+        state.answers = saved.answers;
+      } else {
+        clearProgress();
+        state.questions = shuffle(filtered);
+        state.current = 0;
+        state.answers = {};
+      }
+      renderQuestion();
+    });
   }
 
   init();

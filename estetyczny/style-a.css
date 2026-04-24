@@ -141,3 +141,42 @@ body.pg-out { animation: pgOut 200ms ease forwards !important; }
 @media (prefers-reduced-motion: reduce) {
   body, body.pg-out { animation: none !important; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   RESUME DIALOG: modal "kontynuować zapisaną sesję?"
+   ───────────────────────────────────────────────────────────────────── */
+.dialog-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay-bg);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+
+.dialog-box {
+  background: var(--bg-sheet);
+  border: 2px solid var(--border-main);
+  padding: 36px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.dialog-box p { font-size: 18px; margin-bottom: 24px; }
+
+.dialog-buttons { display: flex; gap: 12px; justify-content: center; }
+
+.dialog-buttons button {
+  padding: 12px 28px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--btn-secondary-border);
+  background: var(--btn-secondary-bg);
+  color: var(--color-ink);
+}
+
+.dialog-buttons button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-color: var(--btn-primary-bg);
+}
