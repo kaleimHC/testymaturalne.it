@@ -24,6 +24,7 @@
   };
 
   var app = document.getElementById('app');
+  var tfSelections = {};
 
   function shuffle(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
@@ -218,7 +219,14 @@
 
     html += '<div class="question-body">' + renderText(q.tresc) + '</div>';
 
-    if (q.typ === 'abcd') {
+    if (q.typ === 'tf') {
+      tfSelections = {};
+      html += renderTFHtml(q);
+      html += '<div class="actions">';
+      html += '<button class="btn-check" id="checkBtn" disabled aria-disabled="true">Sprawdź</button>';
+      html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
+      html += '</div>';
+    } else {
       html += renderABCDHtml(q);
       html += '<div class="actions single">';
       html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
@@ -236,7 +244,10 @@
       app.innerHTML = html;
       renderKaTeX();
       var prev = state.answers[q.id];
-      if (prev && q.typ === 'abcd') restoreABCD(q, prev);
+      if (prev) {
+        if (q.typ === 'abcd') restoreABCD(q, prev);
+        else restoreTF(q, prev);
+      }
     });
   }
 
@@ -316,6 +327,82 @@
       }
       renderQuestion();
     });
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // T/F: tabela Prawda/Fałsz, kółka, Sprawdź, restore
+  // ─────────────────────────────────────────────────────────────────────
+
+  function renderTFHtml(q) {
+    var html = '<table class="tf-table" aria-label="Zdania do oceny prawda lub fałsz"><thead><tr>';
+    html += '<th scope="col">Zdanie</th>';
+    html += '<th class="tf-col" scope="col">P</th><th class="tf-col" scope="col">F</th>';
+    html += '</tr></thead><tbody>';
+    q.zdania.forEach(function (z, i) {
+      html += '<tr data-row="' + i + '">';
+      html += '<td>' + escapeHtml(z.t) + '</td>';
+      html += '<td class="tf-cell" data-tf-row="' + i + '" data-tf-val="true"><div class="tf-circle"></div></td>';
+      html += '<td class="tf-cell" data-tf-row="' + i + '" data-tf-val="false"><div class="tf-circle"></div></td>';
+      html += '</tr>';
+    });
+    html += '</tbody></table>';
+    return html;
+  }
+
+  function handleTFSelect(row, val) {
+    var q = state.questions[state.current];
+    if (state.answers[q.id]) return;
+    tfSelections[parseInt(row, 10)] = (val === 'true');
+    app.querySelectorAll('[data-tf-row="' + row + '"]').forEach(function (cell) {
+      cell.classList.remove('chosen');
+      if (cell.dataset.tfVal === val) cell.classList.add('chosen');
+    });
+    var allSelected = q.zdania.every(function (_, i) { return tfSelections[i] !== undefined; });
+    var checkBtn = document.getElementById('checkBtn');
+    if (checkBtn) checkBtn.disabled = !allSelected;
+    if (checkBtn) checkBtn.setAttribute('aria-disabled', !allSelected ? 'true' : 'false');
+  }
+
+  function markTFRow(i, isRight, chosen) {
+    var row = app.querySelector('tr[data-row="' + i + '"]');
+    if (row) row.classList.add(isRight ? 'row-correct' : 'row-incorrect');
+    var chosenVal = chosen !== undefined ? (chosen ? 'true' : 'false') : null;
+    app.querySelectorAll('[data-tf-row="' + i + '"]').forEach(function (cell) {
+      cell.classList.add('locked');
+      if (chosenVal && cell.dataset.tfVal === chosenVal) cell.classList.add('chosen');
+    });
+  }
+
+  function finishTF() {
+    var checkBtn = document.getElementById('checkBtn');
+    if (checkBtn) { checkBtn.disabled = true; checkBtn.setAttribute('aria-disabled', 'true'); }
+    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('nextBtn').removeAttribute('aria-disabled');
+  }
+
+  function handleTFCheck() {
+    var q = state.questions[state.current];
+    if (state.answers[q.id]) return;
+    var allCorrect = true;
+    q.zdania.forEach(function (z, i) {
+      var given = tfSelections[i];
+      var isRight = given === z.o;
+      if (!isRight) allCorrect = false;
+      markTFRow(i, isRight);
+    });
+    var tfCopy = {}, tfK;
+    for (tfK in tfSelections) { if (tfSelections.hasOwnProperty(tfK)) tfCopy[tfK] = tfSelections[tfK]; }
+    state.answers[q.id] = { given: tfCopy, correct: allCorrect, timestamp: Date.now() };
+    finishTF();
+    saveProgress();
+  }
+
+  function restoreTF(q, prev) {
+    q.zdania.forEach(function (z, i) {
+      var given = prev.given[i];
+      markTFRow(i, given === z.o, given);
+    });
+    finishTF();
   }
 
   // ─────────────────────────────────────────────────────────────────────
