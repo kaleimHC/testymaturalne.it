@@ -463,6 +463,10 @@
       saveProgress();
       renderQuestion();
     }
+
+    var footJasny = e.target.closest('.foot-jasny');
+    var footCiemny = e.target.closest('.foot-ciemny');
+    if (footJasny || footCiemny) { setTheme(!!footCiemny); }
   });
 
   // ─────────────────────────────────────────────────────────────────────
@@ -508,5 +512,31 @@
     document.getElementById('nextBtn').removeAttribute('aria-disabled');
   }
 
+  // ─────────────────────────────────────────────────────────────────────
+  // THEME: dark/light toggle, persyst w localStorage, IIFE przy starcie
+  // ─────────────────────────────────────────────────────────────────────
+
+  function setTheme(isDark) {
+    document.body.classList.toggle('dark', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.textContent = isDark ? '🌙' : '☀️';
+      btn.setAttribute('aria-label', isDark ? 'Włącz tryb jasny' : 'Włącz tryb ciemny');
+    }
+  }
+
+  (function applyTheme() {
+    if (localStorage.getItem('theme') === 'dark') setTheme(true);
+  })();
+
+  var toggle = document.getElementById('themeToggle');
+  if (toggle) toggle.addEventListener('click', function () {
+    setTheme(!document.body.classList.contains('dark'));
+  });
+
+  // ─────────────────────────────────────────────────────────────────────
+  // START
+  // ─────────────────────────────────────────────────────────────────────
   init();
 }());

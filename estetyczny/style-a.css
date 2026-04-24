@@ -251,8 +251,10 @@ body.pg-out { animation: pgOut 200ms ease forwards !important; }
 }
 
 @media (max-width: 540px) {
-  .lbl-long  { display: none; }
-  .lbl-short { display: inline; }
+  .lbl-long     { display: none; }
+  .lbl-short    { display: inline; }
+  #themeToggle  { display: none; }
+  .foot-theme   { display: block; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
@@ -450,3 +452,22 @@ tr.row-incorrect .tf-cell.chosen .tf-circle   { background: var(--color-incorrec
 }
 
 .btn-restart:hover { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOGGLE: pływający przycisk dark/light (desktop); na mobile schowany
+   ───────────────────────────────────────────────────────────────────── */
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  z-index: 200;
+  line-height: 1;
+  transition: opacity 200ms;
+}
+#themeToggle:hover { opacity: 0.5; }
