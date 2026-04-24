@@ -451,6 +451,18 @@
 
     var nextBtn = e.target.closest('#nextBtn');
     if (nextBtn && !nextBtn.disabled) { nextQuestion(); return; }
+
+    var tile = e.target.closest('.summary-tile');
+    if (tile && tile.dataset.review !== undefined) { state.current = parseInt(tile.dataset.review, 10); renderQuestion(); return; }
+
+    if (e.target.closest('.btn-restart')) {
+      clearProgress();
+      state.current = 0;
+      state.answers = {};
+      state.questions = shuffle(state.questions);
+      saveProgress();
+      renderQuestion();
+    }
   });
 
   // ─────────────────────────────────────────────────────────────────────
