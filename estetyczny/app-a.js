@@ -173,7 +173,59 @@
     }).join('');
   }
 
-  function renderQuestion() {}
+  // ─────────────────────────────────────────────────────────────────────
+  // UI HELPERS: questionLabel: etykieta nad pytaniem (Zadanie X + meta)
+  // ─────────────────────────────────────────────────────────────────────
+
+  function questionLabel(q) {
+    var m = q.id.match(/_z(\d+)(?:_(\d+))?/);
+    var zNum = m ? m[1] : '?';
+    if (q.generated === true || q.rok === null) {
+      return 'Zadanie ' + zNum;
+    }
+    var isPP = q.poziom === 'pp';
+    var lbl = isPP ? 'poziom podstawowy' : 'poziom rozszerzony';
+    var lbl2 = isPP ? 'p.p.' : 'p.r.';
+    return 'Zadanie ' + zNum + ' - <span class="lbl-long">' + lbl + '</span>' +
+      '<span class="lbl-short">' + lbl2 + '</span> - ' + q.sesja + ' ' + q.rok + ' r.';
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════
+  // RENDER: centrum quizu, tu wszystko się schodzi
+  //
+  // renderQuestion: state.current -> HTML -> swapContent -> KaTeX -> restore.
+  // ABCD i T/F mają osobne renderery. showSummary jeśli pytań brak.
+  // ═══════════════════════════════════════════════════════════════════════
+
+  function renderQuestion() {
+    if (state.current >= state.questions.length) { showSummary(); return; }
+
+    var q = state.questions[state.current];
+    var num = state.current + 1;
+    var total = state.questions.length;
+
+    var html = '<div class="sheet">';
+
+    html += '<div class="top-bar">';
+    html += '<a class="top-info site-link" href="../">' +
+      '<span class="lbl-long">testymaturalne.it</span>' +
+      '<span class="lbl-short">&lt;- WYBÓR</span></a>';
+    html += '<span class="top-prog">' + num + '/' + total + '</span>';
+    html += '<span class="top-time">Czas: --:--</span>';
+    html += '</div>';
+
+    html += '<div class="task-label"><span>' + questionLabel(q) + '</span></div>';
+
+    html += '<div class="question-body">' + renderText(q.tresc) + '</div>';
+
+    html += '</div>';
+
+    swapContent(function () {
+      app.innerHTML = html;
+      renderKaTeX();
+    });
+  }
+
   function showSummary() {}
 
   function nextQuestion() {
