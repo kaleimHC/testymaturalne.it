@@ -424,6 +424,35 @@
     finishTF();
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // EVENTS: jeden delegowany listener na #app obsługuje cały quiz
+  //
+  // e.target.closest('[data-...]') łapie: wariant ABCD, kółko T/F,
+  // Sprawdź, Następne. Zero osobnych listenerów na elementach.
+  // ═══════════════════════════════════════════════════════════════════════
+
+  app.addEventListener('click', function (e) {
+    var siteLink = e.target.closest('a[href="../"]');
+    if (siteLink) {
+      e.preventDefault();
+      document.body.classList.add('pg-out');
+      setTimeout(function () { window.location.href = '../'; }, NAV_OUT_MS);
+      return;
+    }
+
+    var variant = e.target.closest('.variant:not(.locked)');
+    if (variant && variant.dataset.choice) { handleABCD(variant.dataset.choice); return; }
+
+    var tfCell = e.target.closest('.tf-cell:not(.locked)');
+    if (tfCell && tfCell.dataset.tfRow !== undefined) { handleTFSelect(tfCell.dataset.tfRow, tfCell.dataset.tfVal); return; }
+
+    var checkBtn = e.target.closest('#checkBtn');
+    if (checkBtn && !checkBtn.disabled) { handleTFCheck(); return; }
+
+    var nextBtn = e.target.closest('#nextBtn');
+    if (nextBtn && !nextBtn.disabled) { nextQuestion(); return; }
+  });
+
   // ─────────────────────────────────────────────────────────────────────
   // ABCD: render wariantów, kliknięcie, feedback correct/incorrect, restore
   // ─────────────────────────────────────────────────────────────────────
