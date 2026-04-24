@@ -180,3 +180,77 @@ body.pg-out { animation: pgOut 200ms ease forwards !important; }
   color: var(--btn-primary-color);
   border-color: var(--btn-primary-bg);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SHEET: obramowana "kartka" z pytaniem, specyficzna dla wariantu A
+
+   Warianty B i C nie mają .sheet: tylko A symuluje papier egzaminacyjny.
+   ═════════════════════════════════════════════════════════════════════ */
+.sheet {
+  background: var(--bg-sheet);
+  border: 1.5px solid var(--border-main);
+  padding: 32px 36px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOP BAR: nagłówek z linkiem, numerem pytania i timerem (timer dekoracyjny)
+   ───────────────────────────────────────────────────────────────────── */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--border-main);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.top-info {
+  font-size: 11px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.top-prog {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.top-time {
+  font-size: 11px;
+  color: var(--color-muted);
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TASK LABEL: "Zadanie X: poziom / sesja / rok"
+   ───────────────────────────────────────────────────────────────────── */
+.task-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   QUESTION BODY: ramka z treścią pytania
+   ───────────────────────────────────────────────────────────────────── */
+.question-body {
+  position: relative;
+  border: 1.5px solid var(--border-main);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  background: var(--bg-sheet);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+@media (max-width: 540px) {
+  .lbl-long  { display: none; }
+  .lbl-short { display: inline; }
+}
