@@ -182,22 +182,28 @@
     renderQuestion();
   }
 
+  // ─────────────────────────────────────────────────────────────────────
+  // INIT FLOW: fetch JSON, filtr pytań, resume albo nowy start
+  // ─────────────────────────────────────────────────────────────────────
+
   function init() {
     fetch('../questions.json')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var all = data.filter(function (q) { return q.typ === 'abcd' || q.typ === 'tf'; });
-        var saved = loadProgress();
-        if (saved && saved.questionOrder) {
-          var idMap = {};
-          all.forEach(function (q) { idMap[q.id] = q; });
-          state.questions = saved.questionOrder.map(function (id) { return idMap[id]; }).filter(Boolean);
-          state.current = saved.current || 0;
-          state.answers = saved.answers || {};
-        } else {
-          state.questions = shuffle(all);
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (all) {
+        var filtered = all.filter(function (q) {
+          return q.typ === 'abcd' || q.typ === 'tf';
+        });
+        if (filtered.length === 0) {
+          app.innerHTML = '<p style="padding:20px">Brak dostępnych pytań.</p>';
+          return;
         }
+        state.questions = shuffle(filtered);
+        state.current = 0;
+        state.answers = {};
         renderQuestion();
+      })
+      .catch(function () {
+        app.innerHTML = '<p style="padding:20px">Nie udało się załadować pytań. Sprawdź połączenie i odśwież stronę.</p>';
       });
   }
 
