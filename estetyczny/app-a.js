@@ -251,7 +251,26 @@
     });
   }
 
-  function showSummary() {}
+  // ─────────────────────────────────────────────────────────────────────
+  // SUMMARY: wynik, siatka kafelków, kliknięcie kafelka = review pytania
+  // ─────────────────────────────────────────────────────────────────────
+
+  function showSummary() {
+    var total = state.questions.length;
+    var correct = state.questions.filter(function (q) { return state.answers[q.id] && state.answers[q.id].correct; }).length;
+    var html =
+      '<div class="sheet"><div class="summary">' +
+      '<h2>Podsumowanie</h2>' +
+      '<p class="summary-stats">' + correct + ' / ' + total + ' poprawnych odpowiedzi</p>' +
+      '<div class="summary-grid">' +
+      state.questions.map(function (q, i) {
+        var cls = state.answers[q.id] && state.answers[q.id].correct ? 'tile-correct' : 'tile-incorrect';
+        return '<div class="summary-tile ' + cls + '" data-review="' + i + '">' + (i + 1) + '</div>';
+      }).join('') +
+      '</div><button class="btn-restart">Zacznij od nowa</button>' +
+      '</div></div>';
+    swapContent(function () { app.innerHTML = html; });
+  }
 
   function nextQuestion() {
     state.current++;
