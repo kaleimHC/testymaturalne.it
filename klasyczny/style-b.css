@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ZMIENNE: paleta wariantu Klasycznego (Terminal green)
+
+   :root = jasny motyw (default). body.dark = ciemny.
+   Konwencja: --bg-* tła · --color-* tekst · --border-* ramki
+              --btn-* przyciski · --tile-* kafelki summary.
+   ═════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:           #f5f5f5;
+  --bg-card:           #ffffff;
+  --bg-hover:          #fafafa;
+  --bg-accent:         #f0f0f0;
+  --bg-selected:       #eeeeee;
+  --color-ink:         #1a1a1a;
+  --color-muted:       #666666;
+  --color-dim:         #6b6b6b;
+  --border-main:       #000000;
+  --border-light:      #cccccc;
+  --border-mid:        #333333;
+  --border-hover:      #666666;
+  --circle-border:     #000000;
+  --circle-chosen-bg:  #000000;
+  --bg-correct:        #e8f5e9;
+  --color-correct:     #2e7d32;
+  --bg-incorrect:      #ffebee;
+  --color-incorrect:   #c62828;
+  --tile-correct:      #2e7d32;
+  --tile-incorrect:    #c62828;
+  --tile-text:         #ffffff;
+  --btn-primary-bg:    #1a1a1a;
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover: #333333;
+  --overlay-bg:        rgba(0,0,0,0.4);
+}
+
+body.dark {
+  --bg-page:           #0c110c;
+  --bg-card:           #111811;
+  --bg-hover:          #182018;
+  --bg-accent:         #1e281e;
+  --bg-selected:       #1e281e;
+  --color-ink:         #c8d8c0;
+  --color-muted:       #6a7d6a;
+  --color-dim:         #718471;
+  --border-main:       #2a3e2a;
+  --border-light:      #1e2e1e;
+  --border-mid:        #3a5a3a;
+  --border-hover:      #4a7a4a;
+  --circle-border:     #4a7a4a;
+  --circle-chosen-bg:  #c8d8c0;
+  --bg-correct:        #0d2a0d;
+  --color-correct:     #22c55e;
+  --bg-incorrect:      #2a0d0d;
+  --color-incorrect:   #ef4444;
+  --tile-correct:      #22c55e;
+  --tile-incorrect:    #ef4444;
+  --tile-text:         #0c110c;
+  --btn-primary-bg:    #22c55e;
+  --btn-primary-color: #0c110c;
+  --btn-primary-hover: #16a34a;
+  --overlay-bg:        rgba(0,0,0,0.75);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESET: box-sizing, focus-visible, html/body baseline
+
+   Focus ring tylko dla keyboard nav (focus-visible, nie focus).
+   Tinos z Google Fonts: legalny zamiennik Times New Roman (SIL OFL).
+   ═════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus-visible,
+.variant:focus-visible,
+.tf-cell:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+body {
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background: var(--bg-page);
+  color: var(--color-ink);
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-card);
+  min-height: 100vh;
+}
+
+/* Programowy focus po swapContent() (aria-live announce) nie
+   powinien rysować outline: #app nie jest celem keyboard nav. */
+#app:focus { outline: none; }
+
+.site-link { text-decoration: none; color: inherit; }
+.site-link:hover { text-decoration: underline; }
+
+.lbl-short { display: none; }
