@@ -324,7 +324,7 @@
       var prev = state.answers[q.id];
       if (prev) {
         if (q.typ === 'abcd') restoreABCD(q, prev);
-        else if (q.typ === 'tf') restoreTF(q, prev);
+        else restoreTF(q, prev);
       }
     });
   }
@@ -379,10 +379,11 @@
   // ─────────────────────────────────────────────────────────────────────
 
   function renderTFHtml(q) {
+    tfSelections = {};
     var html = '<table class="tf-table" aria-label="Zdania do oceny prawda lub fałsz"><thead><tr>';
-    html += '<th scope="col">Zdanie</th>';
-    html += '<th class="tf-col" scope="col">P</th><th class="tf-col" scope="col">F</th>';
+    html += '<th scope="col"></th><th class="tf-col" scope="col">P</th><th class="tf-col" scope="col">F</th>';
     html += '</tr></thead><tbody>';
+
     q.zdania.forEach(function (z, i) {
       html += '<tr data-row="' + i + '">';
       html += '<td>' + escapeHtml(z.t) + '</td>';
@@ -390,6 +391,7 @@
       html += '<td class="tf-cell" data-tf-row="' + i + '" data-tf-val="false"><div class="tf-circle"></div></td>';
       html += '</tr>';
     });
+
     html += '</tbody></table>';
     return html;
   }
@@ -415,16 +417,7 @@
     document.getElementById('nextBtn').removeAttribute('aria-disabled');
   }
 
-  function markTFRow(i, isRight, chosen) {
-    var row = app.querySelector('tr[data-row="' + i + '"]');
-    if (row) row.classList.add(isRight ? 'row-correct' : 'row-incorrect');
-    var chosenVal = chosen !== undefined ? (chosen ? 'true' : 'false') : null;
-    app.querySelectorAll('[data-tf-row="' + i + '"]').forEach(function (cell) {
-      cell.classList.add('locked');
-      if (chosenVal && cell.dataset.tfVal === chosenVal) cell.classList.add('chosen');
-    });
-  }
-
+  // handleTFCheck: sprawdza wszystkie zdania T/F, zapisuje wynik, blokuje
   function handleTFCheck() {
     var q = state.questions[state.current];
     if (state.answers[q.id]) return;
@@ -433,7 +426,10 @@
       var given = tfSelections[i];
       var isRight = given === z.o;
       if (!isRight) allCorrect = false;
-      markTFRow(i, isRight);
+      app.querySelectorAll('[data-tf-row="' + i + '"]').forEach(function (cell) {
+        cell.classList.add('locked');
+        if (cell.classList.contains('chosen')) cell.classList.add(isRight ? 'correct' : 'incorrect');
+      });
     });
     var tfCopy = {}, tfK;
     for (tfK in tfSelections) { if (tfSelections.hasOwnProperty(tfK)) tfCopy[tfK] = tfSelections[tfK]; }
@@ -445,7 +441,14 @@
   function restoreTF(q, prev) {
     q.zdania.forEach(function (z, i) {
       var given = prev.given[i];
-      markTFRow(i, given === z.o, given);
+      var isRight = given === z.o;
+      app.querySelectorAll('[data-tf-row="' + i + '"]').forEach(function (cell) {
+        cell.classList.add('locked');
+        if ((cell.dataset.tfVal === 'true') === given) {
+          cell.classList.add('chosen');
+          cell.classList.add(isRight ? 'correct' : 'incorrect');
+        }
+      });
     });
     finishTF();
   }

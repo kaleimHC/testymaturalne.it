@@ -205,3 +205,55 @@ body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
   #themeToggle  { display: none; }
   .foot-theme   { display: block; }
 }
+/* ═══════════════════════════════════════════════════════════════════════
+   T/F TABLE: tabela Prawda/Fałsz: zdania + kółka P/F
+
+   .tf-circle: klikalne kółko. Po kliknięciu: .chosen → wypełnia się.
+   ═════════════════════════════════════════════════════════════════════ */
+.tf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.tf-table thead th,
+.tf-table td {
+  border: 2px solid var(--border-light);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tf-table thead th {
+  background: var(--bg-accent);
+  font-weight: 700;
+  text-align: center;
+}
+
+.tf-table thead th:first-child { text-align: left; }
+
+.tf-col {
+  width: 50px;
+  text-align: center;
+}
+
+.tf-cell {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.tf-cell.locked { cursor: default; }
+
+.tf-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--circle-border);
+  border-radius: 50%;
+  vertical-align: middle;
+  transition: background-color 150ms, border-color 150ms;
+}
+
+.tf-cell.chosen .tf-circle    { background: var(--circle-chosen-bg); }
+.tf-cell.correct .tf-circle   { background: var(--color-correct);   border-color: var(--color-correct); }
+.tf-cell.incorrect .tf-circle { background: var(--color-incorrect); border-color: var(--color-incorrect); }
