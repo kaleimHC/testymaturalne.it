@@ -1,8 +1,8 @@
-// Quiz engine, wariant estetyczny.
+// Quiz engine, wariant egzaminacyjny.
 (function () {
   'use strict';
 
-  var SWAP_FADE_MS        = 110;  // fade między pytaniami, musi pasować do transition w CSS
+  var SWAP_FADE_MS        = 110;  // fade między pytaniami, musi pasować do transition w style-X.css
   var NAV_OUT_MS          = 200;  // fade na przejście do innej strony (pg-out)
   var CODE_LINE_MAX       = 25;   // heurystyka parsera: linia krótsza → kandydat na code-block
   var CODE_BLOCK_MIN_ROWS = 3;    // ile krótkich linii z rzędu żeby wbić w <pre>
@@ -10,9 +10,11 @@
   // ═══════════════════════════════════════════════════════════════════════
   // STATE: jeden obiekt, trzy klucze, żadnego Reduksa
   //
-  // questions -> pytania z JSON, przeshuffled przy starcie.
-  // current   -> indeks aktualnego pytania.
+  // questions -> ~95 pytań z JSON, przeshuffled przy starcie.
+  // current   -> który pytanie pokazujemy teraz (indeks, nie ID).
   // answers   -> { questionId: { given, correct, timestamp } }.
+  //
+  // Reszta kodu to funkcje które to czytają albo modyfikują. Tyle.
   // ═══════════════════════════════════════════════════════════════════════
 
   var STORAGE_KEY = 'edu_progress_c';
@@ -25,6 +27,10 @@
 
   var app = document.getElementById('app');
   var tfSelections = {};
+
+  // ─────────────────────────────────────────────────────────────────────
+  // UTILITIES: shuffle i save/load postępów do localStorage
+  // ─────────────────────────────────────────────────────────────────────
 
   function shuffle(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
@@ -191,97 +197,12 @@
       '<span class="lbl-short">' + lbl2 + '</span> - ' + q.sesja + ' ' + q.rok + ' r.';
   }
 
-  // ═══════════════════════════════════════════════════════════════════════
-  // RENDER: centrum quizu, tu wszystko się schodzi
-  //
-  // renderQuestion: state.current -> HTML -> swapContent -> KaTeX -> restore.
-  // ABCD i T/F mają osobne renderery. showSummary jeśli pytań brak.
-  // ═══════════════════════════════════════════════════════════════════════
-
-  function renderQuestion() {
-    if (state.current >= state.questions.length) { showSummary(); return; }
-
-    var q = state.questions[state.current];
-    var num = state.current + 1;
-    var total = state.questions.length;
-
-    var html = '<div class="sheet">';
-
-    html += '<div class="top-bar">';
-    html += '<a class="top-info site-link" href="../">' +
-      '<span class="lbl-long">testymaturalne.it</span>' +
-      '<span class="lbl-short">&lt;- WYBÓR</span></a>';
-    html += '<span class="top-prog">' + num + '/' + total + '</span>';
-    html += '<span class="top-time">Czas: --:--</span>';
-    html += '</div>';
-
-    html += '<div class="task-label"><span>' + questionLabel(q) + '</span></div>';
-
-    html += '<div class="question-body">' + renderText(q.tresc) + '</div>';
-
-    if (q.typ === 'tf') {
-      tfSelections = {};
-      html += renderTFHtml(q);
-      html += '<div class="actions">';
-      html += '<button class="btn-check" id="checkBtn" disabled aria-disabled="true">Sprawdź</button>';
-      html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
-      html += '</div>';
-    } else {
-      html += renderABCDHtml(q);
-      html += '<div class="actions single">';
-      html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
-      html += '</div>';
-    }
-
-    html += '<div class="cke-footer">';
-    html += '<span>Arkusz egzaminacyjny CKE</span>';
-    html += '<div class="foot-theme"><span class="foot-jasny">JASNY</span> | <span class="foot-ciemny">CIEMNY</span></div>';
-    html += '</div>';
-
-    html += '</div>';
-
-    swapContent(function () {
-      app.innerHTML = html;
-      renderKaTeX();
-      var prev = state.answers[q.id];
-      if (prev) {
-        if (q.typ === 'abcd') restoreABCD(q, prev);
-        else restoreTF(q, prev);
-      }
-    });
-  }
-
-  // ─────────────────────────────────────────────────────────────────────
-  // SUMMARY: wynik, siatka kafelków, kliknięcie kafelka = review pytania
-  // ─────────────────────────────────────────────────────────────────────
-
-  function showSummary() {
-    var total = state.questions.length;
-    var correct = state.questions.filter(function (q) { return state.answers[q.id] && state.answers[q.id].correct; }).length;
-    var html =
-      '<div class="sheet"><div class="summary">' +
-      '<h2>Podsumowanie</h2>' +
-      '<p class="summary-stats">' + correct + ' / ' + total + ' poprawnych odpowiedzi</p>' +
-      '<div class="summary-grid">' +
-      state.questions.map(function (q, i) {
-        var cls = state.answers[q.id] && state.answers[q.id].correct ? 'tile-correct' : 'tile-incorrect';
-        return '<div class="summary-tile ' + cls + '" data-review="' + i + '">' + (i + 1) + '</div>';
-      }).join('') +
-      '</div><button class="btn-restart">Zacznij od nowa</button>' +
-      '</div></div>';
-    swapContent(function () { app.innerHTML = html; });
-  }
-
-  function nextQuestion() {
-    state.current++;
-    saveProgress();
-    renderQuestion();
-  }
-
   // ─────────────────────────────────────────────────────────────────────
   // INIT FLOW: fetch JSON, filtr pytań, resume albo nowy start
   // ─────────────────────────────────────────────────────────────────────
 
+  // init: fetch questions.json, filtr, potem resume albo nowy start
+  //
   function init() {
     fetch('../questions.json')
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
@@ -348,6 +269,109 @@
     });
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // RENDER: centrum quizu, tu wszystko się schodzi
+  //
+  // renderQuestion: state.current -> HTML -> swapContent -> KaTeX -> restore.
+  // ABCD i T/F mają osobne renderery. showSummary jeśli pytań brak.
+  // ═══════════════════════════════════════════════════════════════════════
+
+  // renderQuestion: bierze state.current, składa HTML, wstawia do DOM
+  //
+  // Kolejność: HTML -> swapContent (fade) -> KaTeX -> restore jeśli był tu.
+  // Widok rozgałęzia się na ABCD albo T/F. Nie zwraca nic.
+  function renderQuestion() {
+    if (state.current >= state.questions.length) { showSummary(); return; }
+
+    var q = state.questions[state.current];
+    var num = state.current + 1;
+    var total = state.questions.length;
+
+    var html = '<div class="top-bar">';
+    html += '<a class="top-info site-link" href="../">' +
+      '<span class="lbl-long">testymaturalne.it</span>' +
+      '<span class="lbl-short">&lt;- WYBÓR</span></a>';
+    html += '<span class="top-prog">' + num + '/' + total + '</span>';
+    html += '<span class="top-time">Czas: --:--</span>';
+    html += '</div>';
+
+    html += '<div class="task-label">' + questionLabel(q) + '</div>';
+
+    html += '<div class="question-body">';
+    html += renderText(q.tresc) + '</div>';
+
+    if (q.typ === 'tf') {
+      tfSelections = {};
+      html += renderTFHtml(q);
+      html += '<div class="actions">';
+      html += '<button class="btn-check" id="checkBtn" disabled aria-disabled="true">Sprawdź</button>';
+      html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
+      html += '</div>';
+    } else {
+      html += renderABCDHtml(q);
+      html += '<div class="actions single">';
+      html += '<button class="btn-next" id="nextBtn" disabled aria-disabled="true">Następne zadanie &rarr;</button>';
+      html += '</div>';
+    }
+
+    html += '<div class="cke-footer">Arkusz egzaminacyjny CKE';
+    html += '<div class="foot-theme"><span class="foot-jasny">JASNY</span> | <span class="foot-ciemny">CIEMNY</span></div>';
+    html += '</div>';
+
+    swapContent(function () {
+      app.innerHTML = html;
+      renderKaTeX();
+      var prev = state.answers[q.id];
+      if (prev) {
+        if (q.typ === 'abcd') restoreABCD(q, prev);
+        else restoreTF(q, prev);
+      }
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // ABCD: render wariantów, kliknięcie, feedback correct/incorrect, restore
+  // ─────────────────────────────────────────────────────────────────────
+
+  function renderABCDHtml(q) {
+    var html = '<div class="variants">';
+    ['A', 'B', 'C', 'D'].forEach(function (letter) {
+      if (!q.odpowiedzi[letter]) return;
+      html += '<div class="variant" data-choice="' + letter + '">';
+      html += '<span class="variant-key">' + letter + '.</span>';
+      html += '<span class="variant-text">' + escapeHtml(q.odpowiedzi[letter]) + '</span>';
+      html += '</div>';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  function applyABCDClasses(q, choice, isCorrect) {
+    app.querySelectorAll('.variant').forEach(function (el) {
+      el.classList.add('locked');
+      if (el.dataset.choice === q.poprawna) el.classList.add('correct');
+      if (el.dataset.choice === choice && !isCorrect) el.classList.add('incorrect');
+      if (el.dataset.choice === choice) el.classList.add('selected');
+    });
+  }
+
+  function handleABCD(choice) {
+    var q = state.questions[state.current];
+    if (state.answers[q.id]) return;
+    var isCorrect = choice === q.poprawna;
+    applyABCDClasses(q, choice, isCorrect);
+    state.answers[q.id] = { given: choice, correct: isCorrect, timestamp: Date.now() };
+    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('nextBtn').removeAttribute('aria-disabled');
+    saveProgress();
+  }
+
+  function restoreABCD(q, prev) {
+    applyABCDClasses(q, prev.given, prev.correct);
+    document.getElementById('nextBtn').disabled = false;
+    document.getElementById('nextBtn').removeAttribute('aria-disabled');
+  }
+
   // ─────────────────────────────────────────────────────────────────────
   // T/F: tabela Prawda/Fałsz, kółka, Sprawdź, restore
   // ─────────────────────────────────────────────────────────────────────
@@ -399,6 +423,7 @@
     document.getElementById('nextBtn').removeAttribute('aria-disabled');
   }
 
+  // handleTFCheck: sprawdza wszystkie zdania T/F, zapisuje wynik, blokuje
   function handleTFCheck() {
     var q = state.questions[state.current];
     if (state.answers[q.id]) return;
@@ -424,11 +449,43 @@
     finishTF();
   }
 
+  // ─────────────────────────────────────────────────────────────────────
+  // SUMMARY: wynik, siatka kafelków, kliknięcie kafelka = review pytania
+  // ─────────────────────────────────────────────────────────────────────
+
+  function showSummary() {
+    var total = state.questions.length;
+    var correct = state.questions.filter(function (q) { return state.answers[q.id] && state.answers[q.id].correct; }).length;
+    var html =
+      '<div class="summary">' +
+      '<h2>Podsumowanie</h2>' +
+      '<p class="summary-stats">' + correct + ' / ' + total + ' poprawnych odpowiedzi</p>' +
+      '<div class="summary-grid">' +
+      state.questions.map(function (q, i) {
+        var cls = state.answers[q.id] && state.answers[q.id].correct ? 'tile-correct' : 'tile-incorrect';
+        return '<div class="summary-tile ' + cls + '" data-review="' + i + '">' + (i + 1) + '</div>';
+      }).join('') +
+      '</div><button class="btn-restart">Zacznij od nowa</button>' +
+      '</div>';
+    swapContent(function () { app.innerHTML = html; });
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // NAVIGATION: nextQuestion: current++, saveProgress, renderQuestion
+  // ─────────────────────────────────────────────────────────────────────
+
+  function nextQuestion() {
+    state.current++;
+    saveProgress();
+    renderQuestion();
+  }
+
   // ═══════════════════════════════════════════════════════════════════════
   // EVENTS: jeden delegowany listener na #app obsługuje cały quiz
   //
   // e.target.closest('[data-...]') łapie: wariant ABCD, kółko T/F,
-  // Sprawdź, Następne. Zero osobnych listenerów na elementach.
+  // Sprawdź, Następne, kafelek summary, restart, powrót, motyw.
+  // Zero osobnych listenerów na elementach.
   // ═══════════════════════════════════════════════════════════════════════
 
   app.addEventListener('click', function (e) {
@@ -469,48 +526,6 @@
     if (footJasny || footCiemny) { setTheme(!!footCiemny); }
   });
 
-  // ─────────────────────────────────────────────────────────────────────
-  // ABCD: render wariantów, kliknięcie, feedback correct/incorrect, restore
-  // ─────────────────────────────────────────────────────────────────────
-
-  function renderABCDHtml(q) {
-    var html = '<div class="variants">';
-    ['A', 'B', 'C', 'D'].forEach(function (letter) {
-      if (!q.odpowiedzi[letter]) return;
-      html += '<div class="variant" data-choice="' + letter + '">';
-      html += '<span class="variant-key">' + letter + '.</span>';
-      html += '<span class="variant-text">' + escapeHtml(q.odpowiedzi[letter]) + '</span>';
-      html += '</div>';
-    });
-    html += '</div>';
-    return html;
-  }
-
-  function applyABCDClasses(q, choice, isCorrect) {
-    app.querySelectorAll('.variant').forEach(function (el) {
-      el.classList.add('locked');
-      if (el.dataset.choice === q.poprawna) el.classList.add('correct');
-      if (el.dataset.choice === choice && !isCorrect) el.classList.add('incorrect');
-      if (el.dataset.choice === choice) el.classList.add('selected');
-    });
-  }
-
-  function handleABCD(choice) {
-    var q = state.questions[state.current];
-    if (state.answers[q.id]) return;
-    var isCorrect = choice === q.poprawna;
-    applyABCDClasses(q, choice, isCorrect);
-    state.answers[q.id] = { given: choice, correct: isCorrect, timestamp: Date.now() };
-    document.getElementById('nextBtn').disabled = false;
-    document.getElementById('nextBtn').removeAttribute('aria-disabled');
-    saveProgress();
-  }
-
-  function restoreABCD(q, prev) {
-    applyABCDClasses(q, prev.given, prev.correct);
-    document.getElementById('nextBtn').disabled = false;
-    document.getElementById('nextBtn').removeAttribute('aria-disabled');
-  }
 
   // ─────────────────────────────────────────────────────────────────────
   // THEME: dark/light toggle, persyst w localStorage, IIFE przy starcie
@@ -539,4 +554,4 @@
   // START
   // ─────────────────────────────────────────────────────────────────────
   init();
-}());
+})();

@@ -106,3 +106,64 @@ body {
 .site-link:hover { text-decoration: underline; }
 
 .lbl-short { display: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOP BAR: nagłówek z licznikiem pytania i timerem (timer dekoracyjny)
+   ───────────────────────────────────────────────────────────────────── */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.top-info {
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.top-prog {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.top-time {
+  font-size: 12px;
+  color: var(--color-dim);
+  font-weight: normal;
+  text-align: right;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TASK LABEL: "Zadanie X: poziom / sesja / rok"; fioletowe tło w jasnym
+   ───────────────────────────────────────────────────────────────────── */
+.task-label {
+  background: var(--bg-header-task);
+  border: 1px solid var(--border-main);
+  padding: 8px 14px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: var(--color-ink);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   QUESTION BODY: treść pytania (bez obramowania: inaczej niż A/B)
+   ───────────────────────────────────────────────────────────────────── */
+.question-body {
+  padding: 0 0 16px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.question-body p + p { margin-top: 10px; }
