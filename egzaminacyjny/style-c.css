@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ZMIENNE: paleta wariantu Egzaminacyjnego (Charcoal grey)
+
+   :root = jasny motyw (default). body.dark = ciemny.
+   Konwencja: --bg-* tła · --color-* tekst · --border-* ramki
+              --btn-* przyciski · --tile-* kafelki summary.
+   ═════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:           #ffffff;
+  --bg-hover:          #f5f5f5;
+  --bg-accent:         #f0f0f0;
+  --bg-numer:          #f9f9f9;
+  --bg-header-task:    #c9a0dc;
+  --color-ink:         #0a0a0a;
+  --color-muted:       #555555;
+  --color-dim:         #757575;
+  --color-numer:       #555555;
+  --border-main:       #0a0a0a;
+  --border-light:      #cccccc;
+  --border-circle:     #555555;
+  --circle-chosen-bg:  #0a0a0a;
+  --choice-picked-bg:  #cccccc;
+  --bg-correct:        #d4edda;
+  --color-correct:     #28a745;
+  --bg-incorrect:      #f8d7da;
+  --color-incorrect:   #dc3545;
+  --tile-correct:      #28a745;
+  --tile-incorrect:    #dc3545;
+  --tile-text:         #ffffff;
+  --btn-primary-bg:    #0a0a0a;
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover: #333333;
+  --btn-check-bg:      #ffffff;
+  --btn-check-color:   #0a0a0a;
+  --btn-check-hover:   #f5f5f5;
+  --overlay-bg:        rgba(0,0,0,0.4);
+}
+
+body.dark {
+  --bg-page:           #1a1a1a;
+  --bg-hover:          #242424;
+  --bg-accent:         #2e2e2e;
+  --bg-numer:          #222222;
+  --bg-header-task:    #3d2f4d;
+  --color-ink:         #d0d0d0;
+  --color-muted:       #888888;
+  --color-dim:         #888888;
+  --color-numer:       #707070;
+  --border-main:       #3a3a3a;
+  --border-light:      #2e2e2e;
+  --border-circle:     #666666;
+  --circle-chosen-bg:  #d0d0d0;
+  --choice-picked-bg:  #3d3d3d;
+  --bg-correct:        #0d2217;
+  --color-correct:     #28a745;
+  --bg-incorrect:      #22080a;
+  --color-incorrect:   #dc3545;
+  --tile-correct:      #28a745;
+  --tile-incorrect:    #dc3545;
+  --tile-text:         #ffffff;
+  --btn-primary-bg:    #d0d0d0;
+  --btn-primary-color: #1a1a1a;
+  --btn-primary-hover: #aaaaaa;
+  --btn-check-bg:      #2e2e2e;
+  --btn-check-color:   #d0d0d0;
+  --btn-check-hover:   #3a3a3a;
+  --overlay-bg:        rgba(0,0,0,0.7);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESET: box-sizing, focus-visible, html/body baseline
+
+   Focus ring tylko dla keyboard nav (focus-visible, nie focus).
+   ═════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+button:focus-visible,
+.variant:focus-visible,
+.tf-cell:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background: var(--bg-page);
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-page);
+  min-height: 100vh;
+}
+
+/* Programowy focus po swapContent() (aria-live announce) nie
+   powinien rysować outline: #app nie jest celem keyboard nav. */
+#app:focus { outline: none; }
+
+.site-link { text-decoration: none; color: inherit; }
+.site-link:hover { text-decoration: underline; }
+
+.lbl-short { display: none; }
