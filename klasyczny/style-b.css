@@ -199,12 +199,79 @@ body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
   line-height: 1.6;
 }
 
-@media (max-width: 540px) {
-  .lbl-long     { display: none; }
-  .lbl-short    { display: inline; }
-  #themeToggle  { display: none; }
-  .foot-theme   { display: block; }
+
+.code-block {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  padding: 12px 16px;
+  margin: 10px 0;
+  white-space: pre;
+  overflow-x: auto;
 }
+
+.q-center { text-align: center; margin: 10px 0; }
+
+.q-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.q-table th, .q-table td {
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.q-table th {
+  background: var(--bg-accent);
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ABCD VARIANTS: warianty odpowiedzi A/B/C/D
+
+   .variant: klikalna belka. Po kliknięciu: .locked (pointer-events none)
+   + .correct albo .incorrect na wybranym wariancie.
+   ═════════════════════════════════════════════════════════════════════ */
+.variants {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 2px solid var(--border-light);
+  cursor: pointer;
+  transition: border-color 150ms, background-color 150ms;
+  user-select: none;
+  background: var(--bg-card);
+}
+
+.variant:hover:not(.locked) {
+  border-color: var(--border-hover);
+  background: var(--bg-hover);
+}
+
+.variant-key {
+  font-weight: 700;
+  font-size: 18px;
+  min-width: 28px;
+}
+
+
+.variant.selected  { border-color: var(--border-mid); background: var(--bg-selected); }
+.variant.correct   { border-color: var(--color-correct); background: var(--bg-correct); }
+.variant.incorrect { border-color: var(--color-incorrect); background: var(--bg-incorrect); }
+.variant.locked    { cursor: default; }
+
 /* ═══════════════════════════════════════════════════════════════════════
    T/F TABLE: tabela Prawda/Fałsz: zdania + kółka P/F
 
@@ -257,3 +324,159 @@ body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
 .tf-cell.chosen .tf-circle    { background: var(--circle-chosen-bg); }
 .tf-cell.correct .tf-circle   { background: var(--color-correct);   border-color: var(--color-correct); }
 .tf-cell.incorrect .tf-circle { background: var(--color-incorrect); border-color: var(--color-incorrect); }
+/* ─────────────────────────────────────────────────────────────────────
+   BUTTONS: .btn-next i .btn-check (full-width, disabled state)
+   ───────────────────────────────────────────────────────────────────── */
+.btn-next, .btn-check {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--btn-primary-color);
+  background: var(--btn-primary-bg);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 150ms, background 120ms;
+}
+
+.btn-next:disabled, .btn-check:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn-next:hover:not(:disabled), .btn-check:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   SUMMARY: ekran końcowy: wynik + siatka kafelków
+   ───────────────────────────────────────────────────────────────────── */
+.summary { text-align: center; }
+
+.summary h2 { font-size: 28px; margin-bottom: 8px; }
+
+.summary-stats {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--color-dim);
+}
+
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.summary-tile {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tile-text);
+  cursor: pointer;
+}
+
+.summary-tile.tile-correct   { background: var(--tile-correct); }
+.summary-tile.tile-incorrect { background: var(--tile-incorrect); }
+
+.btn-restart {
+  display: inline-block;
+  padding: 14px 40px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--btn-primary-color);
+  background: var(--btn-primary-bg);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-restart:hover { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   RESUME DIALOG: modal "kontynuować zapisaną sesję?"
+   ───────────────────────────────────────────────────────────────────── */
+.dialog-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.dialog-box {
+  background: var(--bg-card);
+  border: 2px solid var(--border-main);
+  padding: 32px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.dialog-box p { font-size: 18px; margin-bottom: 20px; }
+
+.dialog-buttons { display: flex; gap: 12px; justify-content: center; }
+
+.dialog-buttons button {
+  padding: 10px 24px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--border-main);
+  background: var(--bg-card);
+  color: var(--color-ink);
+}
+
+.dialog-buttons button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-color: var(--btn-primary-bg);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOGGLE: pływający przycisk dark/light (desktop); na mobile schowany
+   ───────────────────────────────────────────────────────────────────── */
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  z-index: 200;
+  line-height: 1;
+  transition: opacity 200ms;
+}
+#themeToggle:hover { opacity: 0.5; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   PAGE TRANSITIONS: pgIn/pgOut fade; wyłączone przy prefers-reduced-motion
+   ───────────────────────────────────────────────────────────────────── */
+body { animation: pgIn 260ms ease both; }
+@keyframes pgIn  { from { opacity: 0; } to { opacity: 1; } }
+body.pg-out { animation: pgOut 200ms ease forwards !important; }
+@keyframes pgOut { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  body, body.pg-out { animation: none !important; }
+}
+
+@media (max-width: 540px) {
+  .lbl-long     { display: none; }
+  .lbl-short    { display: inline; }
+  #themeToggle  { display: none; }
+  .foot-theme   { display: block; }
+}
