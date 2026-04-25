@@ -1,8 +1,8 @@
-// Quiz engine, wariant estetyczny.
+// Quiz engine, wariant klasyczny.
 (function () {
   'use strict';
 
-  var SWAP_FADE_MS        = 110;  // fade między pytaniami, musi pasować do transition w CSS
+  var SWAP_FADE_MS        = 110;  // fade między pytaniami, musi pasować do transition w style-X.css
   var NAV_OUT_MS          = 200;  // fade na przejście do innej strony (pg-out)
   var CODE_LINE_MAX       = 25;   // heurystyka parsera: linia krótsza → kandydat na code-block
   var CODE_BLOCK_MIN_ROWS = 3;    // ile krótkich linii z rzędu żeby wbić w <pre>
@@ -10,9 +10,11 @@
   // ═══════════════════════════════════════════════════════════════════════
   // STATE: jeden obiekt, trzy klucze, żadnego Reduksa
   //
-  // questions -> pytania z JSON, przeshuffled przy starcie.
-  // current   -> indeks aktualnego pytania.
+  // questions -> ~95 pytań z JSON, przeshuffled przy starcie.
+  // current   -> który pytanie pokazujemy teraz (indeks, nie ID).
   // answers   -> { questionId: { given, correct, timestamp } }.
+  //
+  // Reszta kodu to funkcje które to czytają albo modyfikują. Tyle.
   // ═══════════════════════════════════════════════════════════════════════
 
   var STORAGE_KEY = 'edu_progress_b';
@@ -25,6 +27,10 @@
 
   var app = document.getElementById('app');
   var tfSelections = {};
+
+  // ─────────────────────────────────────────────────────────────────────
+  // UTILITIES: shuffle i save/load postępów do localStorage
+  // ─────────────────────────────────────────────────────────────────────
 
   function shuffle(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
