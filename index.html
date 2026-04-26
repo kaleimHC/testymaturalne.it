@@ -350,7 +350,32 @@
   window.addEventListener('resize', function () { setLayout(focusIndex); });
 
   panels.forEach(function (panel, idx) {
+    var bg = panel.querySelector('.bg');
+    var rafId = 0, pendingX = 0, pendingY = 0;
+
+    function apply() {
+      rafId = 0;
+      bg.style.transform = 'translate(' + (pendingX * 5) + 'px,' + (pendingY * 5) + 'px)';
+      panel.style.transform =
+        'rotateY(' + (pendingX * 1.5).toFixed(2) + 'deg) ' +
+        'rotateX(' + (-pendingY * 1).toFixed(2) + 'deg)';
+    }
+
     panel.addEventListener('mouseenter', function () { setLayout(idx); });
+
+    panel.addEventListener('mousemove', function (e) {
+      var r  = panel.getBoundingClientRect();
+      pendingX = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width)  * 2 - 1));
+      pendingY = Math.max(-1, Math.min(1, ((e.clientY - r.top)  / r.height) * 2 - 1));
+      if (!rafId) rafId = requestAnimationFrame(apply);
+    });
+
+    panel.addEventListener('mouseleave', function () {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+      pendingX = 0; pendingY = 0;
+      bg.style.transform   = '';
+      panel.style.transform = '';
+    });
   });
 
   stage.addEventListener('mouseleave', function () { setLayout(-1); });
