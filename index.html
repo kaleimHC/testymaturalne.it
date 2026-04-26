@@ -271,6 +271,13 @@
   @media (prefers-reduced-motion: reduce) {
     .panel, .bg, .cta, .glow { transition: none !important; }
   }
+
+  .stage { animation: stageIn 320ms cubic-bezier(.22,.61,.36,1) both; }
+  @keyframes stageIn { from { opacity: 0; } to { opacity: 1; } }
+  .topbar { animation: stageIn 400ms cubic-bezier(.22,.61,.36,1) both; }
+  @media (prefers-reduced-motion: reduce) {
+    .stage, .topbar { animation: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -375,6 +382,15 @@
       pendingX = 0; pendingY = 0;
       bg.style.transform   = '';
       panel.style.transform = '';
+    });
+
+    panel.addEventListener('click', function (e) {
+      e.preventDefault();
+      var href = panel.getAttribute('href');
+      panel.classList.add('is-clicked');
+      setTimeout(function () {
+        window.location.href = href;
+      }, 160);
     });
   });
 
