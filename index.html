@@ -238,5 +238,44 @@
 
   </main>
 
+<script>
+(function () {
+  'use strict';
+
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+  var stage = document.getElementById('stage');
+  var focusIndex = -1;
+
+  var W_REST     = 33.3333;
+  var W_ACTIVE   = 56;
+  var W_INACTIVE = 22;
+
+  function setLayout(activeIdx) {
+    var mobile = window.matchMedia('(max-width: 540px)').matches;
+    var prop  = mobile ? '--h' : '--w';
+    var clear = mobile ? '--w' : '--h';
+    panels.forEach(function (p, i) {
+      var w = activeIdx < 0 ? W_REST : (i === activeIdx ? W_ACTIVE : W_INACTIVE);
+      p.style.setProperty(prop, w + '%');
+      p.style.removeProperty(clear);
+    });
+    focusIndex = activeIdx;
+  }
+
+  setLayout(-1);
+  window.addEventListener('resize', function () { setLayout(focusIndex); });
+
+  panels.forEach(function (panel, idx) {
+    panel.addEventListener('mouseenter', function () { setLayout(idx); });
+  });
+
+  stage.addEventListener('mouseleave', function () { setLayout(-1); });
+
+  fetch('questions.json').then(function (r) { return r.json(); }).then(function (d) {
+    var el = document.getElementById('q-count');
+    if (el) el.textContent = d.length + ' pytań';
+  });
+})();
+</script>
 </body>
 </html>
