@@ -69,6 +69,27 @@
     background: #0c0c0e;
   }
 
+  @media (max-width: 540px) {
+    .stage { flex-direction: column; }
+    .panel {
+      width: 100% !important;
+      height: var(--h, 33.3333%) !important;
+      transition:
+        height 520ms cubic-bezier(.22,.61,.36,1),
+        transform 280ms ease-out !important;
+      will-change: height, transform;
+    }
+    .panel + .panel::after {
+      top: 0; left: 12%; right: 12%; bottom: auto;
+      width: auto; height: 1px;
+      background: linear-gradient(to right,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.10) 30%,
+        rgba(255,255,255,0.10) 70%,
+        rgba(255,255,255,0) 100%);
+    }
+  }
+
   .panel {
     position: relative;
     width: var(--w, 33.3333%);
@@ -271,6 +292,49 @@
   @media (prefers-reduced-motion: reduce) {
     .panel, .bg, .cta, .glow { transition: none !important; }
   }
+
+  @media (max-width: 540px) {
+    body { display: flex; flex-direction: column; height: 100vh; height: 100svh; }
+    .topbar {
+      position: relative;
+      flex: 0 0 auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+      padding: 10px 20px;
+      background: #0c0c0e;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .topbar .meta { font-size: 9px; letter-spacing: 0.18em; opacity: 0.6; }
+    .topbar .meta .dot { margin: 0 6px; }
+    .topbar .brand { font-size: 11px; letter-spacing: 0.24em; }
+    .stage { flex: 1 1 0%; min-height: 0; overflow: hidden; }
+    .panel .stagebox { display: none; }
+    .panel .glow {
+      background: radial-gradient(70% 70% at 80% 50%, var(--accent, #fff) 0%, rgba(0,0,0,0) 75%);
+      opacity: 0.35;
+    }
+    .panel:hover .glow { opacity: 0.6; }
+    .label {
+      top: 0; bottom: 0; left: 0; right: 0;
+      width: auto; height: auto;
+      padding: 0 26px;
+      align-items: center;
+      background: none;
+    }
+    .label .row { gap: 8px; width: 100%; position: relative; }
+    .label .num { font-size: 10px; letter-spacing: 0.3em; color: rgba(255,255,255,0.4); }
+    .label .title { font-size: 22px; line-height: 1.05; }
+    .label .subtitle { font-size: 10px; letter-spacing: 0.2em; margin-top: 2px; }
+    .cta {
+      position: absolute; right: 0; top: 50%;
+      transform: translateY(-50%) translateX(8px);
+      margin: 0; padding: 9px 16px; font-size: 11px; align-self: auto;
+    }
+    .panel:hover .cta { transform: translateY(-50%) translateX(0); }
+  }
+  @media (max-width: 350px) { .cta { display: none !important; } }
 
   .stage { animation: stageIn 320ms cubic-bezier(.22,.61,.36,1) both; }
   @keyframes stageIn { from { opacity: 0; } to { opacity: 1; } }
