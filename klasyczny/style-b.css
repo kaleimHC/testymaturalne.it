@@ -197,6 +197,7 @@ body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
   margin-bottom: 24px;
   font-size: 18px;
   line-height: 1.6;
+  text-wrap: pretty;
 }
 
 
@@ -253,6 +254,7 @@ body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
   transition: border-color 150ms, background-color 150ms;
   user-select: none;
   background: var(--bg-card);
+  text-wrap: pretty;
 }
 
 .variant:hover:not(.locked) {

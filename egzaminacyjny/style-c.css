@@ -164,6 +164,7 @@ body {
   padding: 0 0 16px 0;
   font-size: 15px;
   line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .question-body p + p { margin-top: 10px; }
@@ -255,6 +256,7 @@ tr.row-incorrect .tf-cell.chosen { background: transparent; }
   font-size: 15px;
   background: var(--bg-page);
   transition: background 100ms;
+  text-wrap: pretty;
 }
 
 .variant:hover:not(.locked) { background: var(--bg-hover); }

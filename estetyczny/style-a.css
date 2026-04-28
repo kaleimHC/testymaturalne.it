@@ -248,6 +248,7 @@ body.pg-out { animation: pgOut 200ms ease forwards !important; }
   background: var(--bg-sheet);
   font-size: 17px;
   line-height: 1.65;
+  text-wrap: pretty;
 }
 
 @media (max-width: 540px) {
@@ -276,6 +277,7 @@ body.pg-out { animation: pgOut 200ms ease forwards !important; }
   font-size: 17px;
   background: var(--bg-sheet);
   transition: background 120ms;
+  text-wrap: pretty;
 }
 
 .variant:hover:not(.locked) { background: var(--bg-hover); }
