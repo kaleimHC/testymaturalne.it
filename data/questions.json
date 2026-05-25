@@ -1,0 +1,2073 @@
+[
+  {
+    "id": "2023_pr_czerwiec2023_z4_1",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Liczba $101201_{3}$ zapisana w systemie o podstawie 9 to:",
+    "img": null,
+    "warianty": {
+      "A": "341",
+      "B": "351",
+      "C": "352",
+      "D": "361"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "2023_pr_czerwiec2023_z4_2",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Liczba $2487_{9}$ zapisana w systemie o podstawie 3 to:",
+    "img": null,
+    "warianty": {
+      "A": "2112221",
+      "B": "2112220",
+      "C": "2112222",
+      "D": "2112121"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2023_pr_czerwiec2023_z5",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Zapis koloru tła w arkuszu CSS został wyrażony w postaci\nbackground-color: #E9967A;",
+    "img": null,
+    "zdania": [
+      {
+        "t": "Zapis dziesiętny składowej czerwonej koloru #E9967A to 233.",
+        "o": true
+      },
+      {
+        "t": "Zmiana zapisu #E9967A na rgb(255,255,255) da w efekcie biały kolor tła.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2023_pr_maj2024_z5",
+    "formuła": "2023",
+    "rok": 2024,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń prawdziwość podanych zdań:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. HTTP to protokół komunikacyjny opisujący sposób przekazywania poczty elektronicznej w internecie.",
+        "o": false
+      },
+      {
+        "t": "2. FTP to protokół zamiany nazw domenowych na adresy IP.",
+        "o": false
+      },
+      {
+        "t": "3. DHCP to protokół umożliwiający hostom uzyskanie od serwera danych konfiguracyjnych, np. adresu IP, adresu bramy sieciowej, adresu serwera DNS.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2023_pr_maj2024_z6_1",
+    "formuła": "2023",
+    "rok": 2024,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Wykonaj działanie na liczbach zapisanych w systemie trójkowym i systemie dziewiątkowym. Wynik podaj w systemie trójkowym:\n\n$101112_{3} + 121_{9} =$",
+    "img": null,
+    "warianty": {
+      "A": "$112020_{3}$",
+      "B": "$112120_{3}$",
+      "C": "$111020_{3}$",
+      "D": "$122020_{3}$"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2023_pr_maj2024_z6_2",
+    "formuła": "2023",
+    "rok": 2024,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Wykonaj działanie na liczbach zapisanych w systemie trójkowym i systemie dziewiątkowym. Wynik podaj w systemie trójkowym:\n\n$101112_{3} - 121_{9} =$",
+    "img": null,
+    "warianty": {
+      "A": "$20211_{3}$",
+      "B": "$20210_{3}$",
+      "C": "$21211_{3}$",
+      "D": "$20111_{3}$"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2023_pr_maj2025_z4",
+    "formuła": "2023",
+    "rok": 2025,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Dokończ zdanie: Program typu keylogger służy do:",
+    "img": null,
+    "warianty": {
+      "A": "szyfrowania informacji do postaci uniemożliwiającej jej odczytanie bez zdefiniowanego klucza.",
+      "B": "przechowywania danych logowania, w tym haseł, w bezpiecznym miejscu na dysku użytkownika.",
+      "C": "generowania kodu, który umożliwia użytkownikowi bankowości elektronicznej wykonanie operacji.",
+      "D": "przechwytywania i gromadzenia informacji o naciśniętych klawiszach."
+    },
+    "odpowiedź": "D"
+  },
+  {
+    "id": "2023_pr_maj2023_z2_4",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Dla nieujemnych liczb całkowitych a i b wynikiem operacji a XOR b jest liczba, której kolejne bity są wyliczane na podstawie poniższej tabelki z odpowiadających sobie bitów w zapisie binarnym liczb a i b. Jeśli jeden zapis jest krótszy od drugiego, to uzupełniamy go zerami z lewej strony (na najbardziej znaczących pozycjach).\n\n| p | q | p XOR q |\n| :--- | :--- | :--- |\n| 1 | 1 | 0 |\n| 1 | 0 | 1 |\n| 0 | 1 | 1 |\n| 0 | 0 | 0 |\n\nOblicz ($123_{10}$ XOR $101101_{2}$) XOR $2D_{16}$. Wynik podaj w systemie dziesiętnym.",
+    "img": null,
+    "warianty": {
+      "A": "123",
+      "B": "127",
+      "C": "255",
+      "D": "64"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2023_pr_maj2023_z4",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "W komunikacji między dwoma osobami A i B z wykorzystaniem szyfrowania asymetrycznego klucz prywatny osoby A stosuje się do:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. odszyfrowania wiadomości wysłanej do osoby A przez osobę B.",
+        "o": true
+      },
+      {
+        "t": "2. uwierzytelnienia osoby B przez osobę A.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2023_pr_maj2023_z5_1",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 3, 5 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(134)$_{5}$ …………………. (134)$_{6}$",
+    "img": null,
+    "warianty": {
+      "A": "<",
+      "B": ">",
+      "C": "=",
+      "D": "brak poprawnej odpowiedzi"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2023_pr_maj2023_z5_2",
+    "formuła": "2023",
+    "rok": 2023,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 3, 5 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(2222)$_{3}$ …………………. (1111)$_{6}$",
+    "img": null,
+    "warianty": {
+      "A": "<",
+      "B": ">",
+      "C": "=",
+      "D": "brak poprawnej odpowiedzi"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2015_pr_maj2023_z3_2",
+    "formuła": "2015",
+    "rok": 2023,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń prawdziwość podanych zdań:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. $A5_{16} = 245_{8}$",
+        "o": true
+      },
+      {
+        "t": "2. $A5_{16} < 10100100_{2}$",
+        "o": false
+      },
+      {
+        "t": "3. $10100100_{2} = 2210_{4}$",
+        "o": true
+      },
+      {
+        "t": "4. $2210_{4} < 245_{8}$",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2018_z1_1",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Dla dodatniej liczby całkowitej n, n-permutacją nazywamy taki n-elementowy ciąg liczb całkowitych, który zawiera każdą z liczb 1, 2, …, n dokładnie jeden raz. Podaj najmniejszą liczbę elementów, które trzeba podmienić, aby ciąg (8, 4, 9, 6, 5, 7) był 6-permutacją.",
+    "img": null,
+    "warianty": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "2015_pr_maj2018_z3_1",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Na pewnym serwerze WWW znajduje się strona napisana w języku PHP, a jej kod zawiera fragmenty w języku JavaScript. Pewien komputer-klient pobrał i wyświetlił tę stronę. Wiadomo, że:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. kod PHP jest wykonywany przez komputer - serwer.",
+        "o": true
+      },
+      {
+        "t": "2. kod JavaScript jest wykonywany przez komputer - klient.",
+        "o": true
+      },
+      {
+        "t": "3. podczas wykonywania kodu PHP zawsze pobierane są dane od klienta.",
+        "o": false
+      },
+      {
+        "t": "4. podczas wykonywania kodu JavaScript mogą być pobierane dodatkowe dane zarówno od klienta, jak i od serwera.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2018_z3_2",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń prawdziwość podanych zdań:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. Plakat do druku lepiej przygotować w modelu barw RGB niż CMYK.",
+        "o": false
+      },
+      {
+        "t": "2. Kolor żółty jest kolorem podstawowym w modelu RGB.",
+        "o": false
+      },
+      {
+        "t": "3. W wyniku nałożenia się składowych Yellow i Magenta w modelu CMYK otrzymamy kolor czerwony.",
+        "o": true
+      },
+      {
+        "t": "4. W modelu barw CMYK litera C pochodzi od angielskiego słowa contrast.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2018_z3_3",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Wskaż zdania prawdziwe dla języka SQL:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. W wynikach zapytania postaci SELECT (...) ORDER BY (...) zawsze dostajemy rekordy uporządkowane ściśle rosnąco według wskazanego pola.",
+        "o": false
+      },
+      {
+        "t": "2. Zapytanie UPDATE może zmienić wartości pól w bazie danych.",
+        "o": true
+      },
+      {
+        "t": "3. Zapytanie postaci SELECT * FROM tabela1 WHERE pole LIKE (...) może w pewnych warunkach dać wszystkie rekordy z tabeli tabela1.",
+        "o": true
+      },
+      {
+        "t": "4. Wynik zapytania SELECT * FROM tabela1 JOIN tabela2 ON tabela1.pole = tabela2.pole może być pusty przy niepustych tabelach tabela1 oraz tabela2.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2017_z3_1",
+    "formuła": "2015",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Po wykonaniu podanego zapytania SQL do pewnej bazy danych wyniki będą zawsze uporządkowane niemalejąco według pola nazwa:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. SELECT nazwa, wartosc FROM dane ORDER BY wartosc, nazwa",
+        "o": false
+      },
+      {
+        "t": "2. SELECT nazwa, wartosc FROM dane ORDER BY nazwa",
+        "o": true
+      },
+      {
+        "t": "3. SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa",
+        "o": false
+      },
+      {
+        "t": "4. SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa ORDER BY nazwa",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2017_z3_2",
+    "formuła": "2015",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Rozważ następujące zapytanie SQL do pewnej bazy danych:\nSELECT pesel, COUNT(*)\nFROM samochody\nWHERE pesel NOT IN (SELECT pesel FROM dokumenty_zastrzezone)\nGROUP BY pesel HAVING COUNT(*) > 1\n\nPo wykonaniu tego zapytania w odpowiedzi:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. ten sam numer PESEL może pojawić więcej niż jeden raz.",
+        "o": false
+      },
+      {
+        "t": "2. nie pojawi się żaden numer PESEL, który jest zapisany w tabeli dokumenty zastrzezone.",
+        "o": true
+      },
+      {
+        "t": "3. otrzymasz tabelę o 2 kolumnach.",
+        "o": true
+      },
+      {
+        "t": "4. przy odpowiednich danych może pojawić się wiersz „82122302134, 1\".",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2017_z3_3",
+    "formuła": "2015",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Pewien oszust chce rozesłać wiadomość, podszywając się pod Jana Kowalskiego, ale nie zdołał wykraść żadnych należących do Jana haseł ani innych prywatnych informacji. Posiada jednak klucz publiczny Jana Kowalskiego, który ten udostępnił w sieci, a także znaleziony w internecie adres e-mail Jana. Może zatem:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. założyć konto „Jan Kowalski\" w serwisie społecznościowym i stamtąd rozsyłać wiadomości.",
+        "o": true
+      },
+      {
+        "t": "2. na podstawie klucza publicznego Jana Kowalskiego szybko wygenerować jego podpis cyfrowy.",
+        "o": false
+      },
+      {
+        "t": "3. na podstawie klucza publicznego Jana Kowalskiego szybko obliczyć jego klucz prywatny.",
+        "o": false
+      },
+      {
+        "t": "4. rozsyłać listy elektroniczne, które w nagłówku „Od:\" będą miały adres e-mail Jana Kowalskiego.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2015_z2_1",
+    "formuła": "2015",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Po wymnożeniu dwóch liczb $1032_{4}$ oraz $131_{4}$ zapisanych w systemie czwórkowym otrzymamy:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. $78_{10}$",
+        "o": false
+      },
+      {
+        "t": "2. $8D6_{16}$",
+        "o": true
+      },
+      {
+        "t": "3. $4326_{8}$",
+        "o": true
+      },
+      {
+        "t": "4. $10011010110_{2}$",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2015_z2_2",
+    "formuła": "2015",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Kompresja stratna w grafice:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. ma związek z plikami graficznymi w formacie BMP.",
+        "o": false
+      },
+      {
+        "t": "2. ma związek z plikami graficznymi w formacie JPG.",
+        "o": true
+      },
+      {
+        "t": "3. jest metodą zmniejszania rozmiaru pliku graficznego bez utraty szczegółów w obrazie.",
+        "o": false
+      },
+      {
+        "t": "4. wykorzystuje algorytm szyfrowania RSA.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2015_z2_3",
+    "formuła": "2015",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Filtrowanie tabeli w bazie danych:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. polega na wyborze wierszy spełniających określone kryterium.",
+        "o": true
+      },
+      {
+        "t": "2. polega na wyborze niektórych kolumn z tabeli.",
+        "o": false
+      },
+      {
+        "t": "3. zmienia jej zawartość.",
+        "o": false
+      },
+      {
+        "t": "4. wymaga podania warunku dla jednej lub kilku kolumn tabeli.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2015_z2_4",
+    "formuła": "2015",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Na licencji ADWARE jest rozpowszechniane oprogramowanie, które:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. jest rozpowszechniane za darmo, ale zawiera funkcje wyświetlające reklamy.",
+        "o": true
+      },
+      {
+        "t": "2. ma otwarty kod źródłowy.",
+        "o": false
+      },
+      {
+        "t": "3. jest opłacane przez użytkownika.",
+        "o": false
+      },
+      {
+        "t": "4. może być używane tylko przez z góry ustalony czas.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_maj2015_z2_5",
+    "formuła": "2015",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "W komórkach arkusza kalkulacyjnego umieszczone zostały poniższe wartości i formuły:\n\n|   | A | B | C |\n|---|---|---|---|\n| 1 | 1 | 2 | 3 |\n| 2 | 2 | =A\\$2*B1 |   |\n| 3 | 3 |   |   |\n| 4 | 4 |   |   |\n\nNastępnie zawartość komórki B2 została skopiowana do komórki C2 oraz do komórek B3, B4, …, B10.",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. W komórce C2 umieszczona zostanie formuła =A\\$2*C1.",
+        "o": false
+      },
+      {
+        "t": "2. W komórce B3 umieszczona zostanie formuła =A\\$2*B2.",
+        "o": true
+      },
+      {
+        "t": "3. Wartość w komórce B10 wyniesie 1024.",
+        "o": true
+      },
+      {
+        "t": "4. Wartość w komórce C2 wyniesie 4.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2023_z3_1",
+    "formuła": "2015",
+    "rok": 2023,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń prawdziwość podanych zdań:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. $101_{16}$ = $11001011_{2}$",
+        "o": false
+      },
+      {
+        "t": "2. $101_{16}$ = $401_{8}$",
+        "o": true
+      },
+      {
+        "t": "3. $401_{8}$ = $100000001_{2}$",
+        "o": true
+      },
+      {
+        "t": "4. $101_{8}$ = $41_{16}$",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2023_z3_2",
+    "formuła": "2015",
+    "rok": 2023,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "W bazie danych znajdują się tabele zwierzeta oraz osoby. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id – klucz podstawowy), gatunek (gatunek), imię zwierzęcia (imie) oraz identyfikator właściciela zwierzęcia (id_osoby). Tabela osoby, z danymi właścicieli zwierząt, zawiera dane: identyfikator osoby (id_osoby – klucz podstawowy), imię i nazwisko osoby (imie, nazwisko).\n\nPoniżej podano kilka przykładowych danych z obu tabel.\n\nTabela zwierzeta\n\n| id | gatunek | imie | id_osoby |\n|---|---|---|---|\n| 1 | pies | Azor | 1 |\n| 2 | kot | Mruczek | 2 |\n| 3 | kot | Kicia | 3 |\n| 4 | pies | Pimpek | 2 |\n\nTabela osoby\n\n| id_osoby | imie | nazwisko |\n|---|---|---|\n| 1 | Jan | Nowak |\n| 2 | Adam | Kowalski |\n| 3 | Anna | Nowakowska |",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. W wyniku zapytania: SELECT DISTINCT nazwisko FROM osoby; otrzymamy listę różnych nazwisk osób z tabeli osoby (nazwiska nie będą się powtarzać).",
+        "o": true
+      },
+      {
+        "t": "2. W wyniku zapytania: SELECT nazwisko FROM osoby WHERE nazwisko LIKE \"A\"; Otrzymamy listę nazwisk zaczynających się od litery A.",
+        "o": false
+      },
+      {
+        "t": "3. W wyniku zapytania: SELECT imie FROM osoby WHERE imie BETWEEN \"A\" AND \"C\"; otrzymamy listę imion zaczynających się od litery A lub B.",
+        "o": false
+      },
+      {
+        "t": "4. W wyniku zapytania: SELECT imie, nazwisko FROM osoby WHERE imie IN (\"Ala\",\"Ula\"); otrzymamy listę imion i nazwisk wszystkich osób mających imiona, które w kolejności alfabetycznej znajdują się pomiędzy „Ala\" a „Ula\".",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2023_z3_3",
+    "formuła": "2015",
+    "rok": 2023,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "W bazie danych znajdują się tabele zwierzeta oraz osoby. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id – klucz podstawowy), gatunek (gatunek), imię zwierzęcia (imie) oraz identyfikator właściciela zwierzęcia (id_osoby). Tabela osoby, z danymi właścicieli zwierząt, zawiera dane: identyfikator osoby (id_osoby – klucz podstawowy), imię i nazwisko osoby (imie, nazwisko).\n\nPoniżej podano kilka przykładowych danych z obu tabel.\n\nTabela zwierzeta\n\n| id | gatunek | imie | id_osoby |\n|---|---|---|---|\n| 1 | pies | Azor | 1 |\n| 2 | kot | Mruczek | 2 |\n| 3 | kot | Kicia | 3 |\n| 4 | pies | Pimpek | 2 |\n\nTabela osoby\n\n| id_osoby | imie | nazwisko |\n|---|---|---|\n| 1 | Jan | Nowak |\n| 2 | Adam | Kowalski |\n| 3 | Anna | Nowakowska |",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. W wyniku zapytania: SELECT count(DISTINCT gatunek) FROM zwierzeta; otrzymamy liczbę różnych nazw gatunków zwierząt z tabeli zwierzeta.",
+        "o": true
+      },
+      {
+        "t": "2. W wyniku zapytania: SELECT count(gatunek) FROM zwierzeta WHERE gatunek = \"pies\"; otrzymamy liczbę psów w tabeli zwierzeta.",
+        "o": true
+      },
+      {
+        "t": "3. W wyniku zapytania: SELECT count(*) FROM zwierzeta INNER JOIN osoby ON zwierzeta.id_osoby = osoby.id_osoby WHERE gatunek = \"pies\"; otrzymamy liczby psów z podziałem na różnych właścicieli.",
+        "o": false
+      },
+      {
+        "t": "4. W wyniku zapytania: SELECT nazwisko, count(*) FROM zwierzeta INNER JOIN osoby ON zwierzeta.id_osoby = osoby.id_osoby GROUP BY osoby.id_osoby; otrzymamy zestawienie z nazwiskami osób i liczbami ich zwierząt.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2018_z3_1",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Które z poniższych zdań dotyczących protokołów internetowych są prawdziwe?",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. Protokół IP jest protokołem warstwy sieciowej.",
+        "o": true
+      },
+      {
+        "t": "2. Protokół TCP gwarantuje, że wszystkie pakiety dotrą do odbiorcy w poprawnej kolejności.",
+        "o": true
+      },
+      {
+        "t": "3. Protokół SMTP jest używany do odbierania poczty elektronicznej przez klienta pocztowego.",
+        "o": false
+      },
+      {
+        "t": "4. Protokół HTTP jest protokołem warstwy aplikacji.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2018_z3_2",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Które zdania dotyczące struktury danych zwanej stosem są prawdziwe?",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. Elementy stosu są zdejmowane w odwrotnej kolejności niż kolejność ich wkładania na stos.",
+        "o": true
+      },
+      {
+        "t": "2. Tylko pierwszy dodany element jest zawsze dostępny na stosie.",
+        "o": false
+      },
+      {
+        "t": "3. Stos może być używany m.in. przy obliczaniu wartości wyrażeń zapisanych w Odwrotnej Notacji Polskiej (ONP).",
+        "o": true
+      },
+      {
+        "t": "4. Tylko ostatnio dodany element jest zawsze dostępny na stosie.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2018_z3_3",
+    "formuła": "2015",
+    "rok": 2018,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Do jednoznacznego zakodowania znaków pięcioelementowego alfabetu wystarczą/y:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. 2 bity.",
+        "o": false
+      },
+      {
+        "t": "2. 3 bity.",
+        "o": true
+      },
+      {
+        "t": "3. 5 bitów.",
+        "o": true
+      },
+      {
+        "t": "4. 8 bitów.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2017_z3_1",
+    "formuła": "2015",
+    "rok": 2017,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oddziały A, B i C znajdują się w różnych strefach czasowych, dlatego zegary nie wskazują tej samej liczby. W pewnym momencie zegary wskazywały następujące wartości:\nOddział A: 00010110100 (zapis binarny),\nOddział B: 000330 (zapis ósemkowy),\nOddział C: 078 (zapis szesnastkowy).",
+    "img": null,
+    "zdania": [
+      {
+        "t": "Wskazania wszystkich trzech zegarów są wielokrotnościami liczby $9_{10}$.",
+        "o": true
+      },
+      {
+        "t": "Wskazania zegarów są wielokrotnościami liczby $6_{10}$.",
+        "o": false
+      },
+      {
+        "t": "Dla każdej pary zegarów różnica ich wartości jest wielokrotnością liczby $60_{10}$.",
+        "o": true
+      },
+      {
+        "t": "Największą wartość wskazuje zegar w oddziale A, a najmniejszą zegar w oddziale C.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2021_z1_1_3",
+    "formuła": "2015",
+    "rok": 2021,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Każdą dodatnią liczbę całkowitą n można reprezentować jako sumę kwadratów dodatnich liczb całkowitych. Długością reprezentacji (kwadratowej) nazywamy liczbę składników sumy. Jedną z metod otrzymywania krótkich reprezentacji kwadratowych jest metoda zachłanna, w której w każdym kroku jako kolejny składnik sumy bierze się największy możliwy kwadrat liczby całkowitej gwarantujący, że suma nie przekracza n. Ta metoda nie zawsze znajduje najkrótsze reprezentacje. Podaj reprezentację kwadratową liczby 23 krótszą od jej reprezentacji otrzymanej metodą zachłanną ($4^2+2^2+1^2+1^2+1^2$).",
+    "img": null,
+    "warianty": {
+      "A": "$3^2 + 3^2 + 2^2 + 1^2$",
+      "B": "$4^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2$",
+      "C": "$3^2 + 2^2 + 2^2 + 2^2 + 2^2 + 1^2 + 1^2$",
+      "D": "$2^2 + 2^2 + 2^2 + 2^2 + 2^2 + 1^2 + 1^2 + 1^2$"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2015_pr_czerwiec2021_z1_1_4",
+    "formuła": "2015",
+    "rok": 2021,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Każdą dodatnią liczbę całkowitą n można reprezentować jako sumę kwadratów dodatnich liczb całkowitych. Jedną z metod otrzymywania krótkich reprezentacji kwadratowych jest metoda zachłanna. Ta metoda nie zawsze znajduje najkrótsze reprezentacje. Podaj dodatkową liczbę $n > 23$ taką, że jej reprezentacja kwadratowa otrzymana metodą zachłanną nie jest jej najkrótszą reprezentacją.",
+    "img": null,
+    "warianty": {
+      "A": "32",
+      "B": "25",
+      "C": "49",
+      "D": "100"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "2015_pr_czerwiec2021_z3_1",
+    "formuła": "2015",
+    "rok": 2021,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Mamy dane operacje logiczne na bitach not, and i or opisane poniżej:\n\n| a | not a |\n| :--- | :--- |\n| 1 | 0 |\n| 0 | 1 |\n\n| a | b | a and b |\n| :--- | :--- | :--- |\n| 1 | 1 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 0 | 0 | 0 |\n\n| a | b | a or b |\n| :--- | :--- | :--- |\n| 1 | 1 | 1 |\n| 0 | 1 | 1 |\n| 1 | 0 | 1 |\n| 0 | 0 | 0 |\n\noraz wyrażenie $W(a,b)$:\n((not a) and b) or (a and (not b))",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. $W(0,0)=1$",
+        "o": false
+      },
+      {
+        "t": "2. $W(1,0)=1$",
+        "o": true
+      },
+      {
+        "t": "3. $W(0,1)=0$",
+        "o": false
+      },
+      {
+        "t": "4. $W(1,1)=0$",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "2015_pr_czerwiec2021_z3_2",
+    "formuła": "2015",
+    "rok": 2021,
+    "sesja": "czerwiec",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń prawdziwość podanych zdań:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "1. $(10101)_{2} + (101011)_{2} = (111111)_{2}$",
+        "o": false
+      },
+      {
+        "t": "2. $(A)_{16} + (B)_{16} = (F)_{16}$",
+        "o": false
+      },
+      {
+        "t": "3. $(12)_{8} + (12)_{8} = (14)_{16}$",
+        "o": true
+      },
+      {
+        "t": "4. $(123)_{10} = (1111101)_{2}$",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2019_z1_2",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Podany algorytm wyznacza pierwszą parzystą liczbę\nw tablicy A[1..n], gdzie nieparzyste są z przodu:\n\ni ← 1\ndopóki A[i] mod 2 ≠ 0:\n  i ← i + 1\nw ← A[i]\n\nZłożoność czasowa algorytmu jest:",
+    "img": null,
+    "warianty": {
+      "A": "liniowa",
+      "B": "kwadratowa",
+      "C": "sześcienna",
+      "D": "wykładnicza"
+    },
+    "odpowiedź": "A"
+  },
+  {
+    "id": "stara_pr_maj2019_z3_1",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń, czy poniższe zdania są prawdziwe:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "DNS to skrót od Domain Name System.",
+        "o": true
+      },
+      {
+        "t": "Do danego adresu IP może być przypisanych wiele różnych nazw.",
+        "o": true
+      },
+      {
+        "t": "Przy zmianie adresu IP komputera pełniącego funkcję serwera WWW jest konieczna zmiana nazwy domeny internetowej.",
+        "o": false
+      },
+      {
+        "t": "System DNS ma jedną centralną bazę danych adresów IP i nazw.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2019_z3_2",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Po pomnożeniu dwóch liczb $1111110_{2}$ oraz $101_{2}$ zapisanych w systemie dwójkowym otrzymamy:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "$21312_{4}$",
+        "o": true
+      },
+      {
+        "t": "$1001010110_{2}$",
+        "o": false
+      },
+      {
+        "t": "$1166_{8}$",
+        "o": true
+      },
+      {
+        "t": "$276_{16}$",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2019_z3_3",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Oceń, czy poniższe zdania są prawdziwe:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "Adres IPv6 składa się z 64 bitów.",
+        "o": false
+      },
+      {
+        "t": "Adres IPv6 składa się z 128 bitów.",
+        "o": true
+      },
+      {
+        "t": "Adres IPv4 składa się z 64 bitów.",
+        "o": false
+      },
+      {
+        "t": "Adres IPv4 składa się z 32 bitów.",
+        "o": true
+      }
+    ],
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pr_maj2019_z3_4",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Skrótem nazwy złącza, przez które można podłączyć urządzenia peryferyjne do komputera, jest:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "USB",
+        "o": true
+      },
+      {
+        "t": "FTP",
+        "o": false
+      },
+      {
+        "t": "PHP",
+        "o": false
+      },
+      {
+        "t": "HDMI",
+        "o": true
+      }
+    ],
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pr_maj2017_z3_2",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Realizacji usług poczty elektronicznej służy protokół:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "SMTP",
+        "o": true
+      },
+      {
+        "t": "IMAP",
+        "o": true
+      },
+      {
+        "t": "EMAIL",
+        "o": false
+      },
+      {
+        "t": "POP3",
+        "o": true
+      }
+    ],
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pr_maj2017_z3_3",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Liczbą większą od $150_{(10)}$ jest:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "$10011001_{(2)}$",
+        "o": true
+      },
+      {
+        "t": "$1222_{(4)}$",
+        "o": false
+      },
+      {
+        "t": "$227_{(8)}$",
+        "o": true
+      },
+      {
+        "t": "$9B_{(16)}$",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2017_z3_4",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Obrazy rastrowe:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "są reprezentowane jako tablice pikseli, co powoduje istotną utratę jakości przy powiększaniu obrazu.",
+        "o": true
+      },
+      {
+        "t": "tworzone są przy użyciu wyrażeń matematycznych opisujących występujące w obrazie odcinki, krzywe, elipsy itp.",
+        "o": false
+      },
+      {
+        "t": "mogą być wprowadzane do komputera przy użyciu urządzeń takich jak aparat cyfrowy lub skaner.",
+        "o": true
+      },
+      {
+        "t": "mogą powstać w efekcie cyfrowego zapisu obrazu widzialnego.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2017_z3_5",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Algorytm zwany sitem Eratostenesa opierający się na „wykreślaniu\" wielokrotności kolejnych (niewykreślonych wcześniej) liczb naturalnych służy wyznaczeniu:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "największego wspólnego dzielnika dwóch liczb.",
+        "o": false
+      },
+      {
+        "t": "najmniejszej wspólnej wielokrotności dwóch liczb.",
+        "o": false
+      },
+      {
+        "t": "liczb pierwszych z zadanego przedziału.",
+        "o": true
+      },
+      {
+        "t": "potęg dwójki z zadanego przedziału.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2017_z3_6",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Przykładem programu, który służy do tłumaczenia instrukcji kodu źródłowego programu komputerowego na język maszynowy, jest:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "walidator",
+        "o": false
+      },
+      {
+        "t": "kompilator",
+        "o": true
+      },
+      {
+        "t": "edytor tekstu",
+        "o": false
+      },
+      {
+        "t": "defragmentator",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2014_z3_c",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Liczba binarna 101011111100 zapisana w systemie szesnastkowym ma postać:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "AEC",
+        "o": false
+      },
+      {
+        "t": "CFC",
+        "o": false
+      },
+      {
+        "t": "AFC",
+        "o": true
+      },
+      {
+        "t": "DFC",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2014_z3_d",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Liczba 262 to:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "wielokrotność liczby 2.",
+        "o": true
+      },
+      {
+        "t": "największy wspólny dzielnik liczb: 1310 i 524.",
+        "o": true
+      },
+      {
+        "t": "kwadrat liczby pierwszej.",
+        "o": false
+      },
+      {
+        "t": "najmniejsza liczba trzycyfrowa zapisana w systemie o podstawie 16.",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2010_z1_a",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "abcd",
+    "treść": "Podaj wzór na liczbę wierszy i kolumn tablicy kwadratowej używanej do szyfrowania tekstu o długości d znaków (gdzie wymiar n tablicy jest najmniejszą liczbą, przy której tekst zmieści się w całości w kwadracie $n\\times n$):",
+    "img": null,
+    "warianty": {
+      "A": "$n=\\lfloor\\sqrt{d}\\rfloor$",
+      "B": "$n=\\lceil\\sqrt{d}\\rceil$",
+      "C": "$n=\\sqrt{d}+1$",
+      "D": "$n=d^{2}$"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pr_maj2010_z3_a",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Pojedyncza operacja wykonywana na stosie to:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "pobranie pierwszego od dołu elementu.",
+        "o": false
+      },
+      {
+        "t": "usunięcie pierwszego od dołu elementu.",
+        "o": false
+      },
+      {
+        "t": "pobranie pierwszego od góry elementu.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2010_z3_c",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Liczba $1000_{16}$ to:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "$34522_{5}$",
+        "o": false
+      },
+      {
+        "t": "$4096_{10}$",
+        "o": true
+      },
+      {
+        "t": "$10000_{8}$",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2010_z3_d",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Program zapobiegający włamaniom do systemu i kontrolujący pakiety sieciowe to:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "firewall",
+        "o": true
+      },
+      {
+        "t": "keylogger",
+        "o": false
+      },
+      {
+        "t": "filtr antyspamowy",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pr_maj2010_z3_e",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pr",
+    "typ": "tf",
+    "treść": "Format plików graficznych dla grafiki rastrowej to:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "BMP",
+        "o": true
+      },
+      {
+        "t": "JPG",
+        "o": true
+      },
+      {
+        "t": "GIF",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pp_maj2019_z3_1",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Formatem grafiki wektorowej jest:",
+    "img": null,
+    "warianty": {
+      "A": "PNG",
+      "B": "SVG",
+      "C": "TIFF",
+      "D": "GIF"
+    },
+    "odpowiedź": "B"
+  },
+  {
+    "id": "stara_pp_maj2019_z3_2",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Liczba $4736_{9}$ zapisana w systemie dziewiątkowym ma w systemie trójkowym postać:",
+    "img": null,
+    "warianty": {
+      "A": "$21212011_{3}$",
+      "B": "$11211020_{3}$",
+      "C": "$10201221_{3}$",
+      "D": "$112020_{3}$"
+    },
+    "odpowiedź": "B"
+  },
+  {
+    "id": "stara_pp_maj2019_z3_3",
+    "formuła": "stara",
+    "rok": 2019,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Creative Commons to:",
+    "img": null,
+    "warianty": {
+      "A": "licencja umożliwiająca autorowi dzieła określenie praw do korzystania z utworu.",
+      "B": "format zapisu plików wideo umożliwiający zapis z wysoką rozdzielczością.",
+      "C": "technologia tworzenia zaawansowanej grafiki komputerowej.",
+      "D": "gra edukacyjna dla dzieci rozwijająca kreatywne myślenie."
+    },
+    "odpowiedź": "A"
+  },
+  {
+    "id": "stara_pp_maj2018_z3_1",
+    "formuła": "stara",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Plik muzyczny zapisany bez kompresji zajmuje 24 megabajty. Jeżeli ten sam plik zostanie zapisany z kompresją bezstratną, jego wielkość wyniesie:",
+    "img": null,
+    "warianty": {
+      "A": "co najmniej 24 megabajty.",
+      "B": "dokładnie 24 megabajty.",
+      "C": "mniej niż 24 megabajty.",
+      "D": "co najwyżej 12 megabajtów."
+    },
+    "odpowiedź": "C"
+  },
+  {
+    "id": "stara_pp_maj2018_z3_2",
+    "formuła": "stara",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Zapisano bez użycia kompresji obrazek o rozmiarach 1280 na 720 pikseli z użyciem 24 bitów na kolor. Ten plik zajmuje na dysku:",
+    "img": null,
+    "warianty": {
+      "A": "921 600 bitów.",
+      "B": "2 764 800 bajtów.",
+      "C": "176 947 kilobajtów.",
+      "D": "24 megabajty."
+    },
+    "odpowiedź": "B"
+  },
+  {
+    "id": "stara_pp_maj2018_z3_3",
+    "formuła": "stara",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "$10110_{2}+111100_{2}$ jest równe:",
+    "img": null,
+    "warianty": {
+      "A": "$111110_{2}$",
+      "B": "$84_{10}$",
+      "C": "$1010010_{2}$",
+      "D": "$124_{8}$"
+    },
+    "odpowiedź": "C"
+  },
+  {
+    "id": "stara_pp_maj2018_z3_4",
+    "formuła": "stara",
+    "rok": 2018,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Poniżej zapisano adresy IPv4 dla komputerów w sieci lokalnej w systemie dziesiętnym w punktach A, B i D oraz w systemie binarnym w punkcie C. Nieprawidłowym adresem IP jest:",
+    "img": null,
+    "warianty": {
+      "A": "168.255.255.360",
+      "B": "1.0.0.1",
+      "C": "11000000.10101000.00000000.00000011",
+      "D": "13.13.13.13"
+    },
+    "odpowiedź": "A"
+  },
+  {
+    "id": "stara_pp_maj2017_z3_1",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Zapis dźwięku w postaci cyfrowej o najwyższej jakości (bez utraty informacji) umożliwia format:",
+    "img": null,
+    "warianty": {
+      "A": "MP3",
+      "B": "WMA",
+      "C": "OGG",
+      "D": "WAV"
+    },
+    "odpowiedź": "D",
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pp_maj2017_z3_2",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "W relacyjnej bazie danych dane przechowywane są w tabelach. Między tabelami można tworzyć relacje (powiązania). Aby utworzyć relację między dwiema tabelami, muszą one posiadać:",
+    "img": null,
+    "warianty": {
+      "A": "pola o takich samych typach danych, przy czym w jednej tabeli pole to musi być kluczem podstawowym.",
+      "B": "pola o takich samych nazwach i typach danych.",
+      "C": "pola o takich samych nazwach, przy czym w obydwu tabelach muszą być one kluczami podstawowymi.",
+      "D": "pola o takich samych nazwach, przy czym w jednej tabeli pole to musi być kluczem podstawowym."
+    },
+    "odpowiedź": "A"
+  },
+  {
+    "id": "stara_pp_maj2017_z3_4",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Jednostką częstotliwości taktowania procesora jest:",
+    "img": null,
+    "warianty": {
+      "A": "GB",
+      "B": "GHz",
+      "C": "Mb/s",
+      "D": "dpi"
+    },
+    "odpowiedź": "B",
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pp_maj2017_z3_5",
+    "formuła": "stara",
+    "rok": 2017,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Komórka A1 arkusza kalkulacyjnego zawiera wartość 10, a komórka B1 wartość 20. W komórce C1 umieszczono formułę =JEŻELI(A1>B1;A1*B1;A1+B1). Jaką wartość wyświetli komórka C1?",
+    "img": null,
+    "warianty": {
+      "A": "200",
+      "B": "30",
+      "C": "10",
+      "D": "20"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2016_z1_2",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "tf",
+    "treść": "Współczesne systemy operacyjne są wielozadaniowe. Wielozadaniowość polega na tym, że:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "kilka programów może być wykonywanych równocześnie przez ten sam procesor.",
+        "o": true
+      },
+      {
+        "t": "użytkownik może uruchomić wiele sesji tego samego programu.",
+        "o": true
+      },
+      {
+        "t": "procesor przełącza się bardzo szybko między wykonywanymi zadaniami.",
+        "o": true
+      },
+      {
+        "t": "każdy użytkownik systemu operacyjnego może wykonywać wiele zadań.",
+        "o": true
+      }
+    ]
+  },
+  {
+    "id": "stara_pp_maj2016_z1_3",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "tf",
+    "treść": "Liczba $1A_{(16)}$ jest równa liczbie:",
+    "img": null,
+    "zdania": [
+      {
+        "t": "$10110_{(2)}$",
+        "o": true
+      },
+      {
+        "t": "$32_{(8)}$",
+        "o": true
+      },
+      {
+        "t": "$26_{(10)}$",
+        "o": true
+      },
+      {
+        "t": "$20_{(11)}$",
+        "o": false
+      }
+    ]
+  },
+  {
+    "id": "stara_pp_maj2016_z3_1",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Serwer DNS (Domain Name System):",
+    "img": null,
+    "warianty": {
+      "A": "umożliwia pobieranie plików z serwera na dysk lokalny.",
+      "B": "odpowiedzialny jest za przesyłanie poczty elektronicznej między serwerami.",
+      "C": "odpowiedzialny jest za bezpieczne szyfrowanie połączenia.",
+      "D": "odpowiedzialny jest za tłumaczenie adresów domenowych na adresy IP i odwrotnie."
+    },
+    "odpowiedź": "D",
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pp_maj2016_z3_2",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Unicode to:",
+    "img": null,
+    "warianty": {
+      "A": "sposób kodowania znaków.",
+      "B": "protokół komunikacyjny.",
+      "C": "sposób szyfrowania danych.",
+      "D": "protokół standardowego wejścia/wyjścia."
+    },
+    "odpowiedź": "A"
+  },
+  {
+    "id": "stara_pp_maj2016_z3_3",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Programowanie polegające na określeniu i wykorzystaniu klas nazywamy programowaniem:",
+    "img": null,
+    "warianty": {
+      "A": "liniowym",
+      "B": "obiektowym",
+      "C": "strukturalnym",
+      "D": "mikroprocesorów"
+    },
+    "odpowiedź": "B"
+  },
+  {
+    "id": "stara_pp_maj2016_z3_4",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Ciąg deklaracji i instrukcji zapisany w języku programowania wysokiego poziomu nazywamy kodem:",
+    "img": null,
+    "warianty": {
+      "A": "wynikowym",
+      "B": "pośrednim",
+      "C": "źródłowym",
+      "D": "maszynowym"
+    },
+    "odpowiedź": "C"
+  },
+  {
+    "id": "stara_pp_maj2016_z3_5",
+    "formuła": "stara",
+    "rok": 2016,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Ile jest równa suma wszystkich liczb naturalnych dwucyfrowych, które są podzielne przez 10?",
+    "img": null,
+    "warianty": {
+      "A": "440",
+      "B": "450",
+      "C": "540",
+      "D": "550"
+    },
+    "odpowiedź": "B",
+    "generated": true,
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pp_maj2015_z1_1a",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "W szóstkowym systemie pozycyjnym liczby reprezentujemy za pomocą cyfr od 0 do 5. W poniższych działaniach wszystkie liczby są zapisane w systemie szóstkowym. Uzupełnij brakujący argument działania $10_{6} * \\dots = 1000_{6}$",
+    "img": null,
+    "warianty": {
+      "A": "10",
+      "B": "100",
+      "C": "1000",
+      "D": "5"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2015_z1_1b",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "W szóstkowym systemie pozycyjnym liczby reprezentujemy za pomocą cyfr od 0 do 5. W poniższych działaniach wszystkie liczby są zapisane w systemie szóstkowym. Uzupełnij brakujący argument działania $425_{6} - \\dots = 41_{6}$",
+    "img": null,
+    "warianty": {
+      "A": "344",
+      "B": "384",
+      "C": "41",
+      "D": "425"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2015_z1_1c",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "W szóstkowym systemie pozycyjnym liczby reprezentujemy za pomocą cyfr od 0 do 5. W poniższych działaniach wszystkie liczby są zapisane w systemie szóstkowym. Uzupełnij brakujący argument działania $154_{6} / \\dots = 55_{6}$",
+    "img": null,
+    "warianty": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2015_z3_1",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Jaką ostatnią cyfrę w zapisie dziesiętnym ma liczba $2^{2015}$?",
+    "img": null,
+    "warianty": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "8"
+    },
+    "odpowiedź": "D"
+  },
+  {
+    "id": "stara_pp_maj2015_z3_2",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Jaki serwer tłumaczy adres IP na adres domenowy i odwrotnie?",
+    "img": null,
+    "warianty": {
+      "A": "serwer pocztowy",
+      "B": "serwer WWW",
+      "C": "serwer FTP",
+      "D": "serwer DNS"
+    },
+    "odpowiedź": "D"
+  },
+  {
+    "id": "stara_pp_maj2015_z3_3",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Klucz podstawowy w tabeli bazy danych:",
+    "img": null,
+    "warianty": {
+      "A": "zawiera wartości wyłącznie numeryczne.",
+      "B": "umożliwia jednoznaczną identyfikację wiersza.",
+      "C": "umożliwia jednoznaczną identyfikację kolumny.",
+      "D": "nie może służyć do łączenia z inną tabelą."
+    },
+    "odpowiedź": "B"
+  },
+  {
+    "id": "stara_pp_maj2015_z3_6",
+    "formuła": "stara",
+    "rok": 2015,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Który z poniższych formatów plików nie służy do zapisywania filmów?",
+    "img": null,
+    "warianty": {
+      "A": "mov",
+      "B": "avi",
+      "C": "mp3",
+      "D": "mp4"
+    },
+    "odpowiedź": "C"
+  },
+  {
+    "id": "stara_pp_maj2014_z3_b",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Liczba binarna 10101010 to w systemie dziesiętnym:",
+    "img": null,
+    "warianty": {
+      "A": "160",
+      "B": "165",
+      "C": "170",
+      "D": "175"
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2014_z3_c",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Ujednolicony format adresowania zasobów (informacji, danych, usług) stosowany w internecie i w sieciach lokalnych to:",
+    "img": null,
+    "warianty": {
+      "A": "FTP",
+      "B": "URL",
+      "C": "URN",
+      "D": "HTTP"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2014_z3_d",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Urządzenie, które pobiera dane cyfrowe z komputera i zamienia je na sygnały analogowe przesyłane w sieci telefonicznej, to:",
+    "img": null,
+    "warianty": {
+      "A": "karta sieciowa",
+      "B": "router",
+      "C": "modem",
+      "D": "hub"
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2014_z3_e",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "W arkuszu kalkulacyjnym adres bezwzględny oznacza adres komórki zapisany w formule, który nie zmienia się przy kopiowaniu komórki zawierającej tę formułę. Przykładem takiego adresu jest:",
+    "img": null,
+    "warianty": {
+      "A": "B\\$12\\$",
+      "B": "B12",
+      "C": "\\$B\\$12",
+      "D": "\\$12B"
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2014_z3_f",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Formatami plików graficznych przechowujących grafikę rastrową są:",
+    "img": null,
+    "warianty": {
+      "A": "JPEG, GIF, BMP",
+      "B": "SVG, CDR, SWF",
+      "C": "PAS, CPP, COM",
+      "D": "PNG, SVG, TIFF"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2014_z3_g",
+    "formuła": "stara",
+    "rok": 2014,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "W arkuszu kalkulacyjnym komórka B3 zawiera liczbę 7, a komórka B4 zawiera liczbę 9. Jeśli formułę JEŻELI (B3<7; B3/2; JEŻELI (B4<>9; 3; MOD (B4; B3))) wpiszemy do komórki C3, to pojawi się tam:",
+    "img": null,
+    "warianty": {
+      "A": "4",
+      "B": "3",
+      "C": "2",
+      "D": "0"
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3a",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Kolumna w tabeli bazy danych:",
+    "img": null,
+    "warianty": {
+      "A": "zawiera dane różnych typów.",
+      "B": "zawiera dane tego samego typu.",
+      "C": "może mieć taką samą nazwę, jak inna kolumna w tej samej tabeli.",
+      "D": "musi zawierać klucz podstawowy."
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3b",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Aby zmniejszyć rozmiar przechowywanych danych, stosuje się programy do:",
+    "img": null,
+    "warianty": {
+      "A": "kompresji",
+      "B": "tworzenia kopii zapasowych.",
+      "C": "defragmentacji dysku.",
+      "D": "archiwizacji danych."
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3c",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Liczba 10101 zapisana w systemie binarnym jest:",
+    "img": null,
+    "warianty": {
+      "A": "większa od liczby 10110 zapisanej w systemie binarnym.",
+      "B": "mniejsza od liczby 20 zapisanej w systemie dziesiętnym.",
+      "C": "równa liczbie 15 zapisanej w systemie szesnastkowym.",
+      "D": "większa od liczby 11111 zapisanej w systemie binarnym."
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3d",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Jeśli w arkuszu kalkulacyjnym w komórce C1 umieścimy formułę =A1*\\$B\\$1, to po skopiowaniu jej do komórki C2 uzyskamy formułę:",
+    "img": null,
+    "warianty": {
+      "A": "=A1*\\$B\\$1",
+      "B": "=A2*\\$B\\$2",
+      "C": "=A2*\\$B\\$1",
+      "D": "=\\$A\\$1*B2"
+    },
+    "odpowiedź": "C",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3e",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Grafika wektorowa to sposób tworzenia i przechowywania w komputerze obrazów, które są reprezentowane w postaci:",
+    "img": null,
+    "warianty": {
+      "A": "zbiorów punktów jednokolorowych.",
+      "B": "opisów figur geometrycznych (odcinków, łuków, okręgów, elips ...).",
+      "C": "siatki niezależnie traktowanych pikseli.",
+      "D": "warstw kolorystycznych obrazu."
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3f",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Protokół sieciowy to:",
+    "img": null,
+    "warianty": {
+      "A": "zbiór reguł, zgodnie z którymi następuje wymiana informacji między komputerami w sieci.",
+      "B": "polecenie, które wysyła pakiet informacji do dowolnego komputera w sieci z żądaniem potwierdzenia otrzymania informacji.",
+      "C": "sterownik, który musi być zainstalowany, aby była możliwa wymiana informacji z innymi komputerami w sieci.",
+      "D": "program służący do bezpiecznego przeglądania stron WWW."
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2011_z3g",
+    "formuła": "stara",
+    "rok": 2011,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Programy komputerowe rozpowszechniane bez opłat do wypróbowania przez użytkowników, mające często ograniczenia czasowe, limit uruchomień lub blokadę dostępu do niektórych funkcji, mają licencję:",
+    "img": null,
+    "warianty": {
+      "A": "freeware",
+      "B": "komercyjną",
+      "C": "shareware",
+      "D": "GNU GPL"
+    },
+    "odpowiedź": "C",
+    "generated": true,
+    "source": "autorskie - w stylu CKE"
+  },
+  {
+    "id": "stara_pp_maj2010_z2a",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Liczba 15(10) zapisana w systemie dwójkowym ma postać:",
+    "img": null,
+    "warianty": {
+      "A": "1111(2)",
+      "B": "1001(2)",
+      "C": "111(2)",
+      "D": "1010(2)"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2010_z2b",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Liczba 101(2) zapisana w systemie dziesiętnym ma postać:",
+    "img": null,
+    "warianty": {
+      "A": "3(10)",
+      "B": "5(10)",
+      "C": "6(10)",
+      "D": "10(10)"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2010_z2c",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Prędkość przesyłu danych 1 Mb/s (megabit na sekundę) to:",
+    "img": null,
+    "warianty": {
+      "A": "1024 b/s",
+      "B": "1024 kb/s",
+      "C": "8 MB/s",
+      "D": "1000 kb/s"
+    },
+    "odpowiedź": "B",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2010_z2d",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Pamięć o pojemności 1 GB (gigabajt) to:",
+    "img": null,
+    "warianty": {
+      "A": "1024 MB",
+      "B": "1000 MB",
+      "C": "1024 kB",
+      "D": "8192 Mb"
+    },
+    "odpowiedź": "A",
+    "generated": true
+  },
+  {
+    "id": "stara_pp_maj2010_z3d",
+    "formuła": "stara",
+    "rok": 2010,
+    "sesja": "maj",
+    "poziom": "pp",
+    "typ": "abcd",
+    "treść": "Co nie dotyczy charakterystyki dysku twardego?",
+    "img": null,
+    "warianty": {
+      "A": "Pojemność liczona np. w GB.",
+      "B": "Czas zapisu i odczytu 1 kB danych liczony w cyklach rozkazowych procesora.",
+      "C": "Liczba obrotów talerzy dysku na minutę (obr/min).",
+      "D": "Średni czas dostępu do danych."
+    },
+    "odpowiedź": "B"
+  }
+]

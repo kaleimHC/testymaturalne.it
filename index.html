@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- 'unsafe-inline' required: router uses inline <script> block and style attrs on parallax tiles -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';">
+<title>Testy maturalne z informatyki — wybór stylu arkusza</title>
+<meta name="description" content="Aplikacja do nauki teorii na maturę z informatyki. 95 pytań ABCD i Prawda/Fałsz z arkuszy CKE 2010–2025. Trzy warianty stylu: estetyczny, klasyczny, egzaminacyjny.">
+<meta name="theme-color" content="#0c0c0e">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/mode-premium.png">
+<link rel="prefetch" href="estetyczny/">
+<link rel="prefetch" href="klasyczny/">
+<link rel="prefetch" href="egzaminacyjny/">
+<meta property="og:title" content="Testy maturalne z informatyki">
+<meta property="og:description" content="95 pytań ABCD i Prawda/Fałsz z arkuszy CKE 2010–2025. Trzy warianty stylu arkusza. Zero instalacji.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #0c0c0e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #f3f3f3;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 44px;
+    pointer-events: none;
+  }
+  .topbar .brand {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #f3f3f3;
+  }
+  .topbar .meta {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: rgba(243,243,243,0.55);
+    text-transform: uppercase;
+  }
+  .topbar .meta .dot {
+    display: inline-block;
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+
+  .stage {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    perspective: 1600px;
+    perspective-origin: 50% 45%;
+    background: #0c0c0e;
+  }
+
+  @media (max-width: 540px) {
+    .stage { flex-direction: column; }
+    .panel {
+      width: 100% !important;
+      height: var(--h, 33.3333%) !important;
+      transition:
+        height 520ms cubic-bezier(.22,.61,.36,1),
+        transform 280ms ease-out !important;
+      will-change: height, transform;
+    }
+    .panel + .panel::after {
+      top: 0; left: 12%; right: 12%; bottom: auto;
+      width: auto; height: 1px;
+      background: linear-gradient(to right,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.10) 30%,
+        rgba(255,255,255,0.10) 70%,
+        rgba(255,255,255,0) 100%);
+    }
+  }
+
+  .panel {
+    position: relative;
+    width: var(--w, 33.3333%);
+    flex: 0 0 auto;
+    height: 100vh;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0c0c0e;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition:
+      width 520ms cubic-bezier(.22,.61,.36,1),
+      transform 280ms ease-out;
+    will-change: width, transform;
+    isolation: isolate;
+    text-decoration: none;
+    color: inherit;
+  }
+  .panel + .panel::after {
+    content: "";
+    position: absolute;
+    top: 12%; bottom: 12%; left: 0;
+    width: 1px;
+    background: linear-gradient(to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.10) 30%,
+      rgba(255,255,255,0.10) 70%,
+      rgba(255,255,255,0) 100%);
+    z-index: 12;
+    pointer-events: none;
+  }
+
+  .panel .stagebox {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    bottom: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: filter 400ms ease;
+  }
+
+  .panel .bg {
+    position: relative;
+    width: calc(100% - 56px);
+    max-width: 720px;
+    aspect-ratio: 1000 / 720;
+    max-height: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.06) inset,
+      0 30px 80px -20px rgba(0,0,0,0.8),
+      0 12px 30px -10px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(255,255,255,0.08);
+    transition:
+      transform 320ms ease-out,
+      box-shadow 400ms ease,
+      filter 400ms ease;
+    will-change: transform;
+    filter: brightness(0.78) saturate(0.92);
+  }
+  .panel:hover .bg {
+    filter: brightness(1) saturate(1);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.08) inset,
+      0 50px 120px -25px rgba(0,0,0,0.9),
+      0 18px 50px -10px rgba(0,0,0,0.7),
+      0 0 0 1px rgba(255,255,255,0.12);
+  }
+
+  .stage:hover .panel:not(:hover) .bg {
+    filter: brightness(0.55) saturate(0.85);
+  }
+  .stage:hover .panel:not(:hover) .label .title {
+    color: rgba(255,255,255,0.55);
+  }
+  .stage:hover .panel:not(:hover) .label .subtitle {
+    color: rgba(255,255,255,0.30);
+  }
+  .stage:hover .panel:not(:hover) .glow { opacity: 0.25; }
+
+  .label .title, .label .subtitle { transition: color 400ms ease; }
+
+  .panel-1 .bg { background-image: url("assets/mode-premium.png"); }
+  .panel-2 .bg { background-image: url("assets/mode-classic.png"); }
+  .panel-3 .bg { background-image: url("assets/mode-school.png"); }
+
+  .panel .glow {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.55;
+    transition: opacity 400ms ease;
+    background: radial-gradient(60% 50% at 50% 35%, var(--accent, #fff) 0%, rgba(0,0,0,0) 70%);
+    mix-blend-mode: screen;
+    filter: blur(40px);
+  }
+  .panel-1 { --accent: #c9a86a; }
+  .panel-2 { --accent: #8a8a8a; }
+  .panel-3 { --accent: #a16fcc; }
+  .panel:hover .glow { opacity: 0.85; }
+
+  .label {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 130px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    background: linear-gradient(to top,
+      rgba(12,12,14,1) 0%,
+      rgba(12,12,14,0.95) 60%,
+      rgba(12,12,14,0) 100%);
+  }
+  .label .row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    position: relative;
+  }
+  .label .num {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.2em;
+  }
+  .label .title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    color: #fff;
+    letter-spacing: -0.005em;
+  }
+  .label .subtitle {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  .cta {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 22px;
+    border: 1px solid rgba(255,255,255,0.85);
+    background: transparent;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition:
+      background 220ms ease,
+      color 220ms ease,
+      border-color 220ms ease,
+      opacity 240ms ease,
+      transform 280ms ease;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .panel:hover .cta {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+    transition-delay: 100ms;
+    pointer-events: auto;
+  }
+  .cta .arrow { transition: transform 220ms ease; display: inline-block; }
+  .cta:hover { background: #fff; color: #111; border-color: #fff; }
+  .cta:hover .arrow { transform: translateX(4px); }
+
+  .panel.is-clicked .bg {
+    transform: translateY(2px) scale(0.995);
+    transition: transform 120ms ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .panel, .bg, .cta, .glow { transition: none !important; }
+  }
+
+  @media (max-width: 540px) {
+    body { display: flex; flex-direction: column; height: 100vh; height: 100svh; }
+    .topbar {
+      position: relative;
+      flex: 0 0 auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+      padding: 10px 20px;
+      background: #0c0c0e;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .topbar .meta { font-size: 9px; letter-spacing: 0.18em; opacity: 0.6; }
+    .topbar .meta .dot { margin: 0 6px; }
+    .topbar .brand { font-size: 11px; letter-spacing: 0.24em; }
+    .stage { flex: 1 1 0%; min-height: 0; overflow: hidden; }
+    .panel .stagebox { display: none; }
+    .panel .glow {
+      background: radial-gradient(70% 70% at 80% 50%, var(--accent, #fff) 0%, rgba(0,0,0,0) 75%);
+      opacity: 0.35;
+    }
+    .panel:hover .glow { opacity: 0.6; }
+    .label {
+      top: 0; bottom: 0; left: 0; right: 0;
+      width: auto; height: auto;
+      padding: 0 26px;
+      align-items: center;
+      background: none;
+    }
+    .label .row { gap: 8px; width: 100%; position: relative; }
+    .label .num { font-size: 10px; letter-spacing: 0.3em; color: rgba(255,255,255,0.4); }
+    .label .title { font-size: 22px; line-height: 1.05; }
+    .label .subtitle { font-size: 10px; letter-spacing: 0.2em; margin-top: 2px; }
+    .cta {
+      position: absolute; right: 0; top: 50%;
+      transform: translateY(-50%) translateX(8px);
+      margin: 0; padding: 9px 16px; font-size: 11px; align-self: auto;
+    }
+    .panel:hover .cta { transform: translateY(-50%) translateX(0); }
+  }
+  @media (max-width: 350px) { .cta { display: none !important; } }
+
+  .stage { animation: stageIn 320ms cubic-bezier(.22,.61,.36,1) both; }
+  @keyframes stageIn { from { opacity: 0; } to { opacity: 1; } }
+  .topbar { animation: stageIn 400ms cubic-bezier(.22,.61,.36,1) both; }
+  @media (prefers-reduced-motion: reduce) {
+    .stage, .topbar { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">Wybierz styl arkusza</div>
+    <div class="meta">
+      Informatyka <span class="dot">·</span> <span style="white-space:nowrap">95 pytań</span>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+
+    <a class="panel panel-1" href="estetyczny/">
+      <div class="glow"></div>
+      <div class="stagebox"><div class="bg"></div></div>
+      <div class="label">
+        <div class="row">
+          <div class="num">- 01</div>
+          <h2 class="title">Estetyczny</h2>
+          <div class="subtitle">Oprawa miła dla oka</div>
+        </div>
+      </div>
+    </a>
+
+    <a class="panel panel-2" href="klasyczny/">
+      <div class="glow"></div>
+      <div class="stagebox"><div class="bg"></div></div>
+      <div class="label">
+        <div class="row">
+          <div class="num">- 02</div>
+          <h2 class="title">Klasyczny</h2>
+          <div class="subtitle">Skupienie na treści</div>
+        </div>
+      </div>
+    </a>
+
+    <a class="panel panel-3" href="egzaminacyjny/">
+      <div class="glow"></div>
+      <div class="stagebox"><div class="bg"></div></div>
+      <div class="label">
+        <div class="row">
+          <div class="num">- 03</div>
+          <h2 class="title">Egzaminacyjny</h2>
+          <div class="subtitle">Styl arkusza maturalnego</div>
+        </div>
+      </div>
+    </a>
+
+  </main>
+
+<script>
+(function () {
+  'use strict';
+
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+  var stage = document.getElementById('stage');
+  var focusIndex = -1;
+
+  var W_REST     = 33.3333;
+  var W_ACTIVE   = 56;
+  var W_INACTIVE = 22;
+
+  function setLayout(activeIdx) {
+    var mobile = window.matchMedia('(max-width: 540px)').matches;
+    var prop  = mobile ? '--h' : '--w';
+    var clear = mobile ? '--w' : '--h';
+    panels.forEach(function (p, i) {
+      var w = activeIdx < 0 ? W_REST : (i === activeIdx ? W_ACTIVE : W_INACTIVE);
+      p.style.setProperty(prop, w + '%');
+      p.style.removeProperty(clear);
+    });
+    focusIndex = activeIdx;
+  }
+
+  setLayout(-1);
+  window.addEventListener('resize', function () { setLayout(focusIndex); });
+
+  panels.forEach(function (panel, idx) {
+    var bg = panel.querySelector('.bg');
+    var rafId = 0, pendingX = 0, pendingY = 0;
+
+    function apply() {
+      rafId = 0;
+      bg.style.transform = 'translate(' + (pendingX * 5) + 'px,' + (pendingY * 5) + 'px)';
+      panel.style.transform =
+        'rotateY(' + (pendingX * 1.5).toFixed(2) + 'deg) ' +
+        'rotateX(' + (-pendingY * 1).toFixed(2) + 'deg)';
+    }
+
+    panel.addEventListener('mouseenter', function () { setLayout(idx); });
+
+    panel.addEventListener('mousemove', function (e) {
+      var r  = panel.getBoundingClientRect();
+      pendingX = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width)  * 2 - 1));
+      pendingY = Math.max(-1, Math.min(1, ((e.clientY - r.top)  / r.height) * 2 - 1));
+      if (!rafId) rafId = requestAnimationFrame(apply);
+    });
+
+    panel.addEventListener('mouseleave', function () {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+      pendingX = 0; pendingY = 0;
+      bg.style.transform   = '';
+      panel.style.transform = '';
+    });
+
+    panel.addEventListener('click', function (e) {
+      e.preventDefault();
+      var href = panel.getAttribute('href');
+      panel.classList.add('is-clicked');
+      setTimeout(function () {
+        window.location.href = href;
+      }, 160);
+    });
+  });
+
+  stage.addEventListener('mouseleave', function () { setLayout(-1); });
+})();
+</script>
+</body>
+</html>

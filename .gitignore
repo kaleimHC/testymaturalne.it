@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+node_modules/
+EDU_backup_*
+.idea/
+.vscode/settings.json
+.claude/

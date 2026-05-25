@@ -1,0 +1,489 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ZMIENNE: paleta wariantu Egzaminacyjnego (Charcoal grey)
+
+   :root = jasny motyw (default). body.dark = ciemny.
+   Konwencja: --bg-* tła · --color-* tekst · --border-* ramki
+              --btn-* przyciski · --tile-* kafelki summary.
+   ═════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:           #ffffff;
+  --bg-hover:          #f5f5f5;
+  --bg-accent:         #f0f0f0;
+  --bg-numer:          #f9f9f9;
+  --bg-header-task:    #c9a0dc;
+  --color-ink:         #0a0a0a;
+  --color-muted:       #555555;
+  --color-dim:         #757575;
+  --color-numer:       #555555;
+  --border-main:       #0a0a0a;
+  --border-light:      #cccccc;
+  --border-circle:     #555555;
+  --circle-chosen-bg:  #0a0a0a;
+  --choice-picked-bg:  #cccccc;
+  --bg-correct:        #d4edda;
+  --color-correct:     #28a745;
+  --bg-incorrect:      #f8d7da;
+  --color-incorrect:   #dc3545;
+  --tile-correct:      #28a745;
+  --tile-incorrect:    #dc3545;
+  --tile-text:         #ffffff;
+  --btn-primary-bg:    #0a0a0a;
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover: #333333;
+  --btn-check-bg:      #ffffff;
+  --btn-check-color:   #0a0a0a;
+  --btn-check-hover:   #f5f5f5;
+  --overlay-bg:        rgba(0,0,0,0.4);
+}
+
+body.dark {
+  --bg-page:           #1a1a1a;
+  --bg-hover:          #242424;
+  --bg-accent:         #2e2e2e;
+  --bg-numer:          #222222;
+  --bg-header-task:    #3d2f4d;
+  --color-ink:         #d0d0d0;
+  --color-muted:       #888888;
+  --color-dim:         #888888;
+  --color-numer:       #707070;
+  --border-main:       #3a3a3a;
+  --border-light:      #2e2e2e;
+  --border-circle:     #666666;
+  --circle-chosen-bg:  #d0d0d0;
+  --choice-picked-bg:  #3d3d3d;
+  --bg-correct:        #0d2217;
+  --color-correct:     #28a745;
+  --bg-incorrect:      #22080a;
+  --color-incorrect:   #dc3545;
+  --tile-correct:      #28a745;
+  --tile-incorrect:    #dc3545;
+  --tile-text:         #ffffff;
+  --btn-primary-bg:    #d0d0d0;
+  --btn-primary-color: #1a1a1a;
+  --btn-primary-hover: #aaaaaa;
+  --btn-check-bg:      #2e2e2e;
+  --btn-check-color:   #d0d0d0;
+  --btn-check-hover:   #3a3a3a;
+  --overlay-bg:        rgba(0,0,0,0.7);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESET: box-sizing, focus-visible, html/body baseline
+
+   Focus ring tylko dla keyboard nav (focus-visible, nie focus).
+   ═════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+button:focus-visible,
+.variant:focus-visible,
+.tf-cell:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background: var(--bg-page);
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-page);
+  min-height: 100vh;
+}
+
+/* Programowy focus po swapContent() (aria-live announce) nie
+   powinien rysować outline: #app nie jest celem keyboard nav. */
+#app:focus { outline: none; }
+
+.site-link { text-decoration: none; color: inherit; }
+.site-link:hover { text-decoration: underline; }
+
+.lbl-short { display: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOP BAR: nagłówek z licznikiem pytania i timerem (timer dekoracyjny)
+   ───────────────────────────────────────────────────────────────────── */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.top-info {
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.top-prog {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.top-time {
+  font-size: 12px;
+  color: var(--color-dim);
+  font-weight: normal;
+  text-align: right;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TASK LABEL: "Zadanie X: poziom / sesja / rok"; fioletowe tło w jasnym
+   ───────────────────────────────────────────────────────────────────── */
+.task-label {
+  background: var(--bg-header-task);
+  border: 1px solid var(--border-main);
+  padding: 8px 14px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: var(--color-ink);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   QUESTION BODY: treść pytania (bez obramowania: inaczej niż A/B)
+   ───────────────────────────────────────────────────────────────────── */
+.question-body {
+  padding: 0 0 16px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.question-body p + p { margin-top: 10px; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   T/F TABLE: tabela Prawda/Fałsz: zdania + kółka P/F
+
+   .tf-circle: klikalne kółko. Po kliknięciu: .chosen → wypełnia się.
+   Po Sprawdź: row-correct/row-incorrect na <tr>.
+   ═════════════════════════════════════════════════════════════════════ */
+.tf-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.tf-table th,
+.tf-table td {
+  border: 1px solid var(--border-main);
+  padding: 10px 14px;
+  vertical-align: middle;
+  transition: background 350ms ease-out;
+}
+
+.tf-table th {
+  background: var(--bg-hover);
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tf-table th.tf-col {
+  background: var(--bg-accent);
+  color: var(--color-ink);
+  width: 52px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.tf-table .num-cell {
+  width: 40px;
+  text-align: center;
+  background: var(--bg-numer);
+  font-weight: bold;
+  color: var(--color-numer);
+  font-size: 14px;
+}
+
+.tf-table .tf-cell {
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  user-select: none;
+  transition: background 350ms ease-out, color 350ms ease-out;
+}
+
+.tf-table .tf-cell:hover:not(.locked) { background: var(--bg-accent); }
+.tf-table .tf-cell.locked { cursor: default; }
+
+.tf-circle {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border-circle);
+  border-radius: 50%;
+  transition: background 350ms ease-out, border-color 350ms ease-out;
+  vertical-align: middle;
+}
+
+.tf-table .tf-cell.chosen             { background: var(--choice-picked-bg); }
+.tf-table .tf-cell.chosen .tf-circle  { background: var(--circle-chosen-bg); border-color: var(--circle-chosen-bg); }
+
+tr.row-correct td:not(.tf-cell)   { background: var(--bg-correct); }
+tr.row-incorrect td:not(.tf-cell) { background: var(--bg-incorrect); }
+
+tr.row-incorrect .tf-cell.chosen { background: transparent; }
+/* ═══════════════════════════════════════════════════════════════════════
+   ABCD VARIANTS: warianty odpowiedzi A/B/C/D
+
+   .variant: klikalna belka. Po kliknięciu: .locked + .correct/.incorrect.
+   ═════════════════════════════════════════════════════════════════════ */
+.variants {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-main);
+  cursor: pointer;
+  font-size: 15px;
+  background: var(--bg-page);
+  transition: background 100ms;
+}
+
+.variant:hover:not(.locked) { background: var(--bg-hover); }
+.variant .variant-key { font-weight: bold; width: 22px; flex-shrink: 0; }
+.variant.selected  { background: var(--bg-accent); border-color: var(--color-muted); }
+.variant.correct   { background: var(--bg-correct); border-color: var(--color-correct); }
+.variant.incorrect { background: var(--bg-incorrect); border-color: var(--color-incorrect); }
+.variant.locked    { pointer-events: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   ACTIONS: przyciski Sprawdź / Następne (grid 50/50 lub single)
+   ───────────────────────────────────────────────────────────────────── */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.actions.single { grid-template-columns: 1fr; }
+
+.btn-check,
+.btn-next {
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: opacity 150ms, background 100ms;
+  border: 1px solid var(--border-main);
+}
+
+.btn-check { background: var(--btn-check-bg);   color: var(--btn-check-color); }
+.btn-next  { background: var(--btn-primary-bg);  color: var(--btn-primary-color); border-color: var(--btn-primary-bg); }
+
+.btn-check:disabled,
+.btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.btn-check:hover:not(:disabled) { background: var(--btn-check-hover); }
+.btn-next:hover:not(:disabled)  { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   SUMMARY: ekran końcowy: wynik + siatka kafelków
+   ───────────────────────────────────────────────────────────────────── */
+.summary { text-align: center; padding-top: 20px; }
+.summary h2 { font-size: 24px; margin-bottom: 8px; }
+.summary .summary-stats { font-size: 18px; margin-bottom: 24px; color: var(--color-dim); }
+
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.summary-tile {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--tile-text);
+  cursor: pointer;
+}
+
+.tile-correct   { background: var(--tile-correct); }
+.tile-incorrect { background: var(--tile-incorrect); }
+
+.btn-restart {
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 15px;
+  font-weight: bold;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-restart:hover { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   RESUME DIALOG: modal "kontynuować zapisaną sesję?"
+   ───────────────────────────────────────────────────────────────────── */
+.dialog-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay-bg);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+
+.dialog-box {
+  background: var(--bg-page);
+  border: 1px solid var(--border-main);
+  padding: 32px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.dialog-box p { font-size: 16px; margin-bottom: 20px; }
+.dialog-buttons  { display: flex; gap: 12px; justify-content: center; }
+
+.dialog-buttons button {
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid var(--border-main);
+  background: var(--btn-check-bg);
+  color: var(--btn-check-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dialog-buttons button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-color: var(--btn-primary-bg);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   CKE FOOTER: stopka z napisem + przełącznik motywu na mobile
+   ───────────────────────────────────────────────────────────────────── */
+.cke-footer {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+  font-size: 12px;
+  color: var(--color-dim);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.foot-theme {
+  display: none;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--color-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+}
+.foot-theme span { cursor: pointer; }
+body:not(.dark) .foot-jasny { font-weight: 700; color: var(--color-ink); }
+body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RICH TEXT BLOCKS: .code-block, .q-center, .q-table (wyniki renderText)
+
+   .code-block: pre z monospace, szare tło: SQL/kod z pytań.
+   .q-table: tabele z JSON (pipe-tables): lżejszy border niż .tf-table.
+   ═════════════════════════════════════════════════════════════════════ */
+
+.code-block {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-light);
+  padding: 12px 16px;
+  margin: 10px 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.q-center { text-align: center; margin: 10px 0; }
+
+.q-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.q-table th, .q-table td {
+  border: 1px solid var(--border-main);
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.q-table th {
+  background: var(--bg-hover);
+  font-weight: bold;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOGGLE: pływający przycisk dark/light (desktop); na mobile schowany
+   ───────────────────────────────────────────────────────────────────── */
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  z-index: 200;
+  line-height: 1;
+  transition: opacity 200ms;
+}
+#themeToggle:hover { opacity: 0.5; }
+
+@media (max-width: 540px) {
+  .lbl-long     { display: none; }
+  .lbl-short    { display: inline; }
+  #themeToggle  { display: none; }
+  .foot-theme   { display: block; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   PAGE TRANSITIONS: pgIn/pgOut fade; wyłączone przy prefers-reduced-motion
+   ───────────────────────────────────────────────────────────────────── */
+body { animation: pgIn 260ms ease both; }
+@keyframes pgIn  { from { opacity: 0; } to { opacity: 1; } }
+body.pg-out { animation: pgOut 200ms ease forwards !important; }
+@keyframes pgOut { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  body, body.pg-out { animation: none !important; }
+}

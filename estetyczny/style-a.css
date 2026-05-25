@@ -1,0 +1,475 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ZMIENNE: paleta wariantu Estetycznego (Gruvbox)
+
+   :root = jasny motyw (default). body.dark = ciemny.
+   Konwencja: --bg-* tła · --color-* tekst · --border-* ramki
+              --btn-* przyciski · --tile-* kafelki summary.
+   ═════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:              #f5f0e8;
+  --bg-sheet:             #fdfcf8;
+  --bg-hover:             #f0ece0;
+  --color-ink:            #0a0a0a;
+  --color-muted:          #666666;
+  --color-dim:            #6a6a6a;
+  --color-selected-border:#555555;
+  --border-main:          #0a0a0a;
+  --border-light:         #cccccc;
+  --bg-correct:           #eef5ec;
+  --color-correct:        #2e7d32;
+  --bg-incorrect:         #f7eceb;
+  --color-incorrect:      #c62828;
+  --tile-correct:         #2e7d32;
+  --tile-incorrect:       #c62828;
+  --tile-text:            #ffffff;
+  --btn-primary-bg:       #0a0a0a;
+  --btn-primary-color:    #fdfcf8;
+  --btn-primary-hover:    #333333;
+  --btn-secondary-bg:     #fdfcf8;
+  --btn-secondary-border: #0a0a0a;
+  --btn-secondary-hover:  #f0ece0;
+  --circle-chosen-bg:     #0a0a0a;
+  --overlay-bg:           rgba(0,0,0,0.45);
+}
+
+body.dark {
+  --bg-page:              #282828;
+  --bg-sheet:             #32302f;
+  --bg-hover:             #3c3836;
+  --color-ink:            #ebdbb2;
+  --color-muted:          #a89984;
+  --color-dim:            #a89984;
+  --color-selected-border:#665c54;
+  --border-main:          #504945;
+  --border-light:         #3c3836;
+  --bg-correct:           rgba(140,187,38,0.15);
+  --color-correct:        #8cbb26;
+  --bg-incorrect:         rgba(251,73,52,0.15);
+  --color-incorrect:      #fb4934;
+  --tile-correct:         #8cbb26;
+  --tile-incorrect:       #fb4934;
+  --tile-text:            #1d2021;
+  --btn-primary-bg:       #d79921;
+  --btn-primary-color:    #1d2021;
+  --btn-primary-hover:    #b57614;
+  --btn-secondary-bg:     #32302f;
+  --btn-secondary-border: #504945;
+  --btn-secondary-hover:  #3c3836;
+  --circle-chosen-bg:     #ebdbb2;
+  --overlay-bg:           rgba(0,0,0,0.7);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESET: box-sizing, focus-visible, html/body baseline
+
+   Focus ring tylko dla keyboard nav (focus-visible, nie focus).
+   Tinos z Google Fonts: legalny zamiennik Times New Roman (SIL OFL).
+   ═════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+button:focus-visible,
+.variant:focus-visible,
+.tf-cell:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+html, body {
+  min-height: 100vh;
+  background: var(--bg-page);
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+#app:focus { outline: none; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SHEET: obramowana "kartka" z pytaniem, specyficzna dla wariantu A
+
+   Warianty B i C nie mają .sheet: tylko A symuluje papier egzaminacyjny.
+   #app:focus outline none: programowy focus po swapContent nie rysuje ramy.
+   ═════════════════════════════════════════════════════════════════════ */
+.sheet {
+  background: var(--bg-sheet);
+  border: 1.5px solid var(--border-main);
+  padding: 32px 36px;
+}
+
+.site-link { text-decoration: none; color: inherit; }
+.site-link:hover { text-decoration: underline; }
+
+.lbl-short { display: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOP BAR: nagłówek z linkiem, numerem pytania i timerem (timer dekoracyjny)
+   ───────────────────────────────────────────────────────────────────── */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--border-main);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.top-info {
+  font-size: 11px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.top-prog {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.top-time {
+  font-size: 11px;
+  color: var(--color-muted);
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TASK LABEL: "Zadanie X: poziom / sesja / rok"
+   ───────────────────────────────────────────────────────────────────── */
+.task-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   QUESTION BODY: ramka z treścią pytania + style dla .code-block i .q-table
+
+   .code-block: pre z monospace, szare tło: wyniki renderText dla SQL/kodu.
+   .q-table: tabele z JSON (pipe-tables): lżejszy border niż .tf-table.
+   ═════════════════════════════════════════════════════════════════════ */
+.question-body {
+  position: relative;
+  border: 1.5px solid var(--border-main);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  background: var(--bg-sheet);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+
+.code-block {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-light);
+  padding: 12px 16px;
+  margin: 10px 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.q-center { text-align: center; margin: 10px 0; }
+
+.q-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.q-table th, .q-table td {
+  border: 1.5px solid var(--border-main);
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.q-table th {
+  background: var(--bg-hover);
+  font-weight: 700;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   T/F TABLE: tabela Prawda/Fałsz: zdania + kółka P/F
+
+   .tf-circle: klikalne kółko. Po kliknięciu: .chosen → wypełnia się.
+   Po Sprawdź: row-correct/row-incorrect + circle w kolorze akcentu.
+   ═════════════════════════════════════════════════════════════════════ */
+.tf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.tf-table th, .tf-table td {
+  border: 1.5px solid var(--border-main);
+  padding: 10px 14px;
+  vertical-align: middle;
+}
+
+.tf-table thead th {
+  background: var(--bg-hover);
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+.tf-table thead th:first-child { text-align: left; }
+
+.tf-col { width: 60px; text-align: center; }
+
+.tf-table .tf-cell {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 100ms;
+}
+
+.tf-table .tf-cell:hover:not(.locked) { background: var(--bg-hover); }
+.tf-table .tf-cell.locked { cursor: default; }
+
+.tf-circle {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border-main);
+  border-radius: 50%;
+  transition: background 120ms, border-color 120ms;
+  vertical-align: middle;
+}
+
+.tf-table .tf-cell.chosen .tf-circle { background: var(--circle-chosen-bg); }
+
+tr.row-correct td                             { background: var(--bg-correct); }
+tr.row-correct .tf-cell.chosen .tf-circle     { background: var(--color-correct); border-color: var(--color-correct); }
+tr.row-incorrect td                           { background: var(--bg-incorrect); }
+tr.row-incorrect .tf-cell.chosen .tf-circle   { background: var(--color-incorrect); border-color: var(--color-incorrect); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ABCD VARIANTS: warianty odpowiedzi A/B/C/D
+
+   .variant: klikalna belka. Po kliknięciu: .locked (pointer-events none)
+   + .correct albo .incorrect na wybranym wariancie.
+   ═════════════════════════════════════════════════════════════════════ */
+.variants { margin-bottom: 24px; }
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border: 1.5px solid var(--border-main);
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  background: var(--bg-sheet);
+  transition: background 120ms;
+}
+
+.variant:hover:not(.locked) { background: var(--bg-hover); }
+.variant-key { font-weight: 700; width: 24px; flex-shrink: 0; }
+.variant.selected  { background: var(--bg-hover); border-color: var(--color-selected-border); }
+.variant.correct   { background: var(--bg-correct); border-color: var(--color-correct); }
+.variant.incorrect { background: var(--bg-incorrect); border-color: var(--color-incorrect); }
+.variant.locked    { pointer-events: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   ACTIONS: przyciski Sprawdź / Następne (grid 2-kolumnowy lub 1)
+   ───────────────────────────────────────────────────────────────────── */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.actions.single { grid-template-columns: 1fr; }
+
+.btn-check,
+.btn-next {
+  padding: 14px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid var(--btn-secondary-border);
+  transition: opacity 150ms, background 120ms;
+}
+
+.btn-check { background: var(--btn-secondary-bg); color: var(--color-ink); }
+.btn-next  { background: var(--btn-primary-bg);   color: var(--btn-primary-color); border-color: var(--btn-primary-bg); }
+
+.btn-check:disabled,
+.btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.btn-check:hover:not(:disabled) { background: var(--btn-secondary-hover); }
+.btn-next:hover:not(:disabled)  { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   CKE FOOTER: stopka z napisem + przełącznik motywu na mobile
+   ───────────────────────────────────────────────────────────────────── */
+.cke-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-main);
+  padding-top: 10px;
+  font-size: 11px;
+  color: var(--color-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.foot-theme {
+  display: none;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--color-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+}
+.foot-theme span { cursor: pointer; }
+body:not(.dark) .foot-jasny { font-weight: 700; color: var(--color-ink); }
+body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   SUMMARY: ekran końcowy: wynik + siatka kafelków
+   ───────────────────────────────────────────────────────────────────── */
+.summary {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.summary h2 { font-size: 28px; margin-bottom: 10px; }
+.summary-stats { font-size: 20px; margin-bottom: 32px; color: var(--color-muted); }
+
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.summary-tile {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tile-text);
+  cursor: pointer;
+}
+
+.tile-correct   { background: var(--tile-correct); }
+.tile-incorrect { background: var(--tile-incorrect); }
+
+.btn-restart {
+  display: inline-block;
+  padding: 14px 40px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--btn-primary-color);
+  background: var(--btn-primary-bg);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-restart:hover { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   RESUME DIALOG: modal "kontynuować zapisaną sesję?"
+   ───────────────────────────────────────────────────────────────────── */
+.dialog-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay-bg);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+
+.dialog-box {
+  background: var(--bg-sheet);
+  border: 2px solid var(--border-main);
+  padding: 36px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.dialog-box p { font-size: 18px; margin-bottom: 24px; }
+
+.dialog-buttons { display: flex; gap: 12px; justify-content: center; }
+
+.dialog-buttons button {
+  padding: 12px 28px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--btn-secondary-border);
+  background: var(--btn-secondary-bg);
+  color: var(--color-ink);
+}
+
+.dialog-buttons button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-color: var(--btn-primary-bg);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOGGLE: pływający przycisk dark/light (desktop); na mobile schowany
+   ───────────────────────────────────────────────────────────────────── */
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  z-index: 200;
+  line-height: 1;
+  transition: opacity 200ms;
+}
+#themeToggle:hover { opacity: 0.5; }
+
+@media (max-width: 540px) {
+  .lbl-long     { display: none; }
+  .lbl-short    { display: inline; }
+  #themeToggle  { display: none; }
+  .foot-theme   { display: block; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   PAGE TRANSITIONS: pgIn/pgOut fade; wyłączone przy prefers-reduced-motion
+   ───────────────────────────────────────────────────────────────────── */
+body { animation: pgIn 260ms ease both; }
+@keyframes pgIn  { from { opacity: 0; } to { opacity: 1; } }
+body.pg-out { animation: pgOut 200ms ease forwards !important; }
+@keyframes pgOut { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  body, body.pg-out { animation: none !important; }
+}

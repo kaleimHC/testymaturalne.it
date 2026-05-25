@@ -1,0 +1,482 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ZMIENNE: paleta wariantu Klasycznego (Terminal green)
+
+   :root = jasny motyw (default). body.dark = ciemny.
+   Konwencja: --bg-* tła · --color-* tekst · --border-* ramki
+              --btn-* przyciski · --tile-* kafelki summary.
+   ═════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-page:           #f5f5f5;
+  --bg-card:           #ffffff;
+  --bg-hover:          #fafafa;
+  --bg-accent:         #f0f0f0;
+  --bg-selected:       #eeeeee;
+  --color-ink:         #1a1a1a;
+  --color-muted:       #666666;
+  --color-dim:         #6b6b6b;
+  --border-main:       #000000;
+  --border-light:      #cccccc;
+  --border-mid:        #333333;
+  --border-hover:      #666666;
+  --circle-border:     #000000;
+  --circle-chosen-bg:  #000000;
+  --bg-correct:        #e8f5e9;
+  --color-correct:     #2e7d32;
+  --bg-incorrect:      #ffebee;
+  --color-incorrect:   #c62828;
+  --tile-correct:      #2e7d32;
+  --tile-incorrect:    #c62828;
+  --tile-text:         #ffffff;
+  --btn-primary-bg:    #1a1a1a;
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover: #333333;
+  --overlay-bg:        rgba(0,0,0,0.4);
+}
+
+body.dark {
+  --bg-page:           #0c110c;
+  --bg-card:           #111811;
+  --bg-hover:          #182018;
+  --bg-accent:         #1e281e;
+  --bg-selected:       #1e281e;
+  --color-ink:         #c8d8c0;
+  --color-muted:       #6a7d6a;
+  --color-dim:         #718471;
+  --border-main:       #2a3e2a;
+  --border-light:      #1e2e1e;
+  --border-mid:        #3a5a3a;
+  --border-hover:      #4a7a4a;
+  --circle-border:     #4a7a4a;
+  --circle-chosen-bg:  #c8d8c0;
+  --bg-correct:        #0d2a0d;
+  --color-correct:     #22c55e;
+  --bg-incorrect:      #2a0d0d;
+  --color-incorrect:   #ef4444;
+  --tile-correct:      #22c55e;
+  --tile-incorrect:    #ef4444;
+  --tile-text:         #0c110c;
+  --btn-primary-bg:    #22c55e;
+  --btn-primary-color: #0c110c;
+  --btn-primary-hover: #16a34a;
+  --overlay-bg:        rgba(0,0,0,0.75);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESET: box-sizing, focus-visible, html/body baseline
+
+   Focus ring tylko dla keyboard nav (focus-visible, nie focus).
+   Tinos z Google Fonts: legalny zamiennik Times New Roman (SIL OFL).
+   ═════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus-visible,
+.variant:focus-visible,
+.tf-cell:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+body {
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background: var(--bg-page);
+  color: var(--color-ink);
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-card);
+  min-height: 100vh;
+}
+
+/* Programowy focus po swapContent() (aria-live announce) nie
+   powinien rysować outline: #app nie jest celem keyboard nav. */
+#app:focus { outline: none; }
+
+.site-link { text-decoration: none; color: inherit; }
+.site-link:hover { text-decoration: underline; }
+
+.lbl-short { display: none; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOP BAR · CKE FOOTER: nagłówek z licznikiem, layout przycisków, stopka
+   ───────────────────────────────────────────────────────────────────── */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-main);
+}
+
+.top-info {
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.top-prog {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.top-time {
+  font-size: 13px;
+  color: var(--color-dim);
+  text-align: right;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.actions .btn-check,
+.actions .btn-next {
+  flex: 1;
+  width: auto;
+}
+
+.cke-footer {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+  font-size: 12px;
+  color: var(--color-dim);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.foot-theme {
+  display: none;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--color-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+}
+.foot-theme span { cursor: pointer; }
+body:not(.dark) .foot-jasny { font-weight: 700; color: var(--color-ink); }
+body.dark       .foot-ciemny { font-weight: 700; color: var(--color-ink); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   TASK LABEL · QUESTION BODY: etykieta pytania, ramka treści, code-block, q-table
+
+   .code-block: pre z monospace, szare tło: wyniki renderText dla SQL/kodu.
+   .q-table: tabele z JSON (pipe-tables): lżejszy border niż .tf-table.
+   ═════════════════════════════════════════════════════════════════════ */
+.task-label {
+  display: block;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 10px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-accent);
+  margin-bottom: 16px;
+}
+
+.question-body {
+  border: 2px solid var(--border-main);
+  padding: 20px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 540px) {
+  .lbl-long     { display: none; }
+  .lbl-short    { display: inline; }
+  #themeToggle  { display: none; }
+  .foot-theme   { display: block; }
+}
+
+
+.code-block {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  padding: 12px 16px;
+  margin: 10px 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.q-center { text-align: center; margin: 10px 0; }
+
+.q-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.q-table th, .q-table td {
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.q-table th {
+  background: var(--bg-accent);
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ABCD VARIANTS: warianty odpowiedzi A/B/C/D
+
+   .variant: klikalna belka. Po kliknięciu: .locked (pointer-events none)
+   + .correct albo .incorrect na wybranym wariancie.
+   ═════════════════════════════════════════════════════════════════════ */
+.variants {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 2px solid var(--border-light);
+  cursor: pointer;
+  transition: border-color 150ms, background-color 150ms;
+  user-select: none;
+  background: var(--bg-card);
+}
+
+.variant:hover:not(.locked) {
+  border-color: var(--border-hover);
+  background: var(--bg-hover);
+}
+
+.variant-key {
+  font-weight: 700;
+  font-size: 18px;
+  min-width: 28px;
+}
+
+
+.variant.selected  { border-color: var(--border-mid); background: var(--bg-selected); }
+.variant.correct   { border-color: var(--color-correct); background: var(--bg-correct); }
+.variant.incorrect { border-color: var(--color-incorrect); background: var(--bg-incorrect); }
+.variant.locked    { cursor: default; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   T/F TABLE: tabela Prawda/Fałsz: zdania + kółka P/F
+
+   .tf-circle: klikalne kółko. Po kliknięciu: .chosen → wypełnia się.
+   ═════════════════════════════════════════════════════════════════════ */
+.tf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.tf-table th,
+.tf-table td {
+  border: 2px solid var(--border-light);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tf-table th {
+  background: var(--bg-accent);
+  font-weight: 700;
+  text-align: center;
+}
+
+.tf-table th:first-child { text-align: left; }
+
+.tf-col {
+  width: 50px;
+  text-align: center;
+}
+
+.tf-cell {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.tf-cell.locked { cursor: default; }
+
+.tf-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--circle-border);
+  border-radius: 50%;
+  vertical-align: middle;
+  transition: background-color 150ms, border-color 150ms;
+}
+
+.tf-cell.chosen .tf-circle    { background: var(--circle-chosen-bg); }
+.tf-cell.correct .tf-circle   { background: var(--color-correct);   border-color: var(--color-correct); }
+.tf-cell.incorrect .tf-circle { background: var(--color-incorrect); border-color: var(--color-incorrect); }
+/* ─────────────────────────────────────────────────────────────────────
+   BUTTONS: .btn-next i .btn-check (full-width, disabled state)
+   ───────────────────────────────────────────────────────────────────── */
+.btn-next, .btn-check {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--btn-primary-color);
+  background: var(--btn-primary-bg);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 150ms, background 120ms;
+}
+
+.btn-next:disabled, .btn-check:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn-next:hover:not(:disabled), .btn-check:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   SUMMARY: ekran końcowy: wynik + siatka kafelków
+   ───────────────────────────────────────────────────────────────────── */
+.summary { text-align: center; }
+
+.summary h2 { font-size: 28px; margin-bottom: 8px; }
+
+.summary-stats {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--color-dim);
+}
+
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.summary-tile {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tile-text);
+  cursor: pointer;
+}
+
+.summary-tile.tile-correct   { background: var(--tile-correct); }
+.summary-tile.tile-incorrect { background: var(--tile-incorrect); }
+
+.btn-restart {
+  display: inline-block;
+  padding: 14px 40px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--btn-primary-color);
+  background: var(--btn-primary-bg);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-restart:hover { background: var(--btn-primary-hover); }
+
+/* ─────────────────────────────────────────────────────────────────────
+   RESUME DIALOG: modal "kontynuować zapisaną sesję?"
+   ───────────────────────────────────────────────────────────────────── */
+.dialog-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.dialog-box {
+  background: var(--bg-card);
+  border: 2px solid var(--border-main);
+  padding: 32px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.dialog-box p { font-size: 18px; margin-bottom: 20px; }
+
+.dialog-buttons { display: flex; gap: 12px; justify-content: center; }
+
+.dialog-buttons button {
+  padding: 10px 24px;
+  font-family: 'Tinos', 'Times New Roman', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--border-main);
+  background: var(--bg-card);
+  color: var(--color-ink);
+}
+
+.dialog-buttons button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border-color: var(--btn-primary-bg);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   TOGGLE: pływający przycisk dark/light (desktop); na mobile schowany
+   ───────────────────────────────────────────────────────────────────── */
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  z-index: 200;
+  line-height: 1;
+  transition: opacity 200ms;
+}
+#themeToggle:hover { opacity: 0.5; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   PAGE TRANSITIONS: pgIn/pgOut fade; wyłączone przy prefers-reduced-motion
+   ───────────────────────────────────────────────────────────────────── */
+body { animation: pgIn 260ms ease both; }
+@keyframes pgIn  { from { opacity: 0; } to { opacity: 1; } }
+body.pg-out { animation: pgOut 200ms ease forwards !important; }
+@keyframes pgOut { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  body, body.pg-out { animation: none !important; }
+}
