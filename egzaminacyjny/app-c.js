@@ -206,7 +206,7 @@
   // Filtr !q.img: pytania z obrazkami wykluczone bo nie hostujemy skanów CKE.
   // Wątpliwe że kiedykolwiek będziemy.
   function init() {
-    fetch('../data/questions.json')
+    fetch('../questions.json')
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (all) {
         var filtered = all.filter(function (q) {
