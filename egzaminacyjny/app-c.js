@@ -90,7 +90,7 @@
 
   function renderKaTeX() {
     if (typeof renderMathInElement !== 'function') return;
-    var PH = '', tw = document.createTreeWalker(app, NodeFilter.SHOW_TEXT), n;
+    var PH = '', tw = document.createTreeWalker(app, NodeFilter.SHOW_TEXT), n;
     while ((n = tw.nextNode())) {
       if (n.nodeValue.indexOf('\\$') !== -1) n.nodeValue = n.nodeValue.replace(/\\\$/g, PH);
     }
