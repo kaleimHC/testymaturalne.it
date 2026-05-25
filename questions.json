@@ -177,7 +177,7 @@
     "sesja": "maj",
     "poziom": "pr",
     "typ": "abcd",
-    "treść": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 3, 5 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(134)$_{5}$ …………………. (134)$_{6}$",
+    "treść": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 5 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(134)$_{5}$ …………………. (134)$_{6}$",
     "img": null,
     "warianty": {
       "A": "<",
@@ -195,7 +195,7 @@
     "sesja": "maj",
     "poziom": "pr",
     "typ": "abcd",
-    "treść": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 3, 5 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(2222)$_{3}$ …………………. (1111)$_{6}$",
+    "treść": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 3 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(2222)$_{3}$ …………………. (1111)$_{6}$",
     "img": null,
     "warianty": {
       "A": "<",

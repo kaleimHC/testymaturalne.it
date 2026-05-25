@@ -352,13 +352,12 @@
     return html;
   }
 
-  function applyABCDClasses(choice, isCorrect) {
+  function applyABCDClasses(q, choice, isCorrect) {
     app.querySelectorAll('.variant').forEach(function (el) {
       el.classList.add('locked');
-      if (el.dataset.choice === choice) {
-        el.classList.add('selected');
-        el.classList.add(isCorrect ? 'correct' : 'incorrect');
-      }
+      if (el.dataset.choice === q.odpowiedź) el.classList.add('correct');
+      if (el.dataset.choice === choice && !isCorrect) el.classList.add('incorrect');
+      if (el.dataset.choice === choice) el.classList.add('selected');
     });
   }
 
@@ -366,7 +365,7 @@
     var q = state.questions[state.current];
     if (state.answers[q.id]) return;
     var isCorrect = choice === q.odpowiedź;
-    applyABCDClasses(choice, isCorrect);
+    applyABCDClasses(q, choice, isCorrect);
     state.answers[q.id] = { given: choice, correct: isCorrect, timestamp: Date.now() };
     document.getElementById('nextBtn').disabled = false;
     document.getElementById('nextBtn').removeAttribute('aria-disabled');
@@ -374,7 +373,7 @@
   }
 
   function restoreABCD(q, prev) {
-    applyABCDClasses(prev.given, prev.correct);
+    applyABCDClasses(q, prev.given, prev.correct);
     document.getElementById('nextBtn').disabled = false;
     document.getElementById('nextBtn').removeAttribute('aria-disabled');
   }
