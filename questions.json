@@ -740,15 +740,15 @@
     "zdania": [
       {
         "t": "Wskazania wszystkich trzech zegarów są wielokrotnościami liczby $9_{10}$.",
-        "o": true
-      },
-      {
-        "t": "Wskazania zegarów są wielokrotnościami liczby $6_{10}$.",
         "o": false
       },
       {
-        "t": "Dla każdej pary zegarów różnica ich wartości jest wielokrotnością liczby $60_{10}$.",
+        "t": "Wskazania zegarów są wielokrotnościami liczby $6_{10}$.",
         "o": true
+      },
+      {
+        "t": "Dla każdej pary zegarów różnica ich wartości jest wielokrotnością liczby $60_{10}$.",
+        "o": false
       },
       {
         "t": "Największą wartość wskazuje zegar w oddziale A, a najmniejszą zegar w oddziale C.",
@@ -1519,7 +1519,7 @@
     "img": null,
     "zdania": [
       {
-        "t": "$10110_{(2)}$",
+        "t": "$11010_{(2)}$",
         "o": true
       },
       {
