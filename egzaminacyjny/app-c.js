@@ -10,7 +10,7 @@
   // ═══════════════════════════════════════════════════════════════════════
   // STATE: jeden obiekt, trzy klucze, żadnego Reduksa
   //
-  // questions -> ~95 pytań z JSON, przeshuffled przy starcie.
+  // questions -> ~240 pytań z JSON, przeshuffled przy starcie.
   // current   -> który pytanie pokazujemy teraz (indeks, nie ID).
   // answers   -> { questionId: { given, correct, timestamp } }.
   //
@@ -203,6 +203,230 @@
 
   // init: fetch questions.json, filtr, potem resume albo nowy start
   //
+  // ===== Ekran startowy (kreator zestawu) - wklejony w wariant =====
+  var NAZWY = {
+    'systemy-liczbowe': 'Systemy liczbowe',
+    'algorytmika': 'Algorytmy i złożoność',
+    'sieci-internet': 'Sieci i internet',
+    'bazy-danych-sql': 'Bazy danych i SQL',
+    'grafika-multimedia': 'Grafika i multimedia',
+    'programowanie-sprzet-os': 'Programowanie i sprzęt',
+    'reprezentacja-danych': 'Reprezentacja danych',
+    'bezpieczenstwo-szyfrowanie': 'Bezpieczeństwo i szyfrowanie',
+    'arkusz-kalkulacyjny': 'Arkusz kalkulacyjny',
+    'prawo-licencje': 'Prawo i licencje'
+  };
+  var ORDER = ['systemy-liczbowe','algorytmika','sieci-internet','bazy-danych-sql','grafika-multimedia','programowanie-sprzet-os','reprezentacja-danych','bezpieczenstwo-szyfrowanie','arkusz-kalkulacyjny','prawo-licencje'];
+  // 3 segmenty wg pola formula (autorytatywne); flex = proporcja wizualna jak we wzorcu
+  var FORMULY = [
+    { id: 'stara', label: 'Stara formuła', flex: 5 },
+    { id: '2015',  label: 'Formuła 2015',  flex: 8 },
+    { id: '2023',  label: 'Formuła 2023',  flex: 3 }
+  ];
+  var PRESETY = [10, 20, 50, 100];
+  var CZASY = [0, 15, 30, 60];
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  function kreatorShow(app, questions, onStart) {
+    // liczniki dynamiczne (NIE hardkodowane)
+    var dzC = {}, fC = {}, fY = {}, yMin = 9999, yMax = 0;
+    questions.forEach(function (q) {
+      if (q.dzial) dzC[q.dzial] = (dzC[q.dzial] || 0) + 1;
+      if (q.formula) { fC[q.formula] = (fC[q.formula] || 0) + 1;
+        if (!fY[q.formula]) fY[q.formula] = [q.rok, q.rok];
+        else { if (q.rok < fY[q.formula][0]) fY[q.formula][0] = q.rok; if (q.rok > fY[q.formula][1]) fY[q.formula][1] = q.rok; } }
+      if (typeof q.rok === 'number') { if (q.rok < yMin) yMin = q.rok; if (q.rok > yMax) yMax = q.rok; }
+    });
+    var dzialy = ORDER.filter(function (id) { return dzC[id]; })
+      .map(function (id) { return { id: id, nazwa: NAZWY[id] || id, n: dzC[id] }; })
+      .sort(function (a, b) { return b.n - a.n || ORDER.indexOf(a.id) - ORDER.indexOf(b.id); });
+    var formuly = FORMULY.filter(function (f) { return fC[f.id]; }).map(function (f) { return { id: f.id, label: f.label, n: fC[f.id], lat: fY[f.id], flex: f.flex }; });
+
+    var cfg = {
+      dzialy: new Set(dzialy.map(function (d) { return d.id; })),
+      formuly: new Set(formuly.map(function (f) { return f.id; })),
+      liczba: 20, czas: null
+    };
+
+    function pool() { return questions.filter(function (q) { return cfg.dzialy.has(q.dzial) && cfg.formuly.has(q.formula); }); }
+
+    function tplChips() {
+      return dzialy.map(function (d) {
+        var on = cfg.dzialy.has(d.id);
+        return '<button type="button" class="dzial-chip' + (on ? ' is-selected' : '') + '" role="checkbox" aria-checked="' + on + '" data-dz="' + d.id + '">' +
+          '<span class="dz-ck" aria-hidden="true">' + (on ? '✓' : '') + '</span>' +
+          '<span class="dz-name">' + esc(d.nazwa) + '</span><span class="dz-n">' + d.n + '</span></button>';
+      }).join('');
+    }
+    function tplFormuly() {
+      return formuly.map(function (f) {
+        var on = cfg.formuly.has(f.id);
+        return '<button type="button" class="formula-seg' + (on ? ' is-selected' : '') + '" role="checkbox" aria-checked="' + on + '" data-fm="' + f.id + '" style="flex:' + f.flex + '">' +
+          '<span class="fm-label">' + esc(f.label) + '</span><span class="fm-years">' + f.lat[0] + '-' + f.lat[1] + '</span></button>';
+      }).join('');
+    }
+    function tplLiczba() {
+      return PRESETY.map(function (v) {
+        var on = cfg.liczba === v;
+        return '<button type="button" class="preset-pill' + (on ? ' is-selected' : '') + '" role="radio" aria-checked="' + on + '" data-lb="' + v + '">' + v + '</button>';
+      }).join('') +
+        '<button type="button" class="preset-pill' + (cfg.liczba === 'all' ? ' is-selected' : '') + '" role="radio" aria-checked="' + (cfg.liczba === 'all') + '" data-lb="all">Wszystkie</button>';
+    }
+    function tplCzas() {
+      return CZASY.map(function (v) {
+        var on = (cfg.czas || 0) === v;
+        var label = v === 0 ? 'Bez limitu' : (v + ' min');
+        return '<button type="button" class="preset-pill' + (on ? ' is-selected' : '') + '" role="radio" aria-checked="' + on + '" data-cz="' + v + '">' + label + '</button>';
+      }).join('');
+    }
+    function scale() {
+      var marks = [yMin, 2015, 2023, yMax].filter(function (v, i, a) { return v && a.indexOf(v) === i; });
+      return marks.map(function (y) { return '<span>' + y + '</span>'; }).join('');
+    }
+
+    app.innerHTML =
+      '<div class="sheet kreator">' +
+        '<div class="top-bar">' +
+          '<a class="top-info site-link" href="../"><span class="lbl-long">testymaturalne.it</span><span class="lbl-short">&lt;- WYBÓR</span></a>' +
+          '<span class="top-prog" data-prog></span>' +
+          '<span class="top-time">Czas: --:--</span>' +
+        '</div>' +
+        '<h1 class="kreator-h1">Ułóż swój zestaw</h1>' +
+        '<div class="sect-label">Działy</div>' +
+        '<div class="dzial-grid" role="group" aria-label="Działy">' + tplChips() + '</div>' +
+        '<div class="sect-label">Roczniki - wg formuły matury</div>' +
+        '<div class="formula-bar" role="group" aria-label="Roczniki wg formuły">' + tplFormuly() + '</div>' +
+        '<div class="formula-scale">' + scale() + '</div>' +
+        '<div class="config-row"><span class="sect-label">Liczba</span><div class="preset-row" data-liczba role="radiogroup" aria-label="Liczba pytań">' + tplLiczba() + '</div></div>' +
+        '<div class="config-row"><span class="sect-label">Na czas</span><div class="preset-row" data-czas role="radiogroup" aria-label="Na czas">' + tplCzas() + '</div></div>' +
+        '<div class="kreator-foot">' +
+          '<span class="preview-line" data-preview aria-live="polite"></span>' +
+          '<button type="button" class="kreator-cta" data-start>Rozpocznij →</button>' +
+        '</div>' +
+      '</div>';
+
+    function update() {
+      var M = pool().length;
+      var prog = app.querySelector('[data-prog]'); if (prog) prog.textContent = M + ' pytań';
+      app.querySelectorAll('.dzial-chip').forEach(function (chip) {
+        var id = chip.getAttribute('data-dz'), n = 0;
+        questions.forEach(function (q) { if (q.dzial === id && cfg.formuly.has(q.formula)) n++; });
+        var el = chip.querySelector('.dz-n'); if (el) el.textContent = n;
+      });
+      // auto-korekta presetu liczby, jeśli nie mieści się w puli
+      if (cfg.liczba !== 'all' && cfg.liczba > M) {
+        var fit = PRESETY.filter(function (v) { return v <= M; });
+        cfg.liczba = fit.length ? fit[fit.length - 1] : 'all';
+      }
+      app.querySelectorAll('[data-lb]').forEach(function (b) {
+        var raw = b.getAttribute('data-lb'); var num = raw === 'all' ? 'all' : parseInt(raw, 10);
+        var dis = num !== 'all' && num > M;
+        if (dis) b.setAttribute('disabled', 'disabled'); else b.removeAttribute('disabled');
+        b.classList.toggle('is-disabled', dis);
+        var on = cfg.liczba === num;
+        b.classList.toggle('is-selected', on); b.setAttribute('aria-checked', on);
+      });
+      var pv = app.querySelector('[data-preview]'); var cta = app.querySelector('[data-start]');
+      if (M === 0) {
+        pv.textContent = 'Wybierz co najmniej jeden dział.'; pv.classList.add('is-empty');
+        if (cta) cta.setAttribute('disabled', 'disabled');
+      } else {
+        pv.classList.remove('is-empty');
+        var N = cfg.liczba === 'all' ? M : Math.min(cfg.liczba, M);
+        var s = 'Wylosujemy <b>' + N + '</b> z <b>' + M + '</b> pytań';
+        if (cfg.czas) s += ', na czas <b>' + cfg.czas + ' min</b>';
+        pv.innerHTML = s + '.';
+        if (cta) cta.removeAttribute('disabled');
+      }
+    }
+
+    function setOne(group, attr, val, value) {
+      group.querySelectorAll('[' + attr + ']').forEach(function (b) {
+        var on = b.getAttribute(attr) === val;
+        b.classList.toggle('is-selected', on); b.classList.toggle('is-active', on);
+        b.setAttribute('aria-checked', on);
+      });
+    }
+
+    function onClick(e) {
+      var dz = e.target.closest('.dzial-chip'); if (dz) {
+        var id = dz.getAttribute('data-dz');
+        if (cfg.dzialy.has(id)) cfg.dzialy['delete'](id); else cfg.dzialy.add(id);
+        var on = cfg.dzialy.has(id);
+        dz.classList.toggle('is-selected', on); dz.setAttribute('aria-checked', on);
+        dz.querySelector('.dz-ck').textContent = on ? '✓' : '';
+        update(); return;
+      }
+      var fm = e.target.closest('.formula-seg'); if (fm) {
+        var fid = fm.getAttribute('data-fm');
+        if (cfg.formuly.has(fid)) cfg.formuly['delete'](fid); else cfg.formuly.add(fid);
+        var fon = cfg.formuly.has(fid);
+        fm.classList.toggle('is-selected', fon); fm.setAttribute('aria-checked', fon);
+        update(); return;
+      }
+      var lb = e.target.closest('[data-lb]'); if (lb) {
+        if (lb.hasAttribute('disabled')) return;
+        var raw = lb.getAttribute('data-lb'); cfg.liczba = raw === 'all' ? 'all' : parseInt(raw, 10);
+        update(); return;
+      }
+      var cz = e.target.closest('[data-cz]'); if (cz) {
+        var cv = parseInt(cz.getAttribute('data-cz'), 10); cfg.czas = cv === 0 ? null : cv;
+        setOne(cz.parentNode, 'data-cz', cz.getAttribute('data-cz')); update(); return;
+      }
+      var st = e.target.closest('[data-start]'); if (st) {
+        if (st.hasAttribute('disabled')) return;
+        app.removeEventListener('click', onClick); app.removeEventListener('keydown', onKey);
+        onStart(pool(), cfg); return;
+      }
+    }
+
+    // klawiatura: strzałki w grupach radio (liczba/czas)
+    function onKey(e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' && e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+      var grp = e.target.closest('[role="radiogroup"]'); if (!grp) return;
+      var items = Array.prototype.filter.call(grp.querySelectorAll('[role="radio"]'), function (b) { return !b.hasAttribute('disabled'); });
+      var i = items.indexOf(e.target); if (i < 0) return;
+      e.preventDefault();
+      var next = (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? (i - 1 + items.length) % items.length : (i + 1) % items.length;
+      items[next].focus(); items[next].click();
+    }
+
+    app.addEventListener('click', onClick);
+    app.addEventListener('keydown', onKey);
+    update();
+  }
+
+  // ── Timer (hook istniejącego .top-time) ──
+  var _timer = null, _timeText = 'Czas: --:--';
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function kreatorStartTimer(minutes, onExpire) {
+    kreatorStopTimer();
+    var endsAt = Date.now() + minutes * 60000;
+    var announced = false;
+    function tick() {
+      var el = document.querySelector('.top-time');
+      if (!el) { kreatorStopTimer(); return; }                 // opuszczono ekran pytań
+      var rem = Math.max(0, Math.round((endsAt - Date.now()) / 1000));
+      _timeText = 'Czas: ' + pad(Math.floor(rem / 60)) + ':' + pad(rem % 60); el.textContent = _timeText;
+      el.classList.toggle('time-low', rem <= 60);
+      if (rem <= 60 && !announced) { announced = true; el.setAttribute('aria-live', 'polite'); }
+      if (rem <= 0) { kreatorStopTimer(); if (onExpire) onExpire(); }
+    }
+    tick(); setTimeout(tick, 150); _timer = setInterval(tick, 1000);  // 150ms: domknij okno po swapContent pytania
+  }
+  function kreatorStopTimer() { if (_timer) { clearInterval(_timer); _timer = null; } _timeText = 'Czas: --:--'; }
+
+  function startQuiz(pool, config) {
+    kreatorStopTimer();
+    var N = config.liczba === 'all' ? pool.length : Math.min(config.liczba, pool.length);
+    state.questions = shuffle(pool.slice()).slice(0, N);
+    state.current = 0;
+    state.answers = {};
+    renderQuestion();
+    if (config.czas) kreatorStartTimer(config.czas, showSummary);
+  }
+
   function init() {
     fetch('../questions.json')
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
@@ -218,10 +442,7 @@
         if (saved && saved.questionOrder && Object.keys(saved.answers).length > 0) {
           showResumeDialog(filtered, saved);
         } else {
-          state.questions = shuffle(filtered);
-          state.current = 0;
-          state.answers = {};
-          renderQuestion();
+          kreatorShow(app, filtered, startQuiz);
         }
       })
       .catch(function () {
@@ -261,9 +482,8 @@
         state.answers = saved.answers;
       } else {
         clearProgress();
-        state.questions = shuffle(filtered);
-        state.current = 0;
-        state.answers = {};
+        kreatorShow(app, filtered, startQuiz);
+        return;
       }
       renderQuestion();
     });
@@ -292,7 +512,7 @@
       '<span class="lbl-long">testymaturalne.it</span>' +
       '<span class="lbl-short">&lt;- WYBÓR</span></a>';
     html += '<span class="top-prog">' + num + '/' + total + '</span>';
-    html += '<span class="top-time">Czas: --:--</span>';
+    html += '<span class="top-time">' + _timeText + '</span>';
     html += '</div>';
 
     html += '<div class="task-label">' + questionLabel(q) + '</div>';
