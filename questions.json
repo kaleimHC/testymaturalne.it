@@ -2,9 +2,9 @@
   {
     "id": "2023_pr_maj2025_z4",
     "formula": "2023",
+    "poziom": "pr",
     "rok": 2025,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "abcd",
     "tresc": "Dokończ zdanie: Program typu keylogger służy do:",
     "odpowiedzi": {
@@ -13,14 +13,15 @@
       "C": "generowania kodu, który umożliwia użytkownikowi bankowości elektronicznej wykonanie operacji.",
       "D": "przechwytywania i gromadzenia informacji o naciśniętych klawiszach."
     },
-    "poprawna": "D"
+    "poprawna": "D",
+    "dzial": "bezpieczenstwo-szyfrowanie"
   },
   {
     "id": "2023_pr_maj2024_z5",
     "formula": "2023",
+    "poziom": "pr",
     "rok": 2024,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Oceń prawdziwość podanych zdań:",
     "zdania": [
@@ -36,65 +37,15 @@
         "t": "3. DHCP to protokół umożliwiający hostom uzyskanie od serwera danych konfiguracyjnych, np. adresu IP, adresu bramy sieciowej, adresu serwera DNS.",
         "o": true
       }
-    ]
-  },
-  {
-    "id": "2023_pr_maj2024_z6_1",
-    "formula": "2023",
-    "rok": 2024,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Wykonaj działanie na liczbach zapisanych w systemie trójkowym i systemie dziewiątkowym. Wynik podaj w systemie trójkowym:\n\n$101112_{3} + 121_{9} =$",
-    "odpowiedzi": {
-      "A": "$112020_{3}$",
-      "B": "$112120_{3}$",
-      "C": "$111020_{3}$",
-      "D": "$122020_{3}$"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "2023_pr_maj2024_z6_2",
-    "formula": "2023",
-    "rok": 2024,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Wykonaj działanie na liczbach zapisanych w systemie trójkowym i systemie dziewiątkowym. Wynik podaj w systemie trójkowym:\n\n$101112_{3} - 121_{9} =$",
-    "odpowiedzi": {
-      "A": "$20211_{3}$",
-      "B": "$20210_{3}$",
-      "C": "$21211_{3}$",
-      "D": "$20111_{3}$"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "2023_pr_maj2023_z2_4",
-    "formula": "2023",
-    "rok": 2023,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Dla nieujemnych liczb całkowitych a i b wynikiem operacji a XOR b jest liczba, której kolejne bity są wyliczane na podstawie poniższej tabelki z odpowiadających sobie bitów w zapisie binarnym liczb a i b. Jeśli jeden zapis jest krótszy od drugiego, to uzupełniamy go zerami z lewej strony (na najbardziej znaczących pozycjach).\n\n| p | q | p XOR q |\n| :--- | :--- | :--- |\n| 1 | 1 | 0 |\n| 1 | 0 | 1 |\n| 0 | 1 | 1 |\n| 0 | 0 | 0 |\n\nOblicz ($123_{10}$ XOR $101101_{2}$) XOR $2D_{16}$. Wynik podaj w systemie dziesiętnym.",
-    "odpowiedzi": {
-      "A": "123",
-      "B": "127",
-      "C": "255",
-      "D": "64"
-    },
-    "poprawna": "A",
-    "generated": true
+    ],
+    "dzial": "sieci-internet"
   },
   {
     "id": "2023_pr_maj2023_z4",
     "formula": "2023",
+    "poziom": "pr",
     "rok": 2023,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "W komunikacji między dwoma osobami A i B z wykorzystaniem szyfrowania asymetrycznego klucz prywatny osoby A stosuje się do:",
     "zdania": [
@@ -106,82 +57,15 @@
         "t": "2. uwierzytelnienia osoby B przez osobę A.",
         "o": false
       }
-    ]
-  },
-  {
-    "id": "2023_pr_maj2023_z5_1",
-    "formula": "2023",
-    "rok": 2023,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 5 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(134)$_{5}$ …………………. (134)$_{6}$",
-    "odpowiedzi": {
-      "A": "<",
-      "B": ">",
-      "C": "=",
-      "D": "brak poprawnej odpowiedzi"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "2023_pr_maj2023_z5_2",
-    "formula": "2023",
-    "rok": 2023,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Dane są liczby zapisane w systemach pozycyjnych o podstawach 3 i 6. Wstaw w miejsce kropek odpowiedni znak spośród: < , > , =, tak aby wyrażenie było poprawne.\n\n(2222)$_{3}$ …………………. (1111)$_{6}$",
-    "odpowiedzi": {
-      "A": "<",
-      "B": ">",
-      "C": "=",
-      "D": "brak poprawnej odpowiedzi"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "2023_pr_czerwiec2023_z4_1",
-    "formula": "2023",
-    "rok": 2023,
-    "sesja": "czerwiec",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Liczba $101201_{3}$ zapisana w systemie o podstawie 9 to:",
-    "odpowiedzi": {
-      "A": "341",
-      "B": "351",
-      "C": "352",
-      "D": "361"
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "2023_pr_czerwiec2023_z4_2",
-    "formula": "2023",
-    "rok": 2023,
-    "sesja": "czerwiec",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Liczba $2487_{9}$ zapisana w systemie o podstawie 3 to:",
-    "odpowiedzi": {
-      "A": "2112221",
-      "B": "2112220",
-      "C": "2112222",
-      "D": "2112121"
-    },
-    "poprawna": "A",
-    "generated": true
+    ],
+    "dzial": "bezpieczenstwo-szyfrowanie"
   },
   {
     "id": "2023_pr_czerwiec2023_z5",
     "formula": "2023",
+    "poziom": "pr",
     "rok": 2023,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Zapis koloru tła w arkuszu CSS został wyrażony w postaci\nbackground-color: #E9967A;",
     "zdania": [
@@ -193,14 +77,15 @@
         "t": "Zmiana zapisu #E9967A na rgb(255,255,255) da w efekcie biały kolor tła.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "2015_pr_maj2023_z3_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2023,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Oceń prawdziwość podanych zdań:",
     "zdania": [
@@ -220,14 +105,15 @@
         "t": "4. $2210_{4} < 245_{8}$",
         "o": true
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "2015_pr_czerwiec2023_z3_1",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2023,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Oceń prawdziwość podanych zdań:",
     "zdania": [
@@ -247,16 +133,17 @@
         "t": "4. $101_{8}$ = $41_{16}$",
         "o": true
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "2015_pr_czerwiec2023_z3_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2023,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
-    "tresc": "W bazie danych znajdują się tabele zwierzeta oraz osoby. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id – klucz podstawowy), gatunek (gatunek), imię zwierzęcia (imie) oraz identyfikator właściciela zwierzęcia (id_osoby). Tabela osoby, z danymi właścicieli zwierząt, zawiera dane: identyfikator osoby (id_osoby – klucz podstawowy), imię i nazwisko osoby (imie, nazwisko).\n\nPoniżej podano kilka przykładowych danych z obu tabel.\n\nTabela zwierzeta\n\n| id | gatunek | imie | id_osoby |\n|---|---|---|---|\n| 1 | pies | Azor | 1 |\n| 2 | kot | Mruczek | 2 |\n| 3 | kot | Kicia | 3 |\n| 4 | pies | Pimpek | 2 |\n\nTabela osoby\n\n| id_osoby | imie | nazwisko |\n|---|---|---|\n| 1 | Jan | Nowak |\n| 2 | Adam | Kowalski |\n| 3 | Anna | Nowakowska |",
+    "tresc": "W bazie danych znajdują się tabele zwierzeta oraz osoby. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id - klucz podstawowy), gatunek (gatunek), imię zwierzęcia (imie) oraz identyfikator właściciela zwierzęcia (id_osoby). Tabela osoby, z danymi właścicieli zwierząt, zawiera dane: identyfikator osoby (id_osoby - klucz podstawowy), imię i nazwisko osoby (imie, nazwisko).\n\nPoniżej podano kilka przykładowych danych z obu tabel.\n\nTabela zwierzeta\n\n| id | gatunek | imie | id_osoby |\n|---|---|---|---|\n| 1 | pies | Azor | 1 |\n| 2 | kot | Mruczek | 2 |\n| 3 | kot | Kicia | 3 |\n| 4 | pies | Pimpek | 2 |\n\nTabela osoby\n\n| id_osoby | imie | nazwisko |\n|---|---|---|\n| 1 | Jan | Nowak |\n| 2 | Adam | Kowalski |\n| 3 | Anna | Nowakowska |",
     "zdania": [
       {
         "t": "1. W wyniku zapytania: SELECT DISTINCT nazwisko FROM osoby; otrzymamy listę różnych nazwisk osób z tabeli osoby (nazwiska nie będą się powtarzać).",
@@ -268,22 +155,23 @@
       },
       {
         "t": "3. W wyniku zapytania: SELECT imie FROM osoby WHERE imie BETWEEN \"A\" AND \"C\"; otrzymamy listę imion zaczynających się od litery A lub B.",
-        "o": false
+        "o": true
       },
       {
         "t": "4. W wyniku zapytania: SELECT imie, nazwisko FROM osoby WHERE imie IN (\"Ala\",\"Ula\"); otrzymamy listę imion i nazwisk wszystkich osób mających imiona, które w kolejności alfabetycznej znajdują się pomiędzy „Ala\" a „Ula\".",
         "o": false
       }
-    ]
+    ],
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "2015_pr_czerwiec2023_z3_3",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2023,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
-    "tresc": "W bazie danych znajdują się tabele zwierzeta oraz osoby. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id – klucz podstawowy), gatunek (gatunek), imię zwierzęcia (imie) oraz identyfikator właściciela zwierzęcia (id_osoby). Tabela osoby, z danymi właścicieli zwierząt, zawiera dane: identyfikator osoby (id_osoby – klucz podstawowy), imię i nazwisko osoby (imie, nazwisko).\n\nPoniżej podano kilka przykładowych danych z obu tabel.\n\nTabela zwierzeta\n\n| id | gatunek | imie | id_osoby |\n|---|---|---|---|\n| 1 | pies | Azor | 1 |\n| 2 | kot | Mruczek | 2 |\n| 3 | kot | Kicia | 3 |\n| 4 | pies | Pimpek | 2 |\n\nTabela osoby\n\n| id_osoby | imie | nazwisko |\n|---|---|---|\n| 1 | Jan | Nowak |\n| 2 | Adam | Kowalski |\n| 3 | Anna | Nowakowska |",
+    "tresc": "W bazie danych znajdują się tabele zwierzeta oraz osoby. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id - klucz podstawowy), gatunek (gatunek), imię zwierzęcia (imie) oraz identyfikator właściciela zwierzęcia (id_osoby). Tabela osoby, z danymi właścicieli zwierząt, zawiera dane: identyfikator osoby (id_osoby - klucz podstawowy), imię i nazwisko osoby (imie, nazwisko).\n\nPoniżej podano kilka przykładowych danych z obu tabel.\n\nTabela zwierzeta\n\n| id | gatunek | imie | id_osoby |\n|---|---|---|---|\n| 1 | pies | Azor | 1 |\n| 2 | kot | Mruczek | 2 |\n| 3 | kot | Kicia | 3 |\n| 4 | pies | Pimpek | 2 |\n\nTabela osoby\n\n| id_osoby | imie | nazwisko |\n|---|---|---|\n| 1 | Jan | Nowak |\n| 2 | Adam | Kowalski |\n| 3 | Anna | Nowakowska |",
     "zdania": [
       {
         "t": "1. W wyniku zapytania: SELECT count(DISTINCT gatunek) FROM zwierzeta; otrzymamy liczbę różnych nazw gatunków zwierząt z tabeli zwierzeta.",
@@ -301,48 +189,15 @@
         "t": "4. W wyniku zapytania: SELECT nazwisko, count(*) FROM zwierzeta INNER JOIN osoby ON zwierzeta.id_osoby = osoby.id_osoby GROUP BY osoby.id_osoby; otrzymamy zestawienie z nazwiskami osób i liczbami ich zwierząt.",
         "o": true
       }
-    ]
-  },
-  {
-    "id": "2015_pr_czerwiec2021_z1_1_3",
-    "formula": "2015",
-    "rok": 2021,
-    "sesja": "czerwiec",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Każdą dodatnią liczbę całkowitą n można reprezentować jako sumę kwadratów dodatnich liczb całkowitych. Długością reprezentacji (kwadratowej) nazywamy liczbę składników sumy. Jedną z metod otrzymywania krótkich reprezentacji kwadratowych jest metoda zachłanna, w której w każdym kroku jako kolejny składnik sumy bierze się największy możliwy kwadrat liczby całkowitej gwarantujący, że suma nie przekracza n. Ta metoda nie zawsze znajduje najkrótsze reprezentacje. Podaj reprezentację kwadratową liczby 23 krótszą od jej reprezentacji otrzymanej metodą zachłanną ($4^2+2^2+1^2+1^2+1^2$).",
-    "odpowiedzi": {
-      "A": "$3^2 + 3^2 + 2^2 + 1^2$",
-      "B": "$4^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2$",
-      "C": "$3^2 + 2^2 + 2^2 + 2^2 + 2^2 + 1^2 + 1^2$",
-      "D": "$2^2 + 2^2 + 2^2 + 2^2 + 2^2 + 1^2 + 1^2 + 1^2$"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "2015_pr_czerwiec2021_z1_1_4",
-    "formula": "2015",
-    "rok": 2021,
-    "sesja": "czerwiec",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Każdą dodatnią liczbę całkowitą n można reprezentować jako sumę kwadratów dodatnich liczb całkowitych. Jedną z metod otrzymywania krótkich reprezentacji kwadratowych jest metoda zachłanna. Ta metoda nie zawsze znajduje najkrótsze reprezentacje. Podaj dodatkową liczbę $n > 23$ taką, że jej reprezentacja kwadratowa otrzymana metodą zachłanną nie jest jej najkrótszą reprezentacją.",
-    "odpowiedzi": {
-      "A": "32",
-      "B": "25",
-      "C": "49",
-      "D": "100"
-    },
-    "poprawna": "A",
-    "generated": true
+    ],
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "2015_pr_czerwiec2021_z3_1",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2021,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Mamy dane operacje logiczne na bitach not, and i or opisane poniżej:\n\n| a | not a |\n| :--- | :--- |\n| 1 | 0 |\n| 0 | 1 |\n\n| a | b | a and b |\n| :--- | :--- | :--- |\n| 1 | 1 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 0 | 0 | 0 |\n\n| a | b | a or b |\n| :--- | :--- | :--- |\n| 1 | 1 | 1 |\n| 0 | 1 | 1 |\n| 1 | 0 | 1 |\n| 0 | 0 | 0 |\n\noraz wyrażenie $W(a,b)$:\n((not a) and b) or (a and (not b))",
     "zdania": [
@@ -362,14 +217,15 @@
         "t": "4. $W(1,1)=0$",
         "o": true
       }
-    ]
+    ],
+    "dzial": "reprezentacja-danych"
   },
   {
     "id": "2015_pr_czerwiec2021_z3_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2021,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Oceń prawdziwość podanych zdań:",
     "zdania": [
@@ -389,31 +245,15 @@
         "t": "4. $(123)_{10} = (1111101)_{2}$",
         "o": false
       }
-    ]
-  },
-  {
-    "id": "2015_pr_maj2018_z1_1",
-    "formula": "2015",
-    "rok": 2018,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Dla dodatniej liczby całkowitej n, n-permutacją nazywamy taki n-elementowy ciąg liczb całkowitych, który zawiera każdą z liczb 1, 2, …, n dokładnie jeden raz. Podaj najmniejszą liczbę elementów, które trzeba podmienić, aby ciąg (8, 4, 9, 6, 5, 7) był 6-permutacją.",
-    "odpowiedzi": {
-      "A": "1",
-      "B": "2",
-      "C": "3",
-      "D": "4"
-    },
-    "poprawna": "C",
-    "generated": true
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "2015_pr_maj2018_z3_1",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2018,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Na pewnym serwerze WWW znajduje się strona napisana w języku PHP, a jej kod zawiera fragmenty w języku JavaScript. Pewien komputer-klient pobrał i wyświetlił tę stronę. Wiadomo, że:",
     "zdania": [
@@ -433,14 +273,15 @@
         "t": "4. podczas wykonywania kodu JavaScript mogą być pobierane dodatkowe dane zarówno od klienta, jak i od serwera.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "sieci-internet"
   },
   {
     "id": "2015_pr_maj2018_z3_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2018,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Oceń prawdziwość podanych zdań:",
     "zdania": [
@@ -460,14 +301,15 @@
         "t": "4. W modelu barw CMYK litera C pochodzi od angielskiego słowa contrast.",
         "o": false
       }
-    ]
+    ],
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "2015_pr_maj2018_z3_3",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2018,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Wskaż zdania prawdziwe dla języka SQL:",
     "zdania": [
@@ -487,41 +329,15 @@
         "t": "4. Wynik zapytania SELECT * FROM tabela1 JOIN tabela2 ON tabela1.pole = tabela2.pole może być pusty przy niepustych tabelach tabela1 oraz tabela2.",
         "o": true
       }
-    ]
-  },
-  {
-    "id": "2015_pr_czerwiec2018_z3_1",
-    "formula": "2015",
-    "rok": 2018,
-    "sesja": "czerwiec",
-    "poziom": "pr",
-    "typ": "tf",
-    "tresc": "Które z poniższych zdań dotyczących protokołów internetowych są prawdziwe?",
-    "zdania": [
-      {
-        "t": "1. Protokół IP jest protokołem warstwy sieciowej.",
-        "o": true
-      },
-      {
-        "t": "2. Protokół TCP gwarantuje, że wszystkie pakiety dotrą do odbiorcy w poprawnej kolejności.",
-        "o": true
-      },
-      {
-        "t": "3. Protokół SMTP jest używany do odbierania poczty elektronicznej przez klienta pocztowego.",
-        "o": false
-      },
-      {
-        "t": "4. Protokół HTTP jest protokołem warstwy aplikacji.",
-        "o": true
-      }
-    ]
+    ],
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "2015_pr_czerwiec2018_z3_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2018,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Które zdania dotyczące struktury danych zwanej stosem są prawdziwe?",
     "zdania": [
@@ -541,14 +357,15 @@
         "t": "4. Tylko ostatnio dodany element jest zawsze dostępny na stosie.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "algorytmika"
   },
   {
     "id": "2015_pr_czerwiec2018_z3_3",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2018,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Do jednoznacznego zakodowania znaków pięcioelementowego alfabetu wystarczą/y:",
     "zdania": [
@@ -568,14 +385,15 @@
         "t": "4. 8 bitów.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "reprezentacja-danych"
   },
   {
     "id": "2015_pr_maj2017_z3_1",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Po wykonaniu podanego zapytania SQL do pewnej bazy danych wyniki będą zawsze uporządkowane niemalejąco według pola nazwa:",
     "zdania": [
@@ -595,14 +413,15 @@
         "t": "4. SELECT nazwa, sum(wartosc) FROM dane GROUP BY nazwa ORDER BY nazwa",
         "o": true
       }
-    ]
+    ],
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "2015_pr_maj2017_z3_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Rozważ następujące zapytanie SQL do pewnej bazy danych:\nSELECT pesel, COUNT(*)\nFROM samochody\nWHERE pesel NOT IN (SELECT pesel FROM dokumenty_zastrzezone)\nGROUP BY pesel HAVING COUNT(*) > 1\n\nPo wykonaniu tego zapytania w odpowiedzi:",
     "zdania": [
@@ -622,14 +441,15 @@
         "t": "4. przy odpowiednich danych może pojawić się wiersz „82122302134, 1\".",
         "o": false
       }
-    ]
+    ],
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "2015_pr_maj2017_z3_3",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Pewien oszust chce rozesłać wiadomość, podszywając się pod Jana Kowalskiego, ale nie zdołał wykraść żadnych należących do Jana haseł ani innych prywatnych informacji. Posiada jednak klucz publiczny Jana Kowalskiego, który ten udostępnił w sieci, a także znaleziony w internecie adres e-mail Jana. Może zatem:",
     "zdania": [
@@ -649,16 +469,17 @@
         "t": "4. rozsyłać listy elektroniczne, które w nagłówku „Od:\" będą miały adres e-mail Jana Kowalskiego.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "bezpieczenstwo-szyfrowanie"
   },
   {
     "id": "2015_pr_czerwiec2017_z3_1",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "czerwiec",
-    "poziom": "pr",
     "typ": "tf",
-    "tresc": "Oddziały A, B i C znajdują się w różnych strefach czasowych, dlatego zegary nie wskazują tej samej liczby. W pewnym momencie zegary wskazywały następujące wartości:\nOddział A: 00010110100 (zapis binarny),\nOddział B: 000330 (zapis ósemkowy),\nOddział C: 078 (zapis szesnastkowy).",
+    "tresc": "Oddziały A, B i C znajdują się w różnych strefach czasowych, dlatego zegary nie wskazują tej samej liczby. W pewnym momencie zegary wskazywały następujące wartości:\nOddział A: 00010110100 (zapis binarny),\nOddział B: 000330 (zapis czwórkowy),\nOddział C: 078 (zapis szesnastkowy).",
     "zdania": [
       {
         "t": "Wskazania wszystkich trzech zegarów są wielokrotnościami liczby $9_{10}$.",
@@ -670,20 +491,21 @@
       },
       {
         "t": "Dla każdej pary zegarów różnica ich wartości jest wielokrotnością liczby $60_{10}$.",
-        "o": false
+        "o": true
       },
       {
         "t": "Największą wartość wskazuje zegar w oddziale A, a najmniejszą zegar w oddziale C.",
         "o": false
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "2015_pr_maj2015_z2_1",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Po wymnożeniu dwóch liczb $1032_{4}$ oraz $131_{4}$ zapisanych w systemie czwórkowym otrzymamy:",
     "zdania": [
@@ -703,14 +525,15 @@
         "t": "4. $10011010110_{2}$",
         "o": false
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "2015_pr_maj2015_z2_2",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Kompresja stratna w grafice:",
     "zdania": [
@@ -730,14 +553,15 @@
         "t": "4. wykorzystuje algorytm szyfrowania RSA.",
         "o": false
       }
-    ]
+    ],
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "2015_pr_maj2015_z2_3",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Filtrowanie tabeli w bazie danych:",
     "zdania": [
@@ -757,14 +581,15 @@
         "t": "4. wymaga podania warunku dla jednej lub kilku kolumn tabeli.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "2015_pr_maj2015_z2_4",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Na licencji ADWARE jest rozpowszechniane oprogramowanie, które:",
     "zdania": [
@@ -784,14 +609,15 @@
         "t": "4. może być używane tylko przez z góry ustalony czas.",
         "o": false
       }
-    ]
+    ],
+    "dzial": "prawo-licencje"
   },
   {
     "id": "2015_pr_maj2015_z2_5",
     "formula": "2015",
+    "poziom": "pr",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "W komórkach arkusza kalkulacyjnego umieszczone zostały poniższe wartości i formuły:\n\n|   | A | B | C |\n|---|---|---|---|\n| 1 | 1 | 2 | 3 |\n| 2 | 2 | =A\\$2*B1 |   |\n| 3 | 3 |   |   |\n| 4 | 4 |   |   |\n\nNastępnie zawartość komórki B2 została skopiowana do komórki C2 oraz do komórek B3, B4, …, B10.",
     "zdania": [
@@ -811,57 +637,32 @@
         "t": "4. Wartość w komórce C2 wyniesie 4.",
         "o": false
       }
-    ]
+    ],
+    "dzial": "arkusz-kalkulacyjny"
   },
   {
     "id": "stara_pr_maj2019_z1_2",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "abcd",
-    "tresc": "Podany algorytm wyznacza pierwszą parzystą liczbę\nw tablicy A[1..n], gdzie nieparzyste są z przodu:\n\ni ← 1\ndopóki A[i] mod 2 ≠ 0:\n  i ← i + 1\nw ← A[i]\n\nZłożoność czasowa algorytmu jest:",
+    "tresc": "Przeanalizuj poniższy algorytm, który dla dodatniej liczby całkowitej n i tablicy liczb całkowitych A[1..n] oblicza inną tablicę C[1..n]:\n\ndla i = 1, 2, ..., n:\n  C[i] = 1\n  dla j = 1, 2, ..., i-1:\n    jeśli A[j] < A[i] oraz C[j]+1 > C[i]:\n      C[i] = C[j]+1\n\nPodany algorytm jest:",
     "odpowiedzi": {
-      "A": "liniowa",
-      "B": "kwadratowa",
-      "C": "sześcienna",
-      "D": "wykładnicza"
+      "A": "liniowy.",
+      "B": "kwadratowy.",
+      "C": "sześcienny.",
+      "D": "wykładniczy."
     },
-    "poprawna": "A"
-  },
-  {
-    "id": "stara_pr_maj2019_z3_1",
-    "formula": "stara",
-    "rok": 2019,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "tf",
-    "tresc": "Oceń, czy poniższe zdania są prawdziwe:",
-    "zdania": [
-      {
-        "t": "DNS to skrót od Domain Name System.",
-        "o": true
-      },
-      {
-        "t": "Do danego adresu IP może być przypisanych wiele różnych nazw.",
-        "o": true
-      },
-      {
-        "t": "Przy zmianie adresu IP komputera pełniącego funkcję serwera WWW jest konieczna zmiana nazwy domeny internetowej.",
-        "o": false
-      },
-      {
-        "t": "System DNS ma jedną centralną bazę danych adresów IP i nazw.",
-        "o": false
-      }
-    ]
+    "poprawna": "B",
+    "dzial": "algorytmika"
   },
   {
     "id": "stara_pr_maj2019_z3_2",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Po pomnożeniu dwóch liczb $1111110_{2}$ oraz $101_{2}$ zapisanych w systemie dwójkowym otrzymamy:",
     "zdania": [
@@ -881,14 +682,15 @@
         "t": "$276_{16}$",
         "o": true
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pr_maj2019_z3_3",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Oceń, czy poniższe zdania są prawdziwe:",
     "zdania": [
@@ -908,14 +710,15 @@
         "t": "Adres IPv4 składa się z 32 bitów.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "sieci-internet"
   },
   {
     "id": "stara_pr_maj2019_z3_4",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Skrótem nazwy złącza, przez które można podłączyć urządzenia peryferyjne do komputera, jest:",
     "zdania": [
@@ -935,14 +738,15 @@
         "t": "HDMI",
         "o": true
       }
-    ]
+    ],
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pr_maj2017_z3_2",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Realizacji usług poczty elektronicznej służy protokół:",
     "zdania": [
@@ -962,14 +766,15 @@
         "t": "POP3",
         "o": true
       }
-    ]
+    ],
+    "dzial": "sieci-internet"
   },
   {
     "id": "stara_pr_maj2017_z3_3",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Liczbą większą od $150_{(10)}$ jest:",
     "zdania": [
@@ -989,14 +794,15 @@
         "t": "$9B_{(16)}$",
         "o": true
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pr_maj2017_z3_4",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Obrazy rastrowe:",
     "zdania": [
@@ -1016,14 +822,15 @@
         "t": "mogą powstać w efekcie cyfrowego zapisu obrazu widzialnego.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "stara_pr_maj2017_z3_5",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Algorytm zwany sitem Eratostenesa opierający się na „wykreślaniu\" wielokrotności kolejnych (niewykreślonych wcześniej) liczb naturalnych służy wyznaczeniu:",
     "zdania": [
@@ -1043,14 +850,15 @@
         "t": "potęg dwójki z zadanego przedziału.",
         "o": false
       }
-    ]
+    ],
+    "dzial": "algorytmika"
   },
   {
     "id": "stara_pr_maj2017_z3_6",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2017,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Przykładem programu, który służy do tłumaczenia instrukcji kodu źródłowego programu komputerowego na język maszynowy, jest:",
     "zdania": [
@@ -1070,14 +878,15 @@
         "t": "defragmentator",
         "o": false
       }
-    ]
+    ],
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pr_maj2014_z3_c",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2014,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Liczba binarna 101011111100 zapisana w systemie szesnastkowym ma postać:",
     "zdania": [
@@ -1097,14 +906,15 @@
         "t": "DFC",
         "o": false
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pr_maj2014_z3_d",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2014,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Liczba 262 to:",
     "zdania": [
@@ -1121,34 +931,18 @@
         "o": false
       },
       {
-        "t": "najmniejsza liczba trzycyfrowa zapisana w systemie o podstawie 16.",
+        "t": "najmniejsza wspólna wielokrotność liczb: 31 i 42.",
         "o": false
       }
-    ]
-  },
-  {
-    "id": "stara_pr_maj2010_z1_a",
-    "formula": "stara",
-    "rok": 2010,
-    "sesja": "maj",
-    "poziom": "pr",
-    "typ": "abcd",
-    "tresc": "Podaj wzór na liczbę wierszy i kolumn tablicy kwadratowej używanej do szyfrowania tekstu o długości d znaków (gdzie wymiar n tablicy jest najmniejszą liczbą, przy której tekst zmieści się w całości w kwadracie $n\\times n$):",
-    "odpowiedzi": {
-      "A": "$n=\\lfloor\\sqrt{d}\\rfloor$",
-      "B": "$n=\\lceil\\sqrt{d}\\rceil$",
-      "C": "$n=\\sqrt{d}+1$",
-      "D": "$n=d^{2}$"
-    },
-    "poprawna": "B",
-    "generated": true
+    ],
+    "dzial": "algorytmika"
   },
   {
     "id": "stara_pr_maj2010_z3_a",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Pojedyncza operacja wykonywana na stosie to:",
     "zdania": [
@@ -1164,14 +958,15 @@
         "t": "pobranie pierwszego od góry elementu.",
         "o": true
       }
-    ]
+    ],
+    "dzial": "algorytmika"
   },
   {
     "id": "stara_pr_maj2010_z3_c",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Liczba $1000_{16}$ to:",
     "zdania": [
@@ -1187,14 +982,15 @@
         "t": "$10000_{8}$",
         "o": true
       }
-    ]
+    ],
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pr_maj2010_z3_d",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Program zapobiegający włamaniom do systemu i kontrolujący pakiety sieciowe to:",
     "zdania": [
@@ -1210,14 +1006,15 @@
         "t": "filtr antyspamowy",
         "o": false
       }
-    ]
+    ],
+    "dzial": "bezpieczenstwo-szyfrowanie"
   },
   {
     "id": "stara_pr_maj2010_z3_e",
     "formula": "stara",
+    "poziom": "pr",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pr",
     "typ": "tf",
     "tresc": "Format plików graficznych dla grafiki rastrowej to:",
     "zdania": [
@@ -1233,14 +1030,15 @@
         "t": "GIF",
         "o": true
       }
-    ]
+    ],
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "stara_pp_maj2019_z3_1",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Formatem grafiki wektorowej jest:",
     "odpowiedzi": {
@@ -1249,14 +1047,15 @@
       "C": "TIFF",
       "D": "GIF"
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "stara_pp_maj2019_z3_2",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Liczba $4736_{9}$ zapisana w systemie dziewiątkowym ma w systemie trójkowym postać:",
     "odpowiedzi": {
@@ -1265,14 +1064,15 @@
       "C": "$10201221_{3}$",
       "D": "$112020_{3}$"
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pp_maj2019_z3_3",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2019,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Creative Commons to:",
     "odpowiedzi": {
@@ -1281,30 +1081,15 @@
       "C": "technologia tworzenia zaawansowanej grafiki komputerowej.",
       "D": "gra edukacyjna dla dzieci rozwijająca kreatywne myślenie."
     },
-    "poprawna": "A"
-  },
-  {
-    "id": "stara_pp_maj2018_z3_1",
-    "formula": "stara",
-    "rok": 2018,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Plik muzyczny zapisany bez kompresji zajmuje 24 megabajty. Jeżeli ten sam plik zostanie zapisany z kompresją bezstratną, jego wielkość wyniesie:",
-    "odpowiedzi": {
-      "A": "co najmniej 24 megabajty.",
-      "B": "dokładnie 24 megabajty.",
-      "C": "mniej niż 24 megabajty.",
-      "D": "co najwyżej 12 megabajtów."
-    },
-    "poprawna": "C"
+    "poprawna": "A",
+    "dzial": "prawo-licencje"
   },
   {
     "id": "stara_pp_maj2018_z3_2",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2018,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Zapisano bez użycia kompresji obrazek o rozmiarach 1280 na 720 pikseli z użyciem 24 bitów na kolor. Ten plik zajmuje na dysku:",
     "odpowiedzi": {
@@ -1313,14 +1098,15 @@
       "C": "176 947 kilobajtów.",
       "D": "24 megabajty."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "stara_pp_maj2018_z3_3",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2018,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "$10110_{2}+111100_{2}$ jest równe:",
     "odpowiedzi": {
@@ -1329,14 +1115,15 @@
       "C": "$1010010_{2}$",
       "D": "$124_{8}$"
     },
-    "poprawna": "C"
+    "poprawna": "C",
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pp_maj2018_z3_4",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2018,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Poniżej zapisano adresy IPv4 dla komputerów w sieci lokalnej w systemie dziesiętnym w punktach A, B i D oraz w systemie binarnym w punkcie C. Nieprawidłowym adresem IP jest:",
     "odpowiedzi": {
@@ -1345,149 +1132,15 @@
       "C": "11000000.10101000.00000000.00000011",
       "D": "13.13.13.13"
     },
-    "poprawna": "A"
-  },
-  {
-    "id": "stara_pp_maj2017_z3_1",
-    "formula": "stara",
-    "rok": 2017,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Zapis dźwięku w postaci cyfrowej o najwyższej jakości (bez utraty informacji) umożliwia format:",
-    "odpowiedzi": {
-      "A": "MP3",
-      "B": "WMA",
-      "C": "OGG",
-      "D": "WAV"
-    },
-    "poprawna": "D"
-  },
-  {
-    "id": "stara_pp_maj2017_z3_2",
-    "formula": "stara",
-    "rok": 2017,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "W relacyjnej bazie danych dane przechowywane są w tabelach. Między tabelami można tworzyć relacje (powiązania). Aby utworzyć relację między dwiema tabelami, muszą one posiadać:",
-    "odpowiedzi": {
-      "A": "pola o takich samych typach danych, przy czym w jednej tabeli pole to musi być kluczem podstawowym.",
-      "B": "pola o takich samych nazwach i typach danych.",
-      "C": "pola o takich samych nazwach, przy czym w obydwu tabelach muszą być one kluczami podstawowymi.",
-      "D": "pola o takich samych nazwach, przy czym w jednej tabeli pole to musi być kluczem podstawowym."
-    },
-    "poprawna": "A"
-  },
-  {
-    "id": "stara_pp_maj2017_z3_4",
-    "formula": "stara",
-    "rok": 2017,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Jednostką częstotliwości taktowania procesora jest:",
-    "odpowiedzi": {
-      "A": "GB",
-      "B": "GHz",
-      "C": "Mb/s",
-      "D": "dpi"
-    },
-    "poprawna": "B"
-  },
-  {
-    "id": "stara_pp_maj2017_z3_5",
-    "formula": "stara",
-    "rok": 2017,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Komórka A1 arkusza kalkulacyjnego zawiera wartość 10, a komórka B1 wartość 20. W komórce C1 umieszczono formułę =JEŻELI(A1>B1;A1*B1;A1+B1). Jaką wartość wyświetli komórka C1?",
-    "odpowiedzi": {
-      "A": "200",
-      "B": "30",
-      "C": "10",
-      "D": "20"
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2016_z1_2",
-    "formula": "stara",
-    "rok": 2016,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "tf",
-    "tresc": "Współczesne systemy operacyjne są wielozadaniowe. Wielozadaniowość polega na tym, że:",
-    "zdania": [
-      {
-        "t": "kilka programów może być wykonywanych równocześnie przez ten sam procesor.",
-        "o": true
-      },
-      {
-        "t": "użytkownik może uruchomić wiele sesji tego samego programu.",
-        "o": true
-      },
-      {
-        "t": "procesor przełącza się bardzo szybko między wykonywanymi zadaniami.",
-        "o": true
-      },
-      {
-        "t": "każdy użytkownik systemu operacyjnego może wykonywać wiele zadań.",
-        "o": true
-      }
-    ]
-  },
-  {
-    "id": "stara_pp_maj2016_z1_3",
-    "formula": "stara",
-    "rok": 2016,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "tf",
-    "tresc": "Liczba $1A_{(16)}$ jest równa liczbie:",
-    "zdania": [
-      {
-        "t": "$11010_{(2)}$",
-        "o": true
-      },
-      {
-        "t": "$32_{(8)}$",
-        "o": true
-      },
-      {
-        "t": "$26_{(10)}$",
-        "o": true
-      },
-      {
-        "t": "$20_{(11)}$",
-        "o": false
-      }
-    ]
-  },
-  {
-    "id": "stara_pp_maj2016_z3_1",
-    "formula": "stara",
-    "rok": 2016,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Serwer DNS (Domain Name System):",
-    "odpowiedzi": {
-      "A": "umożliwia pobieranie plików z serwera na dysk lokalny.",
-      "B": "odpowiedzialny jest za przesyłanie poczty elektronicznej między serwerami.",
-      "C": "odpowiedzialny jest za bezpieczne szyfrowanie połączenia.",
-      "D": "odpowiedzialny jest za tłumaczenie adresów domenowych na adresy IP i odwrotnie."
-    },
-    "poprawna": "D"
+    "poprawna": "A",
+    "dzial": "sieci-internet"
   },
   {
     "id": "stara_pp_maj2016_z3_2",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2016,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Unicode to:",
     "odpowiedzi": {
@@ -1496,14 +1149,15 @@
       "C": "sposób szyfrowania danych.",
       "D": "protokół standardowego wejścia/wyjścia."
     },
-    "poprawna": "A"
+    "poprawna": "A",
+    "dzial": "reprezentacja-danych"
   },
   {
     "id": "stara_pp_maj2016_z3_3",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2016,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Programowanie polegające na określeniu i wykorzystaniu klas nazywamy programowaniem:",
     "odpowiedzi": {
@@ -1512,14 +1166,15 @@
       "C": "strukturalnym",
       "D": "mikroprocesorów"
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pp_maj2016_z3_4",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2016,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Ciąg deklaracji i instrukcji zapisany w języku programowania wysokiego poziomu nazywamy kodem:",
     "odpowiedzi": {
@@ -1528,82 +1183,15 @@
       "C": "źródłowym",
       "D": "maszynowym"
     },
-    "poprawna": "C"
-  },
-  {
-    "id": "stara_pp_maj2016_z3_5",
-    "formula": "stara",
-    "rok": 2016,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Ile jest równa suma wszystkich liczb naturalnych dwucyfrowych, które są podzielne przez 10?",
-    "odpowiedzi": {
-      "A": "440",
-      "B": "450",
-      "C": "540",
-      "D": "550"
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2015_z1_1a",
-    "formula": "stara",
-    "rok": 2015,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "W szóstkowym systemie pozycyjnym liczby reprezentujemy za pomocą cyfr od 0 do 5. W poniższych działaniach wszystkie liczby są zapisane w systemie szóstkowym. Uzupełnij brakujący argument działania $10_{6} * \\dots = 1000_{6}$",
-    "odpowiedzi": {
-      "A": "10",
-      "B": "100",
-      "C": "1000",
-      "D": "5"
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2015_z1_1b",
-    "formula": "stara",
-    "rok": 2015,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "W szóstkowym systemie pozycyjnym liczby reprezentujemy za pomocą cyfr od 0 do 5. W poniższych działaniach wszystkie liczby są zapisane w systemie szóstkowym. Uzupełnij brakujący argument działania $425_{6} - \\dots = 41_{6}$",
-    "odpowiedzi": {
-      "A": "344",
-      "B": "384",
-      "C": "41",
-      "D": "425"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2015_z1_1c",
-    "formula": "stara",
-    "rok": 2015,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "W szóstkowym systemie pozycyjnym liczby reprezentujemy za pomocą cyfr od 0 do 5. W poniższych działaniach wszystkie liczby są zapisane w systemie szóstkowym. Uzupełnij brakujący argument działania $154_{6} / \\dots = 55_{6}$",
-    "odpowiedzi": {
-      "A": "1",
-      "B": "2",
-      "C": "3",
-      "D": "4"
-    },
-    "poprawna": "B",
-    "generated": true
+    "poprawna": "C",
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pp_maj2015_z3_1",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Jaką ostatnią cyfrę w zapisie dziesiętnym ma liczba $2^{2015}$?",
     "odpowiedzi": {
@@ -1612,14 +1200,15 @@
       "C": "6",
       "D": "8"
     },
-    "poprawna": "D"
+    "poprawna": "D",
+    "dzial": "algorytmika"
   },
   {
     "id": "stara_pp_maj2015_z3_2",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Jaki serwer tłumaczy adres IP na adres domenowy i odwrotnie?",
     "odpowiedzi": {
@@ -1628,14 +1217,15 @@
       "C": "serwer FTP",
       "D": "serwer DNS"
     },
-    "poprawna": "D"
+    "poprawna": "D",
+    "dzial": "sieci-internet"
   },
   {
     "id": "stara_pp_maj2015_z3_3",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Klucz podstawowy w tabeli bazy danych:",
     "odpowiedzi": {
@@ -1644,14 +1234,15 @@
       "C": "umożliwia jednoznaczną identyfikację kolumny.",
       "D": "nie może służyć do łączenia z inną tabelą."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "stara_pp_maj2015_z3_6",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2015,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Który z poniższych formatów plików nie służy do zapisywania filmów?",
     "odpowiedzi": {
@@ -1660,235 +1251,15 @@
       "C": "mp3",
       "D": "mp4"
     },
-    "poprawna": "C"
-  },
-  {
-    "id": "stara_pp_maj2014_z3_b",
-    "formula": "stara",
-    "rok": 2014,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Liczba binarna 10101010 to w systemie dziesiętnym:",
-    "odpowiedzi": {
-      "A": "160",
-      "B": "165",
-      "C": "170",
-      "D": "175"
-    },
     "poprawna": "C",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2014_z3_c",
-    "formula": "stara",
-    "rok": 2014,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Ujednolicony format adresowania zasobów (informacji, danych, usług) stosowany w internecie i w sieciach lokalnych to:",
-    "odpowiedzi": {
-      "A": "FTP",
-      "B": "URL",
-      "C": "URN",
-      "D": "HTTP"
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2014_z3_d",
-    "formula": "stara",
-    "rok": 2014,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Urządzenie, które pobiera dane cyfrowe z komputera i zamienia je na sygnały analogowe przesyłane w sieci telefonicznej, to:",
-    "odpowiedzi": {
-      "A": "karta sieciowa",
-      "B": "router",
-      "C": "modem",
-      "D": "hub"
-    },
-    "poprawna": "C",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2014_z3_e",
-    "formula": "stara",
-    "rok": 2014,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "W arkuszu kalkulacyjnym adres bezwzględny oznacza adres komórki zapisany w formule, który nie zmienia się przy kopiowaniu komórki zawierającej tę formułę. Przykładem takiego adresu jest:",
-    "odpowiedzi": {
-      "A": "B\\$12\\$",
-      "B": "B12",
-      "C": "\\$B\\$12",
-      "D": "\\$12B"
-    },
-    "poprawna": "C",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2014_z3_f",
-    "formula": "stara",
-    "rok": 2014,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Formatami plików graficznych przechowujących grafikę rastrową są:",
-    "odpowiedzi": {
-      "A": "JPEG, GIF, BMP",
-      "B": "SVG, CDR, SWF",
-      "C": "PAS, CPP, COM",
-      "D": "PNG, SVG, TIFF"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2014_z3_g",
-    "formula": "stara",
-    "rok": 2014,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "W arkuszu kalkulacyjnym komórka B3 zawiera liczbę 7, a komórka B4 zawiera liczbę 9. Jeśli formułę JEŻELI (B3<7; B3/2; JEŻELI (B4<>9; 3; MOD (B4; B3))) wpiszemy do komórki C3, to pojawi się tam:",
-    "odpowiedzi": {
-      "A": "4",
-      "B": "3",
-      "C": "2",
-      "D": "0"
-    },
-    "poprawna": "C",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3a",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Kolumna w tabeli bazy danych:",
-    "odpowiedzi": {
-      "A": "zawiera dane różnych typów.",
-      "B": "zawiera dane tego samego typu.",
-      "C": "może mieć taką samą nazwę, jak inna kolumna w tej samej tabeli.",
-      "D": "musi zawierać klucz podstawowy."
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3b",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Aby zmniejszyć rozmiar przechowywanych danych, stosuje się programy do:",
-    "odpowiedzi": {
-      "A": "kompresji",
-      "B": "tworzenia kopii zapasowych.",
-      "C": "defragmentacji dysku.",
-      "D": "archiwizacji danych."
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3c",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Liczba 10101 zapisana w systemie binarnym jest:",
-    "odpowiedzi": {
-      "A": "większa od liczby 10110 zapisanej w systemie binarnym.",
-      "B": "mniejsza od liczby 20 zapisanej w systemie dziesiętnym.",
-      "C": "równa liczbie 15 zapisanej w systemie szesnastkowym.",
-      "D": "większa od liczby 11111 zapisanej w systemie binarnym."
-    },
-    "poprawna": "C",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3d",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Jeśli w arkuszu kalkulacyjnym w komórce C1 umieścimy formułę =A1*\\$B\\$1, to po skopiowaniu jej do komórki C2 uzyskamy formułę:",
-    "odpowiedzi": {
-      "A": "=A1*\\$B\\$1",
-      "B": "=A2*\\$B\\$2",
-      "C": "=A2*\\$B\\$1",
-      "D": "=\\$A\\$1*B2"
-    },
-    "poprawna": "C",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3e",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Grafika wektorowa to sposób tworzenia i przechowywania w komputerze obrazów, które są reprezentowane w postaci:",
-    "odpowiedzi": {
-      "A": "zbiorów punktów jednokolorowych.",
-      "B": "opisów figur geometrycznych (odcinków, łuków, okręgów, elips ...).",
-      "C": "siatki niezależnie traktowanych pikseli.",
-      "D": "warstw kolorystycznych obrazu."
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3f",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Protokół sieciowy to:",
-    "odpowiedzi": {
-      "A": "zbiór reguł, zgodnie z którymi następuje wymiana informacji między komputerami w sieci.",
-      "B": "polecenie, które wysyła pakiet informacji do dowolnego komputera w sieci z żądaniem potwierdzenia otrzymania informacji.",
-      "C": "sterownik, który musi być zainstalowany, aby była możliwa wymiana informacji z innymi komputerami w sieci.",
-      "D": "program służący do bezpiecznego przeglądania stron WWW."
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_brak_z3g",
-    "formula": "stara",
-    "rok": 2011,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Programy komputerowe rozpowszechniane bez opłat do wypróbowania przez użytkowników, mające często ograniczenia czasowe, limit uruchomień lub blokadę dostępu do niektórych funkcji, mają licencję:",
-    "odpowiedzi": {
-      "A": "freeware",
-      "B": "komercyjną",
-      "C": "shareware",
-      "D": "GNU GPL"
-    },
-    "poprawna": "C",
-    "generated": true
+    "dzial": "grafika-multimedia"
   },
   {
     "id": "stara_pp_maj2011_z3a",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2011,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Dane są dwie liczby: $A = 11001_{(2)}$ oraz $B = 1010_{(2)}$.",
     "odpowiedzi": {
@@ -1896,14 +1267,15 @@
       "B": "$A + B = 35_{(10)}$.",
       "C": "$A - B = 10100_{(2)}$."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "systemy-liczbowe"
   },
   {
     "id": "stara_pp_maj2011_z3c",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2011,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Do odbierania wiadomości za pomocą poczty elektronicznej służy protokół:",
     "odpowiedzi": {
@@ -1911,14 +1283,15 @@
       "B": "POP3.",
       "C": "FTP."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "sieci-internet"
   },
   {
     "id": "stara_pp_maj2011_z3d",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2011,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "W sieciach komputerowych:",
     "odpowiedzi": {
@@ -1926,14 +1299,15 @@
       "B": "LAN to komputer podłączony do sieci, posiadający adres IP.",
       "C": "serwer DNS tłumaczy adresy domenowe na adresy IP."
     },
-    "poprawna": "C"
+    "poprawna": "C",
+    "dzial": "sieci-internet"
   },
   {
     "id": "stara_pp_maj2011_z3e",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2011,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Firewall to program:",
     "odpowiedzi": {
@@ -1941,14 +1315,15 @@
       "B": "służący do sprawdzania błędów na dysku.",
       "C": "zwiększający przepustowość w sieciach komputerowych."
     },
-    "poprawna": "A"
+    "poprawna": "A",
+    "dzial": "bezpieczenstwo-szyfrowanie"
   },
   {
     "id": "stara_pp_maj2011_z3f",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2011,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "W relacyjnym modelu bazy danych:",
     "odpowiedzi": {
@@ -1956,14 +1331,15 @@
       "B": "podstawową formą organizacji danych są kwerendy.",
       "C": "kluczem podstawowym nie może być kolumna zawierająca tylko i wyłącznie teksty."
     },
-    "poprawna": "A"
+    "poprawna": "A",
+    "dzial": "bazy-danych-sql"
   },
   {
     "id": "stara_pp_maj2011_z3g",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2011,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Programowanie strukturalne polega między innymi na:",
     "odpowiedzi": {
@@ -1971,82 +1347,15 @@
       "B": "hierarchicznym podziale programu na wyodrębnione podzadania.",
       "C": "hierarchicznym podziale długiego tekstu."
     },
-    "poprawna": "B"
-  },
-  {
-    "id": "stara_pp_maj2010_z2a",
-    "formula": "stara",
-    "rok": 2010,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Liczba 15(10) zapisana w systemie dwójkowym ma postać:",
-    "odpowiedzi": {
-      "A": "1111(2)",
-      "B": "1001(2)",
-      "C": "111(2)",
-      "D": "1010(2)"
-    },
-    "poprawna": "A",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2010_z2b",
-    "formula": "stara",
-    "rok": 2010,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Liczba 101(2) zapisana w systemie dziesiętnym ma postać:",
-    "odpowiedzi": {
-      "A": "3(10)",
-      "B": "5(10)",
-      "C": "6(10)",
-      "D": "10(10)"
-    },
     "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2010_z2c",
-    "formula": "stara",
-    "rok": 2010,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Prędkość przesyłu danych 1 Mb/s (megabit na sekundę) to:",
-    "odpowiedzi": {
-      "A": "1024 b/s",
-      "B": "1024 kb/s",
-      "C": "8 MB/s",
-      "D": "1000 kb/s"
-    },
-    "poprawna": "B",
-    "generated": true
-  },
-  {
-    "id": "stara_pp_maj2010_z2d",
-    "formula": "stara",
-    "rok": 2010,
-    "sesja": "maj",
-    "poziom": "pp",
-    "typ": "abcd",
-    "tresc": "Pamięć o pojemności 1 GB (gigabajt) to:",
-    "odpowiedzi": {
-      "A": "1024 MB",
-      "B": "1000 MB",
-      "C": "1024 kB",
-      "D": "8192 Mb"
-    },
-    "poprawna": "A",
-    "generated": true
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pp_maj2010_z3a",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Wiadomo, że kodem ASCII małej litery „a” jest 97. Kodem małej litery „d” jest liczba:",
     "odpowiedzi": {
@@ -2054,14 +1363,15 @@
       "B": "$(01011010)_2$",
       "C": "$(01101110)_2$"
     },
-    "poprawna": "A"
+    "poprawna": "A",
+    "dzial": "reprezentacja-danych"
   },
   {
     "id": "stara_pp_maj2010_z3b",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Zbiór programów, które zarządzają pracą komputera, to:",
     "odpowiedzi": {
@@ -2069,14 +1379,15 @@
       "B": "system operacyjny.",
       "C": "pakiet programów biurowych."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pp_maj2010_z3c",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Popularnym językiem programowania jest:",
     "odpowiedzi": {
@@ -2084,30 +1395,31 @@
       "B": "Java.",
       "C": "Agawa."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pp_maj2010_z3d",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
-    "tresc": "Co nie dotyczy charakterystyki dysku twardego?",
+    "tresc": "Który parametr nie dotyczy charakterystyki dysku twardego?",
     "odpowiedzi": {
       "A": "Pojemność liczona np. w GB.",
       "B": "Czas zapisu i odczytu 1 kB danych liczony w cyklach rozkazowych procesora.",
-      "C": "Liczba obrotów talerzy dysku na minutę (obr/min).",
-      "D": "Średni czas dostępu do danych."
+      "C": "Liczba obrotów talerzy dysku na minutę (obr/min)."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "programowanie-sprzet-os"
   },
   {
     "id": "stara_pp_maj2010_z3e",
     "formula": "stara",
+    "poziom": "pp",
     "rok": 2010,
     "sesja": "maj",
-    "poziom": "pp",
     "typ": "abcd",
     "tresc": "Dany jest następujący algorytm:\n1. n ← 6, i ← 1, s ← 0\n2. dopóki i<=n wykonuj\n   s ← s + i\n   i ← i + 1\n3. s ← s + 1\n(← oznacza instrukcję przypisania)\nPo wykonaniu tego algorytmu wartości zmiennych s, i są odpowiednio równe:",
     "odpowiedzi": {
@@ -2115,6 +1427,3704 @@
       "B": "22, 7.",
       "C": "21, 7."
     },
-    "poprawna": "B"
+    "poprawna": "B",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_czerwiec2015_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Algorytm Euklidesa",
+    "zdania": [
+      {
+        "t": "służy do obliczania potęgi $a^b$.",
+        "o": false
+      },
+      {
+        "t": "służy do obliczania największego wspólnego dzielnika dwóch liczb.",
+        "o": true
+      },
+      {
+        "t": "zastosowany do liczb $a=100$, $b=10$ da wynik 5.",
+        "o": false
+      },
+      {
+        "t": "zastosowany do liczb $a=100$, $b=8$ da wynik 4.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_czerwiec2015_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Liczba szesnastkowa $(FCA)_{16}$ jest",
+    "zdania": [
+      {
+        "t": "mniejsza od liczby $(FFF)_{16}$.",
+        "o": true
+      },
+      {
+        "t": "większa od liczby $(AAAA)_{16}$.",
+        "o": false
+      },
+      {
+        "t": "mniejsza od liczby $(1111)_{16}$.",
+        "o": true
+      },
+      {
+        "t": "większa od liczby $(9999)_{16}$.",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_czerwiec2015_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Klucz obcy w tabeli bazy danych",
+    "zdania": [
+      {
+        "t": "pochodzi z innej tabeli.",
+        "o": true
+      },
+      {
+        "t": "służy do łączenia tabeli z inną tabelą.",
+        "o": true
+      },
+      {
+        "t": "musi być opisany za pomocą jednej kolumny.",
+        "o": false
+      },
+      {
+        "t": "jednoznacznie identyfikuje wiersze tej tabeli.",
+        "o": false
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_czerwiec2015_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Adres IPv4",
+    "zdania": [
+      {
+        "t": "składa się z 48-bitów.",
+        "o": false
+      },
+      {
+        "t": "jest unikatowy w skali świata.",
+        "o": false
+      },
+      {
+        "t": "jest unikatowy w skali sieci lokalnej.",
+        "o": true
+      },
+      {
+        "t": "300.200.256.1 jest poprawny.",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "2015_pr_czerwiec2016_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "W językach programowania: Pascal, C++, Java tablica jest strukturą danych,",
+    "zdania": [
+      {
+        "t": "która ma maksymalnie 256 elementów.",
+        "o": false
+      },
+      {
+        "t": "w której można przechowywać tylko liczby.",
+        "o": false
+      },
+      {
+        "t": "w której możemy się odwoływać do poszczególnych elementów za pomocą indeksów.",
+        "o": true
+      }
+    ],
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "2015_pr_czerwiec2016_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Suma $200_{10}+10_2$ jest równa",
+    "zdania": [
+      {
+        "t": "$210_{10}$",
+        "o": false
+      },
+      {
+        "t": "$312_8$",
+        "o": true
+      },
+      {
+        "t": "$CA_{16}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_czerwiec2016_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Jednym z podstawowych pojęć w informatyce jest algorytm. Każdy algorytm powinien spełniać własność:",
+    "zdania": [
+      {
+        "t": "dowolnego porządku operacji, tzn. działania wykonywane w algorytmie można wykonać w dowolnej kolejności.",
+        "o": false
+      },
+      {
+        "t": "skończonej liczby operacji, tzn. algorytm można zapisać w postaci skończonego ciągu instrukcji lub operacji.",
+        "o": true
+      },
+      {
+        "t": "jednoznaczności operacji, tzn. algorytm może zawierać tylko takie operacje, których działanie jest jednoznacznie określone.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_czerwiec2016_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Grafika wektorowa",
+    "zdania": [
+      {
+        "t": "pozwala skalować obraz bez utraty jego jakości.",
+        "o": true
+      },
+      {
+        "t": "używa figur geometrycznych do przechowywania informacji o obrazie.",
+        "o": true
+      },
+      {
+        "t": "jest powszechnie stosowana do zapisu zdjęć w tabletach, aparatach fotograficznych i telefonach komórkowych.",
+        "o": false
+      }
+    ],
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "2015_pr_czerwiec2019_z1_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "czerwiec",
+    "typ": "abcd",
+    "tresc": "Złożoność czasowa algorytmu opisanego funkcją Rek dla parametrów $x = 1$, $p = 1$, $k = n$ jest",
+    "odpowiedzi": {
+      "A": "sześcienna.",
+      "B": "kwadratowa.",
+      "C": "liniowa.",
+      "D": "logarytmiczna."
+    },
+    "poprawna": "D",
+    "source": "MIN-R1_1P-193",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_czerwiec2019_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Dane są tabele Uczniowie i Oceny. Przeanalizuj i oceń poniższe zapytanie w języku SQL. Oceń, czy poniższe zdania są prawdziwe.\n\n$\\texttt{SELECT Uczniowie.imie, Uczniowie.nazwisko, AVG(Oceny.ocena)}$\n$\\texttt{FROM Uczniowie INNER JOIN Oceny ON Uczniowie.id\\_ucznia = Oceny.id\\_ucznia}$\n$\\texttt{GROUP BY Uczniowie.id\\_ucznia, Uczniowie.imie, Uczniowie.nazwisko}$\n$\\texttt{HAVING AVG(Oceny.ocena) >= 4}$\n$\\texttt{ORDER BY AVG(Oceny.ocena), Uczniowie.nazwisko;}$",
+    "zdania": [
+      {
+        "t": "W wyniku zapytania, przy odpowiednich danych, mogą pojawić się następujące po sobie wiersze: Jan Abacki 4.08, Jan Kowalski 4.85.",
+        "o": true
+      },
+      {
+        "t": "W wyniku zapytania to samo imię i nazwisko może pojawić się tylko raz, nawet jeśli dwóch uczniów ma takie samo imię i nazwisko.",
+        "o": false
+      },
+      {
+        "t": "W wyniku zapytania otrzymamy trzy kolumny z danymi.",
+        "o": true
+      },
+      {
+        "t": "Jedynym kryterium określającym kolejność wierszy w odpowiedzi jest średnia ocena.",
+        "o": false
+      }
+    ],
+    "source": "MIN-R1_1P-193",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_czerwiec2019_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Powyższą tablicę kwadratów w arkuszu kalkulacyjnym można otrzymać, jeżeli skopiuje się tylko jedną formułę z komórki B2 do pozostałych komórek z zakresu B2:K10. W tym celu do komórki B2 należy wpisać",
+    "zdania": [
+      {
+        "t": "$\\texttt{=(\\$A2+B\\$1)*(\\$A2+B\\$1)}$",
+        "o": true
+      },
+      {
+        "t": "$\\texttt{=(A2+B1)*(A2+B1)}$",
+        "o": false
+      },
+      {
+        "t": "$\\texttt{=(\\$A2+B\\$1)\\^{}2}$",
+        "o": true
+      },
+      {
+        "t": "$\\texttt{=(\\$A\\$2+\\$B\\$1)\\^{}2}$",
+        "o": false
+      }
+    ],
+    "source": "MIN-R1_1P-193",
+    "dzial": "arkusz-kalkulacyjny"
+  },
+  {
+    "id": "2015_pr_czerwiec2019_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Protokół HTTPS",
+    "zdania": [
+      {
+        "t": "jest protokołem pobierania poczty elektronicznej ze zdalnego serwera przez połączenie TCP/IP.",
+        "o": false
+      },
+      {
+        "t": "obsługuje system nazywania domen.",
+        "o": false
+      },
+      {
+        "t": "przydziela adresy IP poszczególnym komputerom.",
+        "o": false
+      },
+      {
+        "t": "jest szyfrowaną wersją protokołu http.",
+        "o": true
+      }
+    ],
+    "source": "MIN-R1_1P-193",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "2015_pr_czerwiec2019_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Różnica $11001001_2 - 1111111_2$ jest równa",
+    "zdania": [
+      {
+        "t": "$2A_{16}$",
+        "o": false
+      },
+      {
+        "t": "$112_8$",
+        "o": true
+      },
+      {
+        "t": "$2110_4$",
+        "o": false
+      },
+      {
+        "t": "$1001010_2$",
+        "o": true
+      }
+    ],
+    "source": "MIN-R1_1P-193",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2020_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Czas można odczytywać na zegarach tradycyjnych i na zegarach binarnych. Każda kolumna odpowiada jednej cyfrze zapisu dziesiętnego godziny przedstawionej w postaci binarnej; czarny kwadrat oznacza 1, biały kwadrat oznacza 0, a kwadraty w najniższym wierszu odpowiadają najmniej znaczącym cyfrom zapisu binarnego. Oceń prawdziwość podanych zdań dotyczących zegarów A, B, C i D.",
+    "zdania": [
+      {
+        "t": "Zegar A wskazuje godzinę 22:30:48.",
+        "o": false
+      },
+      {
+        "t": "Zegar B wskazuje godzinę 07:58:35.",
+        "o": true
+      },
+      {
+        "t": "Zegar C wskazuje godzinę 10:44:24.",
+        "o": true
+      },
+      {
+        "t": "Zegar D wskazuje godzinę 17:48:54.",
+        "o": false
+      }
+    ],
+    "source": "CKE MIN-R1_1P-202 czerwiec 2020",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2020_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "W poniższym algorytmie $n$ jest nieujemną liczbą całkowitą, mod to operator reszty z dzielenia, div to operator dzielenia całkowitego:\n\n$w \\leftarrow 0$\ndopóki $n \\neq 0$ wykonuj\n  $w \\leftarrow w + (n \\bmod 10)$\n  $n \\leftarrow n \\,\\mathrm{div}\\, 10$\n\nOceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Po wykonaniu algorytmu dla $n = 45778$ zmienna $w$ przyjmuje wartość 30.",
+        "o": false
+      },
+      {
+        "t": "Po wykonaniu algorytmu dla liczby $n$ wartością zmiennej $w$ jest suma cyfr liczby $n$ w zapisie dziesiętnym.",
+        "o": true
+      },
+      {
+        "t": "Podczas wykonywania algorytmu dla $n = 1234$ w kolejnych iteracjach pętli dopóki, zmienna $w$ przyjmuje wartości 1, 3, 6, 10.",
+        "o": false
+      },
+      {
+        "t": "Po wykonaniu algorytmu dla $n = 11111$ zmienna $w$ przyjmuje wartość 5.",
+        "o": true
+      }
+    ],
+    "source": "CKE MIN-R1_1P-202 czerwiec 2020",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_maj2020_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest konfiguracja interfejsu sieciowego komputerów A i B.\nDla komputera A: Adres IPv4: 192.168.10.65, Maska sieci: 255.255.255.0.\nDla komputera B: Adres IPv4: 192.168.10.128, Maska sieci: 255.255.255.0.\nOceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Komputer A i komputer B są w tej samej sieci.",
+        "o": true
+      },
+      {
+        "t": "Adresem sieci dla komputera A jest adres 192.168.10.0.",
+        "o": true
+      },
+      {
+        "t": "Dla maski 255.255.255.0 są dostępne 254 adresy hostów.",
+        "o": true
+      },
+      {
+        "t": "Adres rozgłoszeniowy sieci, do której należy komputer B, to 192.168.255.255.",
+        "o": false
+      }
+    ],
+    "source": "CKE MIN-R1_1P-202 czerwiec 2020",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "2015_pr_maj2020_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest tabela pracownicy o kolumnach: nr_p, nazwisko, imie, staz, pensja (m.in. 7698 Bracki Bartosz 15 1530; 7782 Celerek Agnieszka 12 1680; 7839 King Mirosław 22 1500; pozostali pracownicy mają pensję ≥ 2000) oraz zapytanie SQL:\n\nSELECT *\n  FROM pracownicy\n  WHERE pensja < 2000\n  ORDER BY staz DESC;\n\nOceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Wynik powyższego zapytania to 3.",
+        "o": false
+      },
+      {
+        "t": "Wynikiem powyższego zapytania jest zestawienie: 7839 King Mirosław 22 1500; 7698 Bracki Bartosz 15 1530; 7782 Celerek Agnieszka 12 1680.",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania będą wiersze z tabeli pracownicy, zawierające wszystkie dane z tej tabeli dotyczące pracowników, dla których wartość z kolumny pensja jest mniejsza niż 2000, posortowane nierosnąco według parametru staz.",
+        "o": true
+      },
+      {
+        "t": "Wynikiem powyższego zapytania jest zestawienie: 7782 12 1680; 7698 15 1530; 7839 22 1500.",
+        "o": false
+      }
+    ],
+    "source": "CKE MIN-R1_1P-202 czerwiec 2020",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_czerwiec2022_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2022,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Po dodaniu dwóch liczb $101101_2$ i $111011_2$ zapisanych w systemie binarnym otrzymamy:",
+    "zdania": [
+      {
+        "t": "$1101000_2$",
+        "o": true
+      },
+      {
+        "t": "$68_{16}$",
+        "o": true
+      },
+      {
+        "t": "$140_8$",
+        "o": false
+      },
+      {
+        "t": "$1120_4$",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_czerwiec2022_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2022,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Poniżej przedstawiono opis dwóch tabel danych zawierających informacje o lekarzach i wizytach u tych lekarzy. Pole Id_lekarza w tabeli Lekarze jest połączone relacją „jeden do wielu” z polem Id_lekarza w tabeli Wizyty. Tabela Lekarze (Id_lekarza Tekst(5) klucz główny, Imie_lekarza Tekst(50), Nazwisko_lekarza Tekst(50), Specjalnosc_lekarza Tekst(200)). Tabela Wizyty (Id_lekarza Tekst(5) klucz obcy, Id_pacjenta Tekst(10), Data_wizyty Data). Oceń prawdziwość poniższych zdań dotyczących wyników zapytań SQL.",
+    "zdania": [
+      {
+        "t": "Wynikiem zapytania: SELECT Imie_lekarza, Nazwisko_lekarza, count(*) FROM Lekarze JOIN Wizyty ON Lekarze.Id_lekarza = Wizyty.Id_lekarza GROUP BY Wizyty.Id_lekarza; jest zestawienie zawierające imię i nazwisko każdego lekarza oraz liczbę wizyt u tego lekarza.",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania: SELECT Specjalnosc_lekarza, count(*) FROM Lekarze JOIN Wizyty ON Lekarze.Id_lekarza = Wizyty.Id_lekarza GROUP BY Lekarze.Id_lekarza; jest zestawienie zawierające nazwy specjalności oraz łączne liczby wizyt u lekarzy tych specjalności.",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania: SELECT Specjalnosc_lekarza, count(Specjalnosc_lekarza) FROM Lekarze JOIN Wizyty ON Lekarze.Id_lekarza = Wizyty.Id_lekarza GROUP BY Wizyty.Id_lekarza; jest zestawienie zawierające nazwy specjalności oraz łączne liczby wizyt u lekarzy tych specjalności.",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania: SELECT Id_pacjenta, count(*) FROM Wizyty JOIN Lekarze ON Lekarze.Id_lekarza = Wizyty.Id_lekarza GROUP BY Lekarze.Id_lekarza; jest zestawienie zawierające liczby wizyt pacjentów u poszczególnych lekarzy.",
+        "o": false
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_lipiec2020_z1_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "lipiec",
+    "typ": "abcd",
+    "tresc": "Dla $1 < a \\le b \\le n$, $S[b] - S[a-1]$ jest równe",
+    "odpowiedzi": {
+      "A": "liczbie dzielników pierwszych liczby $b - a$.",
+      "B": "liczbie liczb pierwszych należących do przedziału $[a, b]$.",
+      "C": "największemu wspólnemu dzielnikowi $a$ i $b$.",
+      "D": "liczbie liczb pierwszych należących do przedziału $[a-1, b]$."
+    },
+    "poprawna": "B",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_lipiec2020_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "lipiec",
+    "typ": "tf",
+    "tresc": "Dana jest rekurencyjna funkcja $f(n)$: jeżeli $n = 0$, wynikiem jest 1; w przeciwnym przypadku $s \\leftarrow 1$, dla $i = 0, 1, ..., n-1$ wykonuj $s \\leftarrow s + f(i)$, wynikiem jest $s$. Oceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Dla $n < 10$ wynikiem działania funkcji $f$ jest liczba mniejsza od 1000.",
+        "o": true
+      },
+      {
+        "t": "Obliczenie poprawnego wyniku $f(200)$ zajmie na komputerze w dowolnej szkolnej pracowni najwyżej kilka sekund.",
+        "o": false
+      },
+      {
+        "t": "W trakcie obliczania wartości funkcji $f$ dla dowolnego $n > 0$ nastąpi łącznie co najwyżej $2n$ wywołań tej funkcji.",
+        "o": false
+      },
+      {
+        "t": "$f(10) = 1024$.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_lipiec2020_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "lipiec",
+    "typ": "tf",
+    "tresc": "Liczba $BA_{16}$ (zapisana w systemie szesnastkowym) jest równa",
+    "zdania": [
+      {
+        "t": "$186_{10}$",
+        "o": true
+      },
+      {
+        "t": "$252_8$",
+        "o": false
+      },
+      {
+        "t": "$10111010_2$",
+        "o": true
+      },
+      {
+        "t": "$2232_4$",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2016_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Po wpisaniu w pasku adresu przeglądarki http://81.219.47.83 otwiera się strona Centralnej Komisji Egzaminacyjnej, ale po wpisaniu http://cke.edu.pl pojawia się błąd „Nie można odnaleźć podanej strony”. Możliwe przyczyny tego stanu rzeczy to:",
+    "zdania": [
+      {
+        "t": "awaria serwera SMTP Centralnej Komisji Egzaminacyjnej",
+        "o": false
+      },
+      {
+        "t": "awaria serwera poczty użytkownika",
+        "o": false
+      },
+      {
+        "t": "awaria serwera DNS",
+        "o": true
+      },
+      {
+        "t": "brak prawidłowego klucza szyfrującego w przeglądarce",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "2015_pr_maj2016_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest funkcja $f$ określona wzorem rekurencyjnym $f(1)=4$, $f(n+1)=1-\\frac{1}{f(n)}$ dla $n \\geq 1$. Wtedy:",
+    "zdania": [
+      {
+        "t": "$f(8)=\\frac{1}{3}$",
+        "o": false
+      },
+      {
+        "t": "$f(9)=\\frac{3}{4}$",
+        "o": true
+      },
+      {
+        "t": "$f(10)=4$",
+        "o": true
+      },
+      {
+        "t": "$f(100)=-\\frac{1}{3}$",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_maj2016_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla dwóch liczb $1111_{2}$ i $101_{2}$, ich",
+    "zdania": [
+      {
+        "t": "suma jest równa $10110_{2}$",
+        "o": false
+      },
+      {
+        "t": "różnica jest równa $1010_{2}$",
+        "o": true
+      },
+      {
+        "t": "iloczyn jest mniejszy od $110000_{2}$",
+        "o": false
+      },
+      {
+        "t": "iloraz jest większy od $10_{2}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2016_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość poniższych zdań dotyczących systemu operacyjnego.",
+    "zdania": [
+      {
+        "t": "Jednym z zadań systemu operacyjnego jest przydział pamięci działającym programom.",
+        "o": true
+      },
+      {
+        "t": "Na jednym dysku twardym mogą być zainstalowane dwa systemy operacyjne.",
+        "o": true
+      },
+      {
+        "t": "System operacyjny musi być przechowywany w pamięci ROM.",
+        "o": false
+      },
+      {
+        "t": "System operacyjny musi być przechowywany na twardym dysku.",
+        "o": false
+      }
+    ],
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "2015_pr_maj2019_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest tabela PRACOWNICY o kolumnach: Nr_P, Nazwisko, Imię, Stanowisko, Nr_działu, zawierająca wiersze: (736, Smitko, Alan, urzędnik, 20), (7499, Nowak, Kazimierz, sprzedawca, 30), (7521, Więcek, Mariusz, sprzedawca, 30), (7566, Jonas, Kamil, kierownik, 20), (7654, Martin, Leon, sprzedawca, 30), (7698, Bracki, Bartosz, kierownik, 30), (7782, Celerek, Agnieszka, kierownik, 10), (7788, Skotnik, Natalia, analityk, 20), (7839, King, Mirosława, prezes, 10). Oceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Wynikiem zapytania SELECT COUNT(Stanowisko) FROM PRACOWNICY; jest: Stanowisko 5",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania SELECT COUNT(Stanowisko) FROM PRACOWNICY WHERE Stanowisko <> \"kierownik\"; jest: 6",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania SELECT Stanowisko, COUNT(*) FROM PRACOWNICY GROUP BY Stanowisko; jest: urzędnik 1, sprzedawca 3, kierownik 3, analityk 1, prezes 1",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania SELECT COUNT(Stanowisko) FROM PRACOWNICY WHERE Stanowisko LIKE \"*nik\"; jest: 2",
+        "o": false
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_maj2019_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2019,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość podanych zdań dotyczących systemu DNS.",
+    "zdania": [
+      {
+        "t": "DNS to skrót od Domain Name System.",
+        "o": true
+      },
+      {
+        "t": "Do danego adresu IP może być przypisanych wiele różnych nazw.",
+        "o": true
+      },
+      {
+        "t": "Przy zmianie adresu IP komputera pełniącego funkcję serwera WWW jest konieczna zmiana nazwy domeny internetowej.",
+        "o": false
+      },
+      {
+        "t": "System DNS ma jedną centralną bazę danych adresów IP i nazw.",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "2015_pr_maj2021_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2021,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest następująca funkcja:\n\nfunkcja f(n):\n  jeżeli n > 0\n      wypisz n\n      f(n - 2)\n      wypisz n\n\nOceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "W wyniku wywołania f(5) otrzymamy ciąg 5 5 5 5 5 5.",
+        "o": false
+      },
+      {
+        "t": "W wyniku wywołania f(6) otrzymamy ciąg 6 4 2 2 4 6.",
+        "o": true
+      },
+      {
+        "t": "W wyniku wywołania f(7) otrzymamy ciąg 7 5 3 1 1 3 5 7.",
+        "o": true
+      },
+      {
+        "t": "W wyniku wywołania f(8) otrzymamy ciąg 8 6 4 2 0 0 2 4 6 8.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_maj2021_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2021,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "$(10000000)_2$ jest liczbą większą od liczby $(A9)_{16}$",
+        "o": false
+      },
+      {
+        "t": "$(1111)_4$ jest liczbą większą od liczby $(1111111)_2$",
+        "o": false
+      },
+      {
+        "t": "$(3003)_4$ jest liczbą większą od liczby $(C2)_{16}$",
+        "o": true
+      },
+      {
+        "t": "$(333)_8$ jest liczbą większą od liczby $(10100101)_2$",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2021_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2021,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "W bazie danych istnieje tabela produkty(id_produktu, produkt, sztuk, cena), zawierająca następujące dane:\n\nid_produktu | produkt | sztuk | cena\n1 | zeszyt | 160 | 2\n2 | okładka | 100 | 3\n3 | ołówek | 250 | 1\n4 | długopis | 178 | 5\n5 | pióro | 100 | 12\n6 | gumka | 250 | 1\n7 | piórnik | 125 | 8\n8 | cyrkiel | 130 | 4\n\nOceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Wynikiem zapytania SELECT produkt FROM produkty WHERE (cena = 2 OR cena = 4) jest cyrkiel",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania SELECT AVG(cena) FROM produkty WHERE sztuk IN (125, 160) jest 5",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania SELECT SUM(sztuk) FROM produkty WHERE (cena = 1 OR cena = 2) jest 660",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania SELECT COUNT(cena) FROM produkty WHERE cena BETWEEN 2 AND 4 jest 2",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_maj2022_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2022,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dany jest algorytm:\n\n$s \\leftarrow 0$\ndla $i = 1, 2, \\ldots, n$\n  dla $j = i, i+1, \\ldots, n$\n    $s \\leftarrow s + 1$\n\nZłożoność obliczeniowa powyższego algorytmu oceniona liczbą wykonań instrukcji $s \\leftarrow s + 1$, w zależności od dodatniej liczby całkowitej $n$, jest",
+    "zdania": [
+      {
+        "t": "liniowa.",
+        "o": false
+      },
+      {
+        "t": "kwadratowa.",
+        "o": true
+      },
+      {
+        "t": "$n \\log n$.",
+        "o": false
+      },
+      {
+        "t": "nie większa niż sześcienna.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_maj2022_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2022,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Po dodaniu liczb $132_4$ oraz $3111_4$ zapisanych w systemie czwórkowym otrzymamy:",
+    "zdania": [
+      {
+        "t": "$1111011_2$",
+        "o": false
+      },
+      {
+        "t": "$362_8$",
+        "o": false
+      },
+      {
+        "t": "$F3_{16}$",
+        "o": true
+      },
+      {
+        "t": "$3303_4$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2022_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2022,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "W bazie danych istnieje tabela mandaty(numer, id_osoby, punkty) zawierająca następujące dane:\n\nnumer | id_osoby | punkty\n1 | 1 | 5\n2 | 1 | 14\n3 | 2 | 20\n4 | 3 | 21\n5 | 2 | 1\n6 | 1 | 2",
+    "zdania": [
+      {
+        "t": "Wynikiem zapytania:\nSELECT id_osoby, sum(punkty)\nFROM mandaty\nGROUP BY id_osoby\nHAVING sum(punkty) > 5\njest zestawienie:\n1 14\n2 20\n3 21",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania:\nSELECT id_osoby, sum(punkty)\nFROM mandaty\nGROUP BY id_osoby\njest zestawienie:\n1 21\n2 21\n3 21",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania:\nSELECT numer + punkty\nFROM mandaty\njest\n86",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania:\nSELECT count(punkty)\nFROM mandaty\nWHERE punkty = 21\njest\n1",
+        "o": true
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2023_pr_czerwiec2024_z5",
+    "formula": "2023",
+    "poziom": "pr",
+    "rok": 2024,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość podanych zdań. Zaznacz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.",
+    "zdania": [
+      {
+        "t": "Ochrona praw autorskich przysługuje twórcy niezależnie od spełnienia jakichkolwiek formalności.",
+        "o": true
+      },
+      {
+        "t": "Programy komputerowe nie są dziełami chronionymi prawami autorskimi.",
+        "o": false
+      }
+    ],
+    "dzial": "prawo-licencje"
+  },
+  {
+    "id": "2023_pr_czerwiec2025_z4",
+    "formula": "2023",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość podanych zdań dotyczących formatów plików graficznych. Zaznacz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.",
+    "zdania": [
+      {
+        "t": "W pliku w formacie GIF zapiszemy obraz w 16 milionach kolorów bez utraty informacji o nich.",
+        "o": false
+      },
+      {
+        "t": "W plikach w formacie JPG są wykorzystywane metody kompresji danych.",
+        "o": true
+      },
+      {
+        "t": "Format JPG obsługuje przezroczyste tła obrazów.",
+        "o": false
+      }
+    ],
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "2023_pr_grudzien2022_z7",
+    "formula": "2023",
+    "poziom": "pr",
+    "rok": 2022,
+    "sesja": "grudzień",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość podanych zdań. Zaznacz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.",
+    "zdania": [
+      {
+        "t": "Klucz symetryczny umożliwia przeprowadzanie operacji szyfrowania i deszyfrowania.",
+        "o": true
+      },
+      {
+        "t": "W szyfrowaniu symetrycznym używa się dwóch kluczy: prywatnego i publicznego.",
+        "o": false
+      }
+    ],
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_1",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Rozróżniamy trzy podstawowe topologie połączeń komputerów w sieci:",
+    "odpowiedzi": {
+      "A": "magistrala, pierścień i gwiazda.",
+      "B": "LAN, WAN, MAN.",
+      "C": "„każdy z każdym”, „klient - serwer”, „serwer - klient”.",
+      "D": "ARPANET, BITNET, SIPRNet."
+    },
+    "poprawna": "A",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_2",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Jednostka gęstości „dpi” określa",
+    "odpowiedzi": {
+      "A": "liczbę bitów na cal.",
+      "B": "liczbę kropek (punktów) na cal wydruku.",
+      "C": "liczbę znaków alfanumerycznych na cal.",
+      "D": "liczbę bajtów na cal."
+    },
+    "poprawna": "B",
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_3",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Liczba binarna $111010101_2$ to w systemie dziesiętnym",
+    "odpowiedzi": {
+      "A": "481.",
+      "B": "467.",
+      "C": "469.",
+      "D": "471."
+    },
+    "poprawna": "C",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_4",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Jeżeli w arkuszu kalkulacyjnym komórka A4 zawiera liczbę 10, a komórka A5 - liczbę 12, to wpisanie formuły\n$=$JEŻELI(A4$<$10; A4/2; JEŻELI(A5$<>$12; 2; MOD(A4;A5)))\nw komórce A6 poskutkuje wyświetleniem liczby",
+    "odpowiedzi": {
+      "A": "2.",
+      "B": "5.",
+      "C": "10.",
+      "D": "8."
+    },
+    "poprawna": "C",
+    "dzial": "arkusz-kalkulacyjny"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_5",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Ploter to",
+    "odpowiedzi": {
+      "A": "urządzenie elektroniczne, pozwalające nakładać na siebie obraz cyfrowy i analogowy.",
+      "B": "urządzenie wskazujące, służące przede wszystkim do rysowania elementów graficznych na komputerze.",
+      "C": "urządzenie umożliwiające druk 3D.",
+      "D": "komputerowe urządzenie peryferyjne, służące do pracy z dużymi płaskimi powierzchniami, mogące nanosić obrazy, wycinać wzory, grawerować."
+    },
+    "poprawna": "D",
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_6",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Dla tablicy $A[1..n]$ algorytm:\n\ndla $j=1,2,...,n-1$:\n   dla $i=1,2,...,n-1$:\n       jeśli $A[i] > A[i+1]$ to $A[i] \\leftrightarrow A[i+1]$\n\n(gdzie $\\leftrightarrow$ oznacza zamianę wartości elementów)\n\nopisuje algorytm sortowania",
+    "odpowiedzi": {
+      "A": "szybkiego.",
+      "B": "przez wybór.",
+      "C": "przez wstawianie.",
+      "D": "bąbelkowego."
+    },
+    "poprawna": "D",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_a",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Tabela bazy danych spełnia warunki:",
+    "zdania": [
+      {
+        "t": "jest podstawową jednostką organizacji danych w relacyjnych bazach danych",
+        "o": true
+      },
+      {
+        "t": "każdy jej wiersz składa się tylko z danych tego samego typu",
+        "o": false
+      },
+      {
+        "t": "wszystkie dane w kolumnie są tego samego typu.",
+        "o": true
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_b",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "10 MB to",
+    "zdania": [
+      {
+        "t": "mniej niż 1 GB.",
+        "o": true
+      },
+      {
+        "t": "więcej niż 1 TB.",
+        "o": false
+      },
+      {
+        "t": "10240 bajtów.",
+        "o": false
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_c",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Program, który umożliwia tłumaczenie programu w języku programowania wysokiego poziomu na kod gotowy do wykonania na komputerze, to",
+    "zdania": [
+      {
+        "t": "kompilator.",
+        "o": true
+      },
+      {
+        "t": "BIOS.",
+        "o": false
+      },
+      {
+        "t": "konsolidator.",
+        "o": false
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_d",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Hiperłącze może oznaczać",
+    "zdania": [
+      {
+        "t": "zamieszczone w dokumencie elektronicznym odwołanie do innego dokumentu.",
+        "o": true
+      },
+      {
+        "t": "zamieszczone w dokumencie elektronicznym odwołanie do innego miejsca w tym dokumencie.",
+        "o": true
+      },
+      {
+        "t": "połączenie między dwoma komputerami w sieci.",
+        "o": false
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_e",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Jednoznaczny standard wskazywania położenia i sposobu dostępu do zasobów w Internecie to",
+    "zdania": [
+      {
+        "t": "URL.",
+        "o": true
+      },
+      {
+        "t": "XML.",
+        "o": false
+      },
+      {
+        "t": "OLE.",
+        "o": false
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_f",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Minimum ciągu $n$-elementowego (dla dowolnego całkowitego $n \\geq 1$)",
+    "zdania": [
+      {
+        "t": "można zawsze znaleźć, wykonując nie więcej niż $n$ porównań pomiędzy elementami ciągu.",
+        "o": true
+      },
+      {
+        "t": "można zawsze znaleźć, wykonując nie więcej niż $n/2$ porównań pomiędzy elementami ciągu.",
+        "o": false
+      },
+      {
+        "t": "można znaleźć za pomocą strategii przeszukiwania liniowego.",
+        "o": true
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_g",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Rozważ poniższy algorytm: $i \\leftarrow 0$; $s \\leftarrow 0$; czytaj $n$; (powtarzaj:) $i \\leftarrow i+1$; $s \\leftarrow s+1/i$; dopóki $i<n$; wypisz $s$. Wynikiem działania tego algorytmu dla liczby całkowitej $n > 0$ jest wypisanie wartości wyrażenia",
+    "zdania": [
+      {
+        "t": "$1 + 2 + 3 + ... + n$.",
+        "o": false
+      },
+      {
+        "t": "$1 + 1/2 + 1/3 + ... + 1/n$.",
+        "o": true
+      },
+      {
+        "t": "$1 \\cdot 1/2 \\cdot 1/3 \\cdot ... \\cdot 1/n$.",
+        "o": false
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pp_maj2009_z3_h",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "W bazie danych",
+    "zdania": [
+      {
+        "t": "sortowanie tabeli oznacza uporządkowanie wierszy według zawartości wybranych kolumn.",
+        "o": true
+      },
+      {
+        "t": "sortowanie tabeli oznacza uporządkowanie kolumn według zawartości wybranych wierszy.",
+        "o": false
+      },
+      {
+        "t": "filtrowanie tabeli to wybór wierszy spełniających określone kryteria.",
+        "o": true
+      }
+    ],
+    "source": "MIN-P1_1P-092",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "stara_pp_maj2012_z3_1",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Adres IP to 32-bitowa liczba zapisywana jako cztery binarne liczby ośmiobitowe oddzielone odstępami, bądź jako cztery liczby dziesiętne oddzielone kropkami. Poniżej podano dwie niepełne wersje tego samego adresu IP:\n\n???????? 10101000 0000001 00000010\n192.???.1.2\n\ngdzie znaki zapytania oznaczają brakujące cyfry.\n\nKtóra z poniższych liczb jest równa brakującej części powyższego adresu IP w postaci binarnej?",
+    "odpowiedzi": {
+      "A": "$11000000$",
+      "B": "$10100000$",
+      "C": "$10111110$"
+    },
+    "poprawna": "A",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pp_maj2012_z3_2",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Adres IP to 32-bitowa liczba zapisywana jako cztery binarne liczby ośmiobitowe oddzielone odstępami, bądź jako cztery liczby dziesiętne oddzielone kropkami. Poniżej podano dwie niepełne wersje tego samego adresu IP:\n\n???????? 10101000 0000001 00000010\n192.???.1.2\n\ngdzie znaki zapytania oznaczają brakujące cyfry.\n\nKtóra z poniższych liczb jest równa brakującej części powyższego adresu IP w postaci dziesiętnej?",
+    "odpowiedzi": {
+      "A": "178",
+      "B": "168",
+      "C": "148"
+    },
+    "poprawna": "B",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pp_maj2012_z3_3",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Największa liczba dziesiętna, jaką można zapisać na 32 bitach jest",
+    "odpowiedzi": {
+      "A": "równa 65 000.",
+      "B": "większa od 1 123 000.",
+      "C": "mniejsza od 4 000."
+    },
+    "poprawna": "B",
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pp_maj2012_z3_4",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Programowanie strukturalne to termin oznaczający",
+    "odpowiedzi": {
+      "A": "tworzenie oprogramowania analizującego strukturę połączeń w sieci WWW.",
+      "B": "programowanie nastawione na wykorzystanie struktury sprzętu, na którym uruchamiany będzie wynikowy program.",
+      "C": "tworzenie programów zawierających struktury sterujące (np. pętle „dopóki”, „powtarzaj”, instrukcje „jeżeli”)."
+    },
+    "poprawna": "C",
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "stara_pp_maj2012_z3_5",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Aby uniemożliwić odczytanie przez niepowołane osoby pliku przesyłanego pocztą elektroniczną, stosuje się narzędzia służące do",
+    "odpowiedzi": {
+      "A": "archiwizacji.",
+      "B": "kompilacji.",
+      "C": "szyfrowania."
+    },
+    "poprawna": "C",
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_a",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Kolumna w tabeli bazy danych",
+    "odpowiedzi": {
+      "A": "zawiera dane różnych typów.",
+      "B": "zawiera dane tego samego typu.",
+      "C": "może mieć taką samą nazwę, jak inna kolumna w tej samej tabeli."
+    },
+    "poprawna": "B",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_b",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Aby zmniejszyć rozmiar przechowywanych danych, stosuje się programy do",
+    "odpowiedzi": {
+      "A": "kompresji.",
+      "B": "tworzenia kopii zapasowych.",
+      "C": "defragmentacji dysku."
+    },
+    "poprawna": "A",
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_c",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Liczba 10101 zapisana w systemie binarnym jest",
+    "odpowiedzi": {
+      "A": "większa od liczby 10110 zapisanej w systemie binarnym.",
+      "B": "mniejsza od liczby 20 zapisanej w systemie dziesiętnym.",
+      "C": "równa liczbie 15 zapisanej w systemie szesnastkowym."
+    },
+    "poprawna": "C",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_d",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Jeśli w arkuszu kalkulacyjnym w komórce C1 umieścimy formułę =A1*$B$1, to po skopiowaniu jej do komórki C2 uzyskamy formułę",
+    "odpowiedzi": {
+      "A": "=A1*$B$1.",
+      "B": "=A2*$B$2.",
+      "C": "=A2*$B$1."
+    },
+    "poprawna": "C",
+    "dzial": "arkusz-kalkulacyjny"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_e",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Grafika wektorowa to sposób tworzenia i przechowywania w komputerze obrazów, które są reprezentowane w postaci",
+    "odpowiedzi": {
+      "A": "zbiorów punktów jednokolorowych.",
+      "B": "opisów figur geometrycznych (odcinków, łuków, okręgów, elips ...).",
+      "C": "siatki niezależnie traktowanych pikseli."
+    },
+    "poprawna": "B",
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_f",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Protokół sieciowy to",
+    "odpowiedzi": {
+      "A": "zbiór reguł, zgodnie z którymi następuje wymiana informacji między komputerami w sieci.",
+      "B": "polecenie, które wysyła pakiet informacji do dowolnego komputera w sieci z żądaniem potwierdzenia otrzymania informacji.",
+      "C": "sterownik, który musi być zainstalowany, aby była możliwa wymiana informacji z innymi komputerami w sieci."
+    },
+    "poprawna": "A",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pp_maj2013_z3_g",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Programy komputerowe rozpowszechniane bez opłat do wypróbowania przez użytkowników, mające często ograniczenia czasowe, limit uruchomień lub blokadę dostępu do niektórych funkcji, mają licencję",
+    "odpowiedzi": {
+      "A": "freeware.",
+      "B": "komercyjną.",
+      "C": "shareware."
+    },
+    "poprawna": "C",
+    "dzial": "prawo-licencje"
+  },
+  {
+    "id": "stara_pp_maj2020_z3_3_2",
+    "formula": "stara",
+    "poziom": "pp",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Liczba binarna $111010101$ to w systemie dziesiętnym",
+    "odpowiedzi": {
+      "A": "481.",
+      "B": "467.",
+      "C": "469.",
+      "D": "471."
+    },
+    "poprawna": "C",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2020_z1_2_a",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Po wykonaniu algorytmu z zadania 1. wartością $x$ jest",
+    "odpowiedzi": {
+      "A": "najmniejsza liczba w tablicy $A$.",
+      "B": "największa liczba w tablicy $A$."
+    },
+    "poprawna": "A",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2020_z1_2_b",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Po wykonaniu algorytmu z zadania 1. wartością $y$ jest",
+    "odpowiedzi": {
+      "A": "najmniejsza liczba w tablicy $A$.",
+      "B": "największa liczba w tablicy $A$."
+    },
+    "poprawna": "B",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2020_z3_2",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Urządzenie sieciowe, którego głównym zadaniem jest łączenie ze sobą różnych sieci, w celu umożliwienia im wzajemnej komunikacji oraz określanie ścieżki przepływu danych pomiędzy sieciami na podstawie adresu IP, to",
+    "zdania": [
+      {
+        "t": "host.",
+        "o": false
+      },
+      {
+        "t": "hub.",
+        "o": false
+      },
+      {
+        "t": "switch.",
+        "o": false
+      },
+      {
+        "t": "router.",
+        "o": true
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2020_z3_3",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość poniższych zdań dotyczących CSS.",
+    "zdania": [
+      {
+        "t": "CSS to skrót określający Kaskadowe Arkusze Stylów.",
+        "o": true
+      },
+      {
+        "t": "CSS stworzono w celu oddzielenia struktury dokumentu od formy jego prezentacji.",
+        "o": true
+      },
+      {
+        "t": "CSS stosuje się w arkuszach kalkulacyjnych do warunkowego formatowania komórek.",
+        "o": false
+      },
+      {
+        "t": "CSS to język służący do opisu prezentacji stron WWW.",
+        "o": true
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2020_z3_4",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $10110101101_2$ zapisana w systemie binarnym jest równa:",
+    "zdania": [
+      {
+        "t": "$1540_{10}$",
+        "o": false
+      },
+      {
+        "t": "$231121_4$",
+        "o": false
+      },
+      {
+        "t": "$2655_8$",
+        "o": true
+      },
+      {
+        "t": "$5AD_{16}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2020_z3_5",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość poniższych zdań dotyczących stosu.",
+    "zdania": [
+      {
+        "t": "Stos to struktura danych, z której dane pobierane są w takiej samej kolejności, w jakiej zostały wstawione.",
+        "o": false
+      },
+      {
+        "t": "Stos to struktura danych, w której dane dokładane są na wierzchołek stosu i z jego wierzchołka są pobierane.",
+        "o": true
+      },
+      {
+        "t": "Stos to struktura danych, w której każdy element jest bezpośrednio dostępny.",
+        "o": false
+      },
+      {
+        "t": "Wszystkie elementy w stosie muszą być różne.",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2020_z3_6",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest konfiguracja interfejsu sieciowego komputerów A i B. Dla komputera A: Adres IPv4: 192.168.10.65, Maska sieci: 255.255.255.0. Dla komputera B: Adres IPv4: 192.168.10.128, Maska sieci: 255.255.255.0. Oceń prawdziwość poniższych zdań.",
+    "zdania": [
+      {
+        "t": "Komputer A i komputer B są w tej samej sieci.",
+        "o": true
+      },
+      {
+        "t": "Adresem sieci dla komputera A jest adres 192.168.10.0.",
+        "o": true
+      },
+      {
+        "t": "Dla maski 255.255.255.0 są dostępne 254 adresy hostów.",
+        "o": true
+      },
+      {
+        "t": "Adres rozgłoszeniowy sieci, do której należy komputer B, to 192.168.255.255",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "2015_pr_czerwiec2024_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2024,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "W tabeli miasta zamieszczono informacje o liczbie ludności miast Polski. Zawartość tabeli miasta:\n\nidentyfikator | miasto | wojewodztwo | ludnosc\n767 | Szamotuły | wielkopolskie | 18853\n768 | Szczawnica | małopolskie | 5711\n769 | Szczawno-Zdrój | dolnośląskie | 5569\n770 | Szczebrzeszyn | lubelskie | 4964\n771 | Szczecin | zachodniopomorskie | 401907\n\nDla podanych danych w wyniku zapytania\n\nSELECT ludnosc\nFROM miasta\nWHERE identyfikator > 770 OR miasto = \"Szamotuły\"\n\notrzymamy:",
+    "zdania": [
+      {
+        "t": "dwie liczby",
+        "o": true
+      },
+      {
+        "t": "pusty wynik",
+        "o": false
+      },
+      {
+        "t": "401907",
+        "o": false
+      },
+      {
+        "t": "420760",
+        "o": false
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_czerwiec2024_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2024,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Wynik dodawania liczb binarnych $1011101_2$ oraz $111_2$ jest:",
+    "zdania": [
+      {
+        "t": "równy $1100110_2$",
+        "o": false
+      },
+      {
+        "t": "mniejszy niż $1111111_2$",
+        "o": true
+      },
+      {
+        "t": "większy niż $1110000_2$",
+        "o": false
+      },
+      {
+        "t": "równy $1100100_2$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_czerwiec2025_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Dla liczb $11010101_2$, $1222_4$, $333_8$, $D6_{16}$ zapisanych w systemach pozycyjnych o podstawach 2, 4, 8 i 16:",
+    "zdania": [
+      {
+        "t": "$11010101_2 > 1222_4$",
+        "o": true
+      },
+      {
+        "t": "$1222_4 > 333_8$",
+        "o": false
+      },
+      {
+        "t": "$333_8 > D6_{16}$",
+        "o": true
+      },
+      {
+        "t": "$D6_{16} > 11010101_2$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_czerwiec2025_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość podanych zdań dotyczących formatów plików graficznych.",
+    "zdania": [
+      {
+        "t": "W pliku w formacie GIF można zapisać obraz z 16 milionami kolorów bez utraty informacji o nich.",
+        "o": false
+      },
+      {
+        "t": "W formacie JPG są wykorzystywane metody kompresji danych.",
+        "o": true
+      },
+      {
+        "t": "Format JPG obsługuje przezroczyste tła obrazów.",
+        "o": false
+      },
+      {
+        "t": "Pliki w formacie JPG mogą mieć rozszerzenie .jpg lub .jpeg.",
+        "o": true
+      }
+    ],
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "2015_pr_czerwiec2025_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "czerwiec",
+    "typ": "tf",
+    "tresc": "W bazie danych istnieją dwie tabele: kontrahenci (id_kontrahenta, nazwa) oraz faktury (nr_faktury, id_kontrahenta, kwota, data). Między tabelami zachodzi relacja „jeden do wielu”. Tabela FAKTURY zawiera rekordy: (1/07/2022/F, 004, 426, 01.07.2022), (2/07/2022/F, 002, 142, 03.07.2022), (3/07/2022/F, 001, 689, 10.07.2022), (4/07/2022/F, 001, 603, 12.07.2022), (5/07/2022/F, 001, 599, 13.07.2022), (6/07/2022/F, 004, 161, 19.07.2022), (7/07/2022/F, 003, 769, 25.07.2022), (8/07/2022/F, 003, 748, 28.07.2022). Tabela KONTRAHENCI: (001, Zima), (002, Wiosna), (003, Lato), (004, Jesień). Oceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "Wynikiem zapytania SQL: SELECT Sum(Faktury.kwota) FROM Faktury; jest suma kwot.",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania SQL: SELECT Kontrahenci.Nazwa, Count(Faktury.nr_faktury) FROM Kontrahenci JOIN Faktury ON Kontrahenci.id_kontrahenta = Faktury.id_kontrahenta GROUP BY Kontrahenci.Nazwa HAVING ((Count(Faktury.nr_faktury))>=2); jest Jesień 2, Lato 2.",
+        "o": false
+      },
+      {
+        "t": "Wynikiem zapytania SQL: SELECT Faktury.nr_faktury FROM Faktury WHERE Faktury.kwota Between 100 And 300; jest lista dwóch numerów faktur.",
+        "o": true
+      },
+      {
+        "t": "Wynikiem zapytania SQL: SELECT Kontrahenci.Nazwa, Faktury.kwota FROM Kontrahenci JOIN Faktury ON Kontrahenci.id_kontrahenta = Faktury.id_kontrahenta ORDER BY Faktury.kwota DESC; jest lista kontrahentów i kwot posortowana rosnąco według kwoty.",
+        "o": false
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_c",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Najmniejszą jednostką informacji jest",
+    "odpowiedzi": {
+      "A": "bit.",
+      "B": "bajt.",
+      "C": "znak."
+    },
+    "poprawna": "A",
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pr_maj2007_z1_1",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2007,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Ile różnych liczb całkowitych bez znaku można zapisać za pomocą 1 bajta?",
+    "odpowiedzi": {
+      "A": "$82$",
+      "B": "$256$",
+      "C": "$210$",
+      "D": "$128$"
+    },
+    "poprawna": "B",
+    "source": "stara_pr_maj2007",
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pr_maj2007_z1_7",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2007,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Sieć oznaczona skrótem MAN",
+    "odpowiedzi": {
+      "A": "łączy komputery w obrębie jednego budynku.",
+      "B": "łączy komputery w obrębie jednej instytucji.",
+      "C": "łączy komputery w obrębie aglomeracji miejskiej.",
+      "D": "łączy komputery w różnych miastach."
+    },
+    "poprawna": "C",
+    "source": "stara_pr_maj2007",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2007_z3_4",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2007,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Dany jest algorytm: (1) $p1\\leftarrow 1$; (2) $suma\\leftarrow 0$; (3) dla $k\\leftarrow 1...n$ wykonuj; (4) $p1\\leftarrow p1*n$; (5) $p2\\leftarrow 1$; (6) dla $i\\leftarrow 1...n$ wykonuj; (7) $p2\\leftarrow p2*k$; (8) $suma\\leftarrow suma+p1+p2$. Zakreślając właściwą odpowiedź, zaznacz, jaką wartość przyjmie zmienna suma w wyniku działania powyższego algorytmu.",
+    "odpowiedzi": {
+      "A": "$\\sum_{k=1}^{n}(k^k+n^2)$",
+      "B": "$\\sum_{k=1}^{n}(n^n+k^n)$",
+      "C": "$\\sum_{i=1}^{k}(n^k+k^2)$",
+      "D": "$\\sum_{k=1}^{n}(n^k+k^n)$",
+      "E": "$\\sum_{k=1}^{n}(n^n+k^k)$"
+    },
+    "poprawna": "D",
+    "source": "stara_pr_maj2007",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2007_z3_5",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2007,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Dla algorytmu z zadania 3 (z podwójną pętlą po $k$ i $i$ od $1$ do $n$): zakreślając właściwą odpowiedź, podaj, ile wynosi liczba operacji arytmetycznych (dodawań i mnożeń) wykonywanych w czasie realizacji przedstawionego algorytmu.",
+    "odpowiedzi": {
+      "A": "$3n$",
+      "B": "$n^2+3n$",
+      "C": "$2n+n^2$",
+      "D": "$n^n+2n$",
+      "E": "$n!+2n$"
+    },
+    "poprawna": "B",
+    "source": "stara_pr_maj2007",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_a",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla poniższego algorytmu dane stanowi skończony ciąg liczbowy zawierający co najmniej jedną liczbę:\n1. i := 0\n2. wynik := 0\n3. dopóki nie przetworzono wszystkich liczb w ciągu wykonuj:\n   i. x := kolejna liczba\n   ii. wynik := (i*wynik+x)/(i+1)\n   iii. i := i+1\n4. wypisz wynik\nUwaga: „:=” oznacza instrukcję przypisania.\nWynikiem działania tego algorytmu jest",
+    "zdania": [
+      {
+        "t": "suma podanych liczb.",
+        "o": false
+      },
+      {
+        "t": "średnia arytmetyczna podanych liczb.",
+        "o": true
+      },
+      {
+        "t": "średnia geometryczna podanych liczb.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_b",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Poszukując numeru telefonu w książce telefonicznej wiele osób korzysta z następującego algorytmu: otwieramy książkę mniej więcej w połowie. Jeśli szukane nazwisko w kolejności alfabetycznej jest wcześniej niż nazwisko, na które trafiliśmy, otwieramy książkę w połowie, licząc od początku do miejsca, w którym się znajdujemy. W przeciwnym przypadku bierzemy pod uwagę drugą połowę książki. Postępujemy podobnie dla tej części książki, którą wybraliśmy, aż do momentu, kiedy jesteśmy blisko szukanego nazwiska. Wtedy wystarczy już przejrzeć kilka stron. Ten sposób postępowania jest zastosowaniem w praktyce strategii",
+    "zdania": [
+      {
+        "t": "dziel i zwyciężaj.",
+        "o": true
+      },
+      {
+        "t": "zachłannej.",
+        "o": false
+      },
+      {
+        "t": "porządkowania ciągu elementów.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_c",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Urządzenie, które pobiera dane cyfrowe z komputera i zamienia je na sygnały analogowe przesyłane w sieci telefonicznej to",
+    "zdania": [
+      {
+        "t": "karta sieciowa.",
+        "o": false
+      },
+      {
+        "t": "router.",
+        "o": false
+      },
+      {
+        "t": "modem.",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_d",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Zapis $1010_{(p)}$ oznacza, że 1010 jest zapisem pewnej liczby w systemie pozycyjnym o podstawie $p$. Zaznacz, która z poniższych równości jest prawdziwa:",
+    "zdania": [
+      {
+        "t": "$1010_{(2)} = 10_{(10)}$",
+        "o": true
+      },
+      {
+        "t": "$12_{(10)} = 1110_{(2)}$",
+        "o": false
+      },
+      {
+        "t": "$67_{(10)} = 1000011_{(2)}$",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_e",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Kod ASCII znaku zero wynosi 48, a kodem małej litery „a” jest 97.",
+    "zdania": [
+      {
+        "t": "Kodem znaku „3” jest liczba $00110100_{(2)}$.",
+        "o": false
+      },
+      {
+        "t": "Kodem znaku „4” jest liczba $01100000_{(2)}$.",
+        "o": false
+      },
+      {
+        "t": "Kodem małej litery „f” jest liczba $01100110_{(2)}$.",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_g",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Do szyfrowania informacji służy",
+    "zdania": [
+      {
+        "t": "algorytm RSA.",
+        "o": true
+      },
+      {
+        "t": "algorytm Euklidesa.",
+        "o": false
+      },
+      {
+        "t": "algorytm Hornera.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_h",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Adresy IP składają się z czterech liczb z zakresu od 0 do 255, które zapisuje się oddzielone kropkami, np. 130.11.121.94. Pierwsza z liczb zapisana binarnie na ośmiu bitach pozwala określić, do jakiej klasy należy adres. Adresy klasy B mają na dwóch pierwszych bitach (licząc od lewej strony) wartości odpowiednio 1 i 0. Adresy klasy C mają na pierwszych trzech pozycjach wartości 1, 1 i 0.",
+    "zdania": [
+      {
+        "t": "Adres 128.12.67.90 należy do klasy B.",
+        "o": true
+      },
+      {
+        "t": "Adres 191.12.56.1 należy do klasy C.",
+        "o": false
+      },
+      {
+        "t": "Adres 192.14.56.10 należy do klasy B.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_i",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Skrótem nazwy protokołu sieciowego jest",
+    "zdania": [
+      {
+        "t": "FTP.",
+        "o": true
+      },
+      {
+        "t": "SSH.",
+        "o": true
+      },
+      {
+        "t": "OSI.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_j",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Plik graficzny zawiera obrazek o rozmiarach 1024 na 768 pikseli zapisany z użyciem 256 kolorów. Do zapisania tego pliku (bez użycia kompresji) potrzebne jest",
+    "zdania": [
+      {
+        "t": "786432 bitów.",
+        "o": false
+      },
+      {
+        "t": "786432 bajtów.",
+        "o": true
+      },
+      {
+        "t": "786432 kilobajtów.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_k",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Nazwą nośnika pamięci zewnętrznej jest",
+    "zdania": [
+      {
+        "t": "płyta CD.",
+        "o": true
+      },
+      {
+        "t": "pamięć flash.",
+        "o": true
+      },
+      {
+        "t": "pamięć cache.",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "stara_pr_maj2008_z3_l",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2008,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Asymetryczne metody szyfrowania wymagają",
+    "zdania": [
+      {
+        "t": "używania takich samych kluczy do szyfrowania i deszyfrowania wiadomości.",
+        "o": false
+      },
+      {
+        "t": "używania różnych kluczy do szyfrowania i deszyfrowania wiadomości.",
+        "o": true
+      },
+      {
+        "t": "ujawniania klucza służącego do szyfrowania.",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "stara_pr_maj2009_z1_a",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Przeanalizuj poniższy algorytm (:= oznacza instrukcję przypisania): 1. $m:=0$ 2. $n:=6$ 3. jeśli $m>n$ to wykonaj krok 7. 4. $m:=m+1$ 5. pisz $m$ 6. przejdź do kroku 3. 7. stop. Oceń prawdziwość poniższych zdań.",
+    "zdania": [
+      {
+        "t": "Wykonywanie algorytmu zakończy się po wypisaniu liczb od 1 do 7.",
+        "o": true
+      },
+      {
+        "t": "Po pierwszym sprawdzeniu warunku w kroku 3. nie zostaną wykonane kroki: 4., 5., 6. i wykonywanie algorytmu zakończy się.",
+        "o": false
+      },
+      {
+        "t": "Wykonywanie algorytmu zakończy się po wypisaniu liczb od 0 do 6.",
+        "o": false
+      },
+      {
+        "t": "Sprawdzenie warunku $m>n$ wykonane zostanie dokładnie 8 razy.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2009_z1_b",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "434 176 bitów to:",
+    "zdania": [
+      {
+        "t": "53 kB.",
+        "o": true
+      },
+      {
+        "t": "53 MB.",
+        "o": false
+      },
+      {
+        "t": "mniej niż 50 kB.",
+        "o": false
+      },
+      {
+        "t": "54 272 bajty.",
+        "o": true
+      }
+    ],
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pr_maj2009_z1_c",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba dziesiętna 83 jest reprezentowana przez:",
+    "zdania": [
+      {
+        "t": "$(63)_{16}$",
+        "o": false
+      },
+      {
+        "t": "$(121)_8$",
+        "o": false
+      },
+      {
+        "t": "$(1103)_4$",
+        "o": true
+      },
+      {
+        "t": "$(10100011)_2$",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2009_z1_d",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "8-bitowa reprezentacja pewnej liczby dziesiętnej zapisanej w kodzie U2 ma postać 11111110. Tą liczbą jest:",
+    "zdania": [
+      {
+        "t": "$-2$.",
+        "o": true
+      },
+      {
+        "t": "$-126$.",
+        "o": false
+      },
+      {
+        "t": "$-1$.",
+        "o": false
+      },
+      {
+        "t": "254.",
+        "o": false
+      }
+    ],
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pr_maj2009_z1_e",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2009,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Schemat Hornera znajduje zastosowanie przy:",
+    "zdania": [
+      {
+        "t": "obliczaniu pola powierzchni figur płaskich.",
+        "o": false
+      },
+      {
+        "t": "obliczaniu wartości wielomianu przy minimalnej liczbie operacji mnożenia.",
+        "o": true
+      },
+      {
+        "t": "szybkim sortowaniu dużych zbiorów danych.",
+        "o": false
+      },
+      {
+        "t": "znajdowaniu najmniejszego elementu w zbiorze.",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2011_z2_c",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Dany jest algorytm potęgowania o wykładniku naturalnym (krok 1: $p:=1$, $b:=a$; krok 2: dopóki $n>0$ wykonuj: a) jeśli $n \\bmod 2 = 0$, to $p:=p*b$; b) $b:=b*b$; c) $n:=n \\,\\mathrm{div}\\, 2$). Podkreśl funkcję, której wartość jest równa liczbie mnożeń wykonywanych przez powyższy algorytm dla wartości $n$ będącej potęgą dwójki:",
+    "odpowiedzi": {
+      "A": "$f(n) = 2 + \\log_2 n$",
+      "B": "$f(n) = n$",
+      "C": "$f(n) = 2n^2 + 1$",
+      "D": "$f(n) = 2n$"
+    },
+    "poprawna": "A",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_a",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $21202_3$ jest równa:",
+    "zdania": [
+      {
+        "t": "$D1_{16}$",
+        "o": true
+      },
+      {
+        "t": "$321_8$",
+        "o": true
+      },
+      {
+        "t": "$10110001_2$",
+        "o": false
+      },
+      {
+        "t": "$211_{10}$",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_b",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Rozważ algorytm, który dla zadanego naturalnego $n>0$ oblicza sumę $suma = 1^1 + 2^2 + 3^3 + 4^4 + \\ldots + n^n$. Algorytm: krok 1: $suma:=1$, $i:=2$; krok 2: dopóki $i \\le n$ wykonuj: a) $j:=i$, $p:=1$; b) dopóki $j \\ge 1$ wykonuj: (i) $p:=p*i$, (ii) $j:=j-1$; c) $suma:=suma+p$, $i:=i+1$. Oceń prawdziwość stwierdzeń:",
+    "zdania": [
+      {
+        "t": "Liczba instrukcji wykonana przez ten algorytm nie zależy od wielkości $n$.",
+        "o": false
+      },
+      {
+        "t": "Liczba instrukcji wykonana przez ten algorytm jest funkcją kwadratową ze względu na $n$.",
+        "o": true
+      },
+      {
+        "t": "Instrukcja w kroku 2. jest instrukcją iteracji.",
+        "o": true
+      },
+      {
+        "t": "Wartość zmiennej $j$ w kroku 2.b. zmienia się kolejno od 1 do $i$, przy $n>1$.",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_c",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Algorytmy kryptograficzne dotyczą:",
+    "zdania": [
+      {
+        "t": "kompresji danych.",
+        "o": false
+      },
+      {
+        "t": "szyfrowania danych.",
+        "o": true
+      },
+      {
+        "t": "zapewnienia bezpieczeństwa przesyłanych informacji.",
+        "o": true
+      },
+      {
+        "t": "przekształcania obrazów.",
+        "o": false
+      }
+    ],
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_d",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Strategia przeszukiwania liniowego:",
+    "zdania": [
+      {
+        "t": "może być wykorzystana do znalezienia najmniejszego elementu w ciągu liczb.",
+        "o": true
+      },
+      {
+        "t": "może być wykorzystana do sprawdzenia, czy dany znak występuje w tekście.",
+        "o": true
+      },
+      {
+        "t": "jest wykorzystywana do obliczania wartości silni.",
+        "o": false
+      },
+      {
+        "t": "jest najbardziej efektywną metodą znajdowania elementu w uporządkowanym ciągu.",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_e",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Aby program napisany w języku programowania wysokiego poziomu mógł być wykonany przez komputer:",
+    "zdania": [
+      {
+        "t": "musi być przetłumaczony na język wewnętrzny komputera.",
+        "o": true
+      },
+      {
+        "t": "musi być wydrukowany.",
+        "o": false
+      },
+      {
+        "t": "niezbędny jest dostęp do kompilatora lub interpretera tego języka.",
+        "o": true
+      },
+      {
+        "t": "wystarczy zmienić rozszerzenie głównego pliku tego programu na exe.",
+        "o": false
+      }
+    ],
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_f",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Grafika wektorowa jest wykorzystywana do reprezentowania:",
+    "zdania": [
+      {
+        "t": "schematów i kompozycji figur geometrycznych.",
+        "o": true
+      },
+      {
+        "t": "czcionek.",
+        "o": true
+      },
+      {
+        "t": "zdjęć wysokiej jakości.",
+        "o": false
+      },
+      {
+        "t": "obrazów pochodzących bezpośrednio ze skanera.",
+        "o": false
+      }
+    ],
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_g",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Pamięć operacyjna komputera:",
+    "zdania": [
+      {
+        "t": "jest wykorzystywana wyłącznie przez aplikacje służące do administrowania systemem operacyjnym.",
+        "o": false
+      },
+      {
+        "t": "służy głównie jako nośnik do archiwizacji dokumentów.",
+        "o": false
+      },
+      {
+        "t": "jest wykorzystywana do przechowywania programu komputerowego podczas jego uruchamiania i wykonywania.",
+        "o": true
+      },
+      {
+        "t": "jest niezbędna do poprawnej pracy komputera.",
+        "o": true
+      }
+    ],
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "stara_pr_maj2011_z3_h",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2011,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Protokół sieciowy:",
+    "zdania": [
+      {
+        "t": "SSL umożliwia bezpieczne przesyłanie danych w sieci.",
+        "o": true
+      },
+      {
+        "t": "IP używany jest tylko w sieci lokalnej.",
+        "o": false
+      },
+      {
+        "t": "POP3 to protokół odbioru poczty elektronicznej.",
+        "o": true
+      },
+      {
+        "t": "HTTP dotyczy przesyłania dokumentów zapisanych w języku HTML.",
+        "o": true
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2012_z1_b",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "abcd",
+    "tresc": "Dana jest liczba naturalna $n>0$ i tablica różnych liczb całkowitych $a[1..n]$. Rozważamy rekurencyjną funkcję $F$ z argumentem $i$ będącym liczbą naturalną, $1 \\le i \\le n$, która dla $i=n$ zwraca $n$, a w przeciwnym razie wyznacza $j:=F(i+1)$ i zwraca $i$, gdy $a[i] < a[j]$, lub $j$ w przeciwnym razie. Niech $w$ będzie wynikiem wywołania funkcji $F$ dla argumentu $i$, $1 \\le i \\le n$. Wtedy $a[w]$ w odniesieniu do pozostałych liczb w tablicy $a$ jest zawsze:",
+    "odpowiedzi": {
+      "A": "najmniejszą liczbą w tej tablicy.",
+      "B": "najmniejszą liczbą w tej tablicy spośród elementów o indeksach od $i$ do $n$.",
+      "C": "najmniejszą liczbą w tej tablicy spośród elementów o indeksach od 1 do $i$."
+    },
+    "poprawna": "B",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2012_z3_1",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Poniżej przedstawiono fragment bazy danych zawierającej informacje o książkach, czytelnikach i wypożyczeniach. Pole id_Cz w tabeli Czytelnicy jest połączone relacją \"jeden do wielu\" z polem id_Cz w tabeli Wypożyczenia, podobnie pole id_Ks w tabeli Książki z polem id_Ks w tabeli Wypożyczenia.\n\nKsiążki (id_Ks, Autor, Tytuł, Rok wydania):\n1, John Tolkien, Hobbit, czyli tam i z powrotem, 2007\n2, Ursula K. Le Guin, Czarnoksiężnik z Archipelagu, 2009\n3, Peter V. Brett, Malowany człowiek. Księga II, 2011\n4, Stanisław Lem, Bajki robotów, 2006\n5, Trudi Canavan, Misja Ambasadora, 2011\n6, John Tolkien, Dzieci Húrina, 2010\n7, Andrzej Sapkowski, Krew Elfów, 2010\n\nCzytelnicy (id_Cz, Imię, Nazwisko, Klasa):\n1, Anna, Tulik, I\n2, Magda, Nowak, I\n3, Marek, Krokus, I\n4, Jacek, Doniec, II\n5, Wojtek, Madejski, II\n6, Michał, Sośnierz, II\n7, Franek, Jedliński, II\n8, Sandra, Biecz, III\n9, Jowita, Kolska, III\n10, Ala, Mleczko, III\n\nWypożyczenia (Nr_W, id_Ks, id_Cz):\n1, 4, 2\n2, 7, 3\n3, 3, 9\n4, 1, 5\n5, 2, 8\n6, 4, 10\n7, 6, 8\n8, 5, 7\n9, 5, 9\n10, 7, 1\n\nZ danych umieszczonych w tym fragmencie bazy wynika, że:",
+    "zdania": [
+      {
+        "t": "Jowita Kolska wypożyczyła \"Misję Ambasadora\".",
+        "o": true
+      },
+      {
+        "t": "\"Bajki robotów\" były wypożyczane dwa razy.",
+        "o": true
+      },
+      {
+        "t": "Z podanych klas (I, II, III) najwięcej książek wypożyczyli uczniowie klasy II.",
+        "o": false
+      },
+      {
+        "t": "Jacek Doniec nie wypożyczył jeszcze żadnej książki.",
+        "o": true
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "stara_pr_maj2012_z3_2",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Które z podanych pojęć i skrótów dotyczą technologii i standardów wykorzystywanych w budowie lokalnych sieci komputerowych?",
+    "zdania": [
+      {
+        "t": "XML",
+        "o": false
+      },
+      {
+        "t": "WiFi",
+        "o": true
+      },
+      {
+        "t": "Ethernet",
+        "o": true
+      },
+      {
+        "t": "Telnet",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2012_z3_3",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $1E_{16}$ jest równa liczbie:",
+    "zdania": [
+      {
+        "t": "$101010_2$.",
+        "o": false
+      },
+      {
+        "t": "$36_8$.",
+        "o": true
+      },
+      {
+        "t": "$1110_3$.",
+        "o": false
+      },
+      {
+        "t": "$30_{10}$.",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2012_z3_4",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla dwóch liczb $1110_2$ i $10_2$, ich:",
+    "zdania": [
+      {
+        "t": "suma jest równa $10000_2$.",
+        "o": true
+      },
+      {
+        "t": "różnica jest równa $1000_2$.",
+        "o": false
+      },
+      {
+        "t": "iloczyn jest równy $11110_2$.",
+        "o": false
+      },
+      {
+        "t": "iloraz jest równy $111_2$.",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2012_z3_5",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2012,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Licencja GNU GPL zezwala na:",
+    "zdania": [
+      {
+        "t": "uruchamianie programu do użytku domowego.",
+        "o": true
+      },
+      {
+        "t": "rozpowszechnianie niezmodyfikowanej kopii programu.",
+        "o": true
+      },
+      {
+        "t": "analizowanie, jak program działa i dostosowywanie go do swoich potrzeb.",
+        "o": true
+      },
+      {
+        "t": "udoskonalanie programu i publiczne rozpowszechnianie własnych ulepszeń.",
+        "o": true
+      }
+    ],
+    "dzial": "prawo-licencje"
+  },
+  {
+    "id": "stara_pr_maj2013_z3_a",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Usługa zamieniająca adres domenowy (np. cke.edu.pl) na adres IP to:",
+    "zdania": [
+      {
+        "t": "DNS.",
+        "o": true
+      },
+      {
+        "t": "HTTP.",
+        "o": false
+      },
+      {
+        "t": "TCP.",
+        "o": false
+      },
+      {
+        "t": "DHCP.",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2013_z3_b",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla $x$ będących liczbami całkowitymi dodatnimi, funkcja określona wzorem $t(x)=\\begin{cases}1 & \\text{dla } x=1\\\\ x \\cdot t(x-1) & \\text{dla } x>1\\end{cases}$",
+    "zdania": [
+      {
+        "t": "jest przykładem funkcji rekurencyjnej.",
+        "o": true
+      },
+      {
+        "t": "dla $x=3$ przyjmuje wartość $t(x)=9$.",
+        "o": false
+      },
+      {
+        "t": "dla liczby całkowitej dodatniej $x$ przyjmuje wartość $x!$.",
+        "o": true
+      },
+      {
+        "t": "w rozwinięciu zawiera $x-1$ operatorów mnożenia „*”.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2013_z3_c",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $BA_{16}$ jest równa liczbie:",
+    "zdania": [
+      {
+        "t": "$272_8$",
+        "o": true
+      },
+      {
+        "t": "$186_{10}$",
+        "o": true
+      },
+      {
+        "t": "$2232_4$",
+        "o": false
+      },
+      {
+        "t": "$10101010_2$",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2013_z3_d",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Licencja adware:",
+    "zdania": [
+      {
+        "t": "umożliwia korzystanie z aplikacji po uiszczeniu opłaty.",
+        "o": false
+      },
+      {
+        "t": "zawiera żądanie zgody na wyświetlanie reklamy zwykle w postaci banerów.",
+        "o": true
+      },
+      {
+        "t": "nie gwarantuje dostępu do kodu źródłowego aplikacji.",
+        "o": true
+      },
+      {
+        "t": "dotyczy wyłącznie oprogramowania systemowego.",
+        "o": false
+      }
+    ],
+    "dzial": "prawo-licencje"
+  },
+  {
+    "id": "stara_pr_maj2013_z3_e",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Routery w sieciach komputerowych:",
+    "zdania": [
+      {
+        "t": "realizują połączenia międzysieciowe.",
+        "o": true
+      },
+      {
+        "t": "usytuowane są na styku sieci LAN z internetem lub pomiędzy sieciami LAN.",
+        "o": true
+      },
+      {
+        "t": "wymagają stosowania tej samej klasy adresów IP przed i za routerem.",
+        "o": false
+      },
+      {
+        "t": "kierują pakiety danych do odpowiednich podsieci.",
+        "o": true
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2013_z3_f",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2013,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Przeanalizuj działanie poniższego algorytmu dla $n=3$.\n1. $s\\leftarrow 1; p\\leftarrow 1$\n2. dla $k=1..n$ wykonuj\n3. $\\quad s\\leftarrow s+p$\n4. $\\quad$ dla $i=1..k$ wykonuj\n5. $\\quad\\quad p\\leftarrow p \\cdot k$",
+    "zdania": [
+      {
+        "t": "Podczas wykonywania algorytmu $k$ dwukrotnie przyjmuje wartość 3.",
+        "o": false
+      },
+      {
+        "t": "Podczas wykonywania algorytmu $i$ dwukrotnie przyjmuje wartość 2.",
+        "o": true
+      },
+      {
+        "t": "Po wykonaniu powyższego algorytmu $s=7$.",
+        "o": true
+      },
+      {
+        "t": "Po wykonaniu powyższego algorytmu $p=108$.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2015_z3_1",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla danej tablicy Tab (4x4, kolumny $k=1..4$, wiersze $w=1..4$): wiersz 1: 1,1,4,4; wiersz 2: 2,2,3,3; wiersz 3: 3,3,2,2; wiersz 4: 4,4,1,1) wykonano poniższy algorytm:\n\n$k \\leftarrow 1; s \\leftarrow 0; w \\leftarrow 0;$\npowtarzaj\n  $w \\leftarrow w + 1;$\n  $s \\leftarrow s + Tab[w,k];$\naż $w = 4;$\nwypisz $s, w, k;$\n\nW wyniku zostaną wypisane liczby:",
+    "zdania": [
+      {
+        "t": "10, 4, 1",
+        "o": true
+      },
+      {
+        "t": "10, 1, 1",
+        "o": false
+      },
+      {
+        "t": "40, 4, 4",
+        "o": false
+      },
+      {
+        "t": "40, 4, 1",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2015_z3_2",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Poniżej zapisano wyrażenia w odwrotnej notacji polskiej (ONP). Wartościami tych wyrażeń są:",
+    "zdania": [
+      {
+        "t": "$7\\ 3\\ -\\ 2\\ /$ ma wartość $2$",
+        "o": true
+      },
+      {
+        "t": "$4\\ 3\\ -\\ 1\\ 3\\ +\\ *$ ma wartość $8$",
+        "o": false
+      },
+      {
+        "t": "$3\\ 5\\ 1\\ -\\ *$ ma wartość $12$",
+        "o": true
+      },
+      {
+        "t": "$8\\ 2\\ +\\ 2\\ /$ ma wartość $10$",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2015_z3_3",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Pewna podsieć ma maskę: 255.255.255.248. Ile maksymalnie komputerów można podłączyć do danej podsieci? Uwzględnij, że 2 z możliwych adresów w sieci to adres sieci oraz adres rozgłoszeniowy.",
+    "zdania": [
+      {
+        "t": "10",
+        "o": false
+      },
+      {
+        "t": "8",
+        "o": false
+      },
+      {
+        "t": "6",
+        "o": true
+      },
+      {
+        "t": "4",
+        "o": false
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2015_z3_4",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "W celu posortowania rosnąco ciągu liczb [2, 1, 0, 3] wykonano porównania i ewentualnie zamieniono liczby w parach otoczonych owalami. Kolejne stany ciągu: [2,1,0,3] → [1,2,0,3] → [1,0,2,3] → [1,0,2,3] → [0,1,2,3] → [0,1,2,3]. Jakie to sortowanie?",
+    "zdania": [
+      {
+        "t": "przez wstawianie",
+        "o": false
+      },
+      {
+        "t": "bąbelkowe",
+        "o": true
+      },
+      {
+        "t": "kubełkowe",
+        "o": false
+      },
+      {
+        "t": "szybkie",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2015_z3_5",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Program rozpowszechniany za darmo, z którego możemy korzystać w pełni przez nieograniczony czas, może być na licencji:",
+    "zdania": [
+      {
+        "t": "shareware.",
+        "o": false
+      },
+      {
+        "t": "freeware.",
+        "o": true
+      },
+      {
+        "t": "adware.",
+        "o": true
+      },
+      {
+        "t": "GNU GPL.",
+        "o": true
+      }
+    ],
+    "dzial": "prawo-licencje"
+  },
+  {
+    "id": "stara_pr_maj2015_z3_6",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2015,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest tabela Lista (kolumny: Lp., Imie, Nazwisko, Miasto, DataUrodzenia): 1. Marian Kubok, Gdynia, 1980-12-07; 2. Michalina Przybysz, Kraków, 1995-06-06; 3. Marcelina Marchewka, Mikołajki, 1988-02-09; 4. Zygmunt Piotrowski, Katowice, 1999-04-15. Zastosowanie dla powyższej tabeli Lista zapytania\n\nSELECT Imie, Nazwisko\nFROM Lista\nWHERE Year(DataUrodzenia)>1990\nORDER BY Nazwisko;\n\nspowoduje wypisanie:",
+    "zdania": [
+      {
+        "t": "Zygmunt Piotrowski; Michalina Przybysz",
+        "o": true
+      },
+      {
+        "t": "Michalina Przybysz; Zygmunt Piotrowski",
+        "o": false
+      },
+      {
+        "t": "Marcelina Marchewka; Marian Kubok",
+        "o": false
+      },
+      {
+        "t": "Marian Kubok; Marcelina Marchewka",
+        "o": false
+      }
+    ],
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "stara_pr_maj2016_z1_1",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $CB_{16}$ jest równa liczbie:",
+    "zdania": [
+      {
+        "t": "$10101111_2$",
+        "o": false
+      },
+      {
+        "t": "$313_8$",
+        "o": true
+      },
+      {
+        "t": "$3120_4$",
+        "o": false
+      },
+      {
+        "t": "$203_{10}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2016_z1_3",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla dwóch liczb $110_2$ i $101_2$, ich:",
+    "zdania": [
+      {
+        "t": "suma jest równa $10000_2$.",
+        "o": false
+      },
+      {
+        "t": "różnica jest równa $1_2$.",
+        "o": true
+      },
+      {
+        "t": "iloczyn jest równy $11110_2$.",
+        "o": true
+      },
+      {
+        "t": "iloraz jest równy $11_2$.",
+        "o": false
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2016_z1_4",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Protokołem pocztowym jest:",
+    "zdania": [
+      {
+        "t": "FTP.",
+        "o": false
+      },
+      {
+        "t": "POP3.",
+        "o": true
+      },
+      {
+        "t": "SMTP.",
+        "o": true
+      },
+      {
+        "t": "IMAP.",
+        "o": true
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2016_z1_5",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2016,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dwudziestocyfrowa liczba binarna z 1 na najbardziej znaczącej pozycji ma w systemie:",
+    "zdania": [
+      {
+        "t": "czwórkowym dokładnie 9 cyfr.",
+        "o": false
+      },
+      {
+        "t": "ósemkowym dokładnie 7 cyfr.",
+        "o": true
+      },
+      {
+        "t": "szesnastkowym dokładnie 5 cyfr.",
+        "o": true
+      },
+      {
+        "t": "dziesiętnym co najwyżej 7 cyfr.",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2018_z1_3",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2018,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dotyczy algorytmu badającego, czy liczba jest wesoła czy smutna (Zadanie 1). Oceń, czy poniższe stwierdzenia są prawdziwe.",
+    "zdania": [
+      {
+        "t": "Dla danej dodatniej, całkowitej liczby $n$, wszystkie elementy tablicy $T$ są liczbami wesołymi albo wszystkie elementy tablicy $T$ są liczbami smutnymi.",
+        "o": true
+      },
+      {
+        "t": "Pomnożenie liczby $n$ przez 10 nie wpływa na zmianę opisanych w zadaniu właściwości liczby.",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2018_z3_1",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2018,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Oceń prawdziwość stwierdzeń dotyczących działań w systemach liczbowych.",
+    "zdania": [
+      {
+        "t": "$A5_{16} + 234_{8} = 149_{16}$",
+        "o": false
+      },
+      {
+        "t": "$A5_{16} - 234_{8} = 9_{16}$",
+        "o": true
+      },
+      {
+        "t": "$A5_{16} \\cdot 1000_{2} = A50_{16}$",
+        "o": false
+      },
+      {
+        "t": "$128_{10} / 2_{8} = 1000000_{2}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2018_z3_2",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2018,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dane są następujące adresy IPv4 komputerów: Komputer nr 1: 196.122.128.0; Komputer nr 2: 196.122.129.0; Komputer nr 3: 196.123.129.0. Oceń prawdziwość stwierdzeń.",
+    "zdania": [
+      {
+        "t": "Dla maski 255.255.0.0 komputery pierwszy i drugi należą do tej samej sieci.",
+        "o": true
+      },
+      {
+        "t": "Dla maski 255.255.255.0 komputery drugi i trzeci należą do tej samej sieci.",
+        "o": false
+      },
+      {
+        "t": "Dla maski 255.255.0.0 adres sieci, w której jest pierwszy komputer, to 196.122.0.0",
+        "o": true
+      },
+      {
+        "t": "Dla maski 255.255.255.0 adres rozgłoszeniowy sieci, w której jest trzeci komputer, to 196.123.129.255",
+        "o": true
+      }
+    ],
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2018_z3_3",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2018,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest funkcja rekurencyjna $f(x)$ określona następująco: $f(x)=1$ dla $x \\le 1$ oraz $f(x)=x+f(x \\,\\mathrm{div}\\, 2)$ dla $x>1$, gdzie $x$ jest nieujemną liczbą całkowitą, a operacja $x \\,\\mathrm{div}\\, 2$ oznacza część całkowitą z dzielenia $x$ przez 2. Oceń prawdziwość stwierdzeń.",
+    "zdania": [
+      {
+        "t": "$f(15) = 25$",
+        "o": false
+      },
+      {
+        "t": "$f(12) = 22$",
+        "o": true
+      },
+      {
+        "t": "Podczas obliczania wartości $f(12)$ operacja dodawania zostanie wykonana 4 razy.",
+        "o": false
+      },
+      {
+        "t": "Dla $x$ równych potędze dwójki $f(x) = 2 \\cdot x - 1$",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2018_z3_4",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2018,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Prawidłowe przyporządkowania rozszerzeń plików i ich zastosowanie to. Oceń prawdziwość stwierdzeń.",
+    "zdania": [
+      {
+        "t": "TIFF, OCR, OGG - pliki w grafice wektorowej",
+        "o": false
+      },
+      {
+        "t": "BMP, JPG, PNG - pliki w grafice rastrowej",
+        "o": true
+      },
+      {
+        "t": "AVI, MOV, MPEG - pliki filmowe",
+        "o": true
+      },
+      {
+        "t": "WMA, WAV, MIDI - pliki dźwiękowe",
+        "o": true
+      }
+    ],
+    "dzial": "grafika-multimedia"
+  },
+  {
+    "id": "stara_pr_maj2018_z3_5",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2018,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest tablica $T[0..3, 0..3]$ wypełniona wartościami (wiersze i=0..3, kolumny k=0..3): wiersz 0: 1, 2, 3, 4; wiersz 1: 2, 2, 4, 6; wiersz 2: 4, 4, 6, 6; wiersz 3: 4, 5, 6, 8. Dla podanych algorytmów oceń poprawność podanego wyniku ich działania.",
+    "zdania": [
+      {
+        "t": "Algorytm: suma=0; Dla każdego i od 0 do 2 { Dla każdego k od 0 do 2 { suma=suma+T[i,k]; } } wypisz suma; -- Wynik: 64",
+        "o": false
+      },
+      {
+        "t": "Algorytm: k=3; suma=0; Dla każdego i od 0 do 3 { suma=suma+T[i,k]; k=k-1; } wypisz suma; -- Wynik: 16",
+        "o": true
+      },
+      {
+        "t": "Algorytm: Dla każdego i od 0 do 3 { Dla każdego k od 0 do 3 { W[k,i]=T[i,k]; } } k=2; Dla każdego i od 0 do 3 { wypisz W[i,k]; } -- Wynik: 2, 2, 4, 6",
+        "o": false
+      },
+      {
+        "t": "Algorytm: Dla każdego i od 0 do 3 { Dla każdego k od 0 do 3 { W[k,i]=T[i,k]; } } Dla każdego i od 0 do 3 { wypisz W[i,i]; } -- Wynik: 1, 2, 6, 8",
+        "o": true
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "stara_pr_maj2020_z3_4_2",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2020,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $10110101101_2$ zapisana w systemie binarnym jest równa:",
+    "zdania": [
+      {
+        "t": "$1540_{10}$",
+        "o": false
+      },
+      {
+        "t": "$23121_4$",
+        "o": false
+      },
+      {
+        "t": "$2655_8$",
+        "o": true
+      },
+      {
+        "t": "$5AD_{16}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2023_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2023,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Rozważamy dwie funkcje F i G, których argumentem jest liczba całkowita $x > 1$ (gdzie mod oznacza resztę z dzielenia):\n\nF(x):\n  $i \\leftarrow 2$\n  dopóki x mod i ≠ 0 wykonuj\n    $i \\leftarrow i+1$\n  zwróć i\n\nG(x):\n  $i \\leftarrow x-1$\n  dopóki x mod i ≠ 0 wykonuj\n    $i \\leftarrow i-1$\n  zwróć i\n\nOceń prawdziwość podanych zdań.",
+    "zdania": [
+      {
+        "t": "$F(2)=2$ oraz $G(2)=1$.",
+        "o": true
+      },
+      {
+        "t": "Dla każdej liczby parzystej x wartość F(x) jest parzysta.",
+        "o": true
+      },
+      {
+        "t": "Dla każdej liczby parzystej x wartość G(x) jest parzysta.",
+        "o": false
+      },
+      {
+        "t": "Dla każdej liczby x większej od 2 F(x) dzieli liczbę x.",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_maj2023_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2023,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "W bazie danych znajdują się tabele zwierzeta oraz gromady. Tabela zwierzeta zawiera dane: identyfikator zwierzęcia (id), gatunek (gatunek), sposób odżywiania (sposob_odzywiania - mięsożerne, roślinożerne) oraz identyfikator gromady, do której należy dany gatunek (id_gromady). Pole id jest kluczem podstawowym w tej tabeli. Tabela gromady zawiera pola: identyfikator gromady (id - klucz podstawowy) oraz nazwę gromady (gromada).\n\nPrzykładowe dane - tabela zwierzeta: (1, lew afrykanski, miesozerne, 2), (2, zyrafa, roslinozerne, 2), (3, krokodyl nilowy, miesozerne, 3). Tabela gromady: (1, ptaki), (2, ssaki), (3, gady), (4, ryby).\n\nDla tabel opisanych wyżej (i podanych danych przykładowych) listę nazw gatunków wszystkich ssaków z tabeli zwierzeta otrzymamy w wyniku zapytania:",
+    "zdania": [
+      {
+        "t": "SELECT gatunek FROM zwierzeta WHERE id_gromady = 2;",
+        "o": true
+      },
+      {
+        "t": "SELECT gatunek FROM zwierzeta, gromady WHERE zwierzeta.id_gromady=gromady.id AND gromada = \"ssaki\";",
+        "o": true
+      },
+      {
+        "t": "SELECT gatunek FROM zwierzeta INNER JOIN gromady ON zwierzeta.id_gromady=gromady.id WHERE gromada = \"ssaki\";",
+        "o": true
+      },
+      {
+        "t": "SELECT gatunek FROM zwierzeta LEFT JOIN gromady ON zwierzeta.id_gromady=gromady.id WHERE gromada = \"2\";",
+        "o": false
+      }
+    ],
+    "source": "CKE",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_maj2023_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2023,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dla tabel zwierzeta i gromady opisanych wcześniej i podanych danych przykładowych oceń prawdziwość podanych zdań:",
+    "zdania": [
+      {
+        "t": "W wyniku zapytania: SELECT gromada, count(*) FROM gromady INNER JOIN zwierzeta ON zwierzeta.id_gromady = gromady.id GROUP BY gromada; otrzymamy nazwy gromad oraz liczby gatunków zwierząt należących do tych gromad.",
+        "o": true
+      },
+      {
+        "t": "W wyniku zapytania: SELECT gromada, count(*) FROM gromady INNER JOIN zwierzeta ON zwierzeta.id_gromady = gromady.id GROUP BY gromada; otrzymamy liczbę różnych gromad z tabeli gromady.",
+        "o": false
+      },
+      {
+        "t": "W wyniku zapytania: SELECT count(*) FROM zwierzeta INNER JOIN gromady ON zwierzeta.id_gromady = gromady.id WHERE gromady.id=2; otrzymamy liczbę gatunków ssaków z tabeli zwierzeta.",
+        "o": true
+      },
+      {
+        "t": "W wyniku zapytania: SELECT count(*) FROM zwierzeta, gromady WHERE zwierzeta.id_gromady = gromady.id AND gromady.gromada = \"ssaki\"; otrzymamy liczbę gatunków ssaków z tabeli zwierzeta.",
+        "o": true
+      }
+    ],
+    "source": "CKE",
+    "dzial": "bazy-danych-sql"
+  },
+  {
+    "id": "2015_pr_maj2024_z3_3",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2024,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Różnica $100100111_2 - 1111100_2$ jest równa:",
+    "zdania": [
+      {
+        "t": "$10101011_2$",
+        "o": true
+      },
+      {
+        "t": "$253_8$",
+        "o": true
+      },
+      {
+        "t": "$AB_{16}$",
+        "o": true
+      },
+      {
+        "t": "$2323_4$",
+        "o": false
+      }
+    ],
+    "source": "stara_pr_maj2024.ark.txt",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2024_z3_4",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2024,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Suma $100100111_2 + 1111100_2$ jest równa:",
+    "zdania": [
+      {
+        "t": "$110100010_2$",
+        "o": false
+      },
+      {
+        "t": "$645_8$",
+        "o": false
+      },
+      {
+        "t": "$1A3_{16}$",
+        "o": true
+      },
+      {
+        "t": "$12203_4$",
+        "o": true
+      }
+    ],
+    "source": "stara_pr_maj2024.ark.txt",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "2015_pr_maj2025_z1_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Dana jest rekurencyjna funkcja $przestaw(n)$, której parametrem jest nieujemna liczba całkowita. Niech $n$ będzie liczbą $k$-cyfrową, gdzie $k>0$. Liczba wywołań funkcji $przestaw$ w zależności od $k$ jest równa:",
+    "zdania": [
+      {
+        "t": "$\\dfrac{k}{2}$",
+        "o": false
+      },
+      {
+        "t": "$(k+1)\\;\\mathrm{div}\\;2$ (gdzie $\\mathrm{div}$ oznacza dzielenie całkowite)",
+        "o": true
+      },
+      {
+        "t": "$\\begin{cases}\\dfrac{k}{2} & \\text{gdy } k \\text{ jest liczbą parzystą}\\\\[2pt] \\dfrac{k+1}{2} & \\text{gdy } k \\text{ jest liczbą nieparzystą}\\end{cases}$",
+        "o": true
+      },
+      {
+        "t": "$\\dfrac{k+1}{2}$",
+        "o": false
+      }
+    ],
+    "dzial": "algorytmika"
+  },
+  {
+    "id": "2015_pr_maj2025_z3_1",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Program typu keylogger służy do",
+    "zdania": [
+      {
+        "t": "szyfrowania informacji do postaci uniemożliwiającej jej odczytanie bez zdefiniowanego klucza.",
+        "o": false
+      },
+      {
+        "t": "przechowywania danych logowania, w tym - haseł, w bezpiecznym miejscu na dysku użytkownika.",
+        "o": false
+      },
+      {
+        "t": "generowania kodu, który umożliwia użytkownikowi bankowości elektronicznej wykonanie operacji.",
+        "o": false
+      },
+      {
+        "t": "przechwytywania i gromadzenia informacji o naciśniętych klawiszach.",
+        "o": true
+      }
+    ],
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "2015_pr_maj2025_z3_2",
+    "formula": "2015",
+    "poziom": "pr",
+    "rok": 2025,
+    "sesja": "maj",
+    "typ": "tf",
+    "tresc": "Liczba $1111\\,1111\\,1111\\,1111_2$ (zapisana w systemie binarnym) jest równa",
+    "zdania": [
+      {
+        "t": "$33333333_4$",
+        "o": true
+      },
+      {
+        "t": "$777777_8$",
+        "o": false
+      },
+      {
+        "t": "$65535_{10}$",
+        "o": true
+      },
+      {
+        "t": "$FFFF_{16}$",
+        "o": true
+      }
+    ],
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_a",
+    "tresc": "Adresy IP składają się z czterech liczb z zakresu od 0 do 255, które zapisuje się oddzielone kropkami, np. 130.11.121.94. Każda z tych liczb reprezentowana jest w komputerze na ośmiu bitach. Wśród adresów IP wyróżniamy m.in. adresy klasy B, w których pierwsza z liczb zapisana binarnie na ośmiu bitach, ma na dwóch pierwszych pozycjach (licząc od lewej strony) wartości odpowiednio 1 i 0. Który z poniższych adresów jest adresem IP typu B?",
+    "odpowiedzi": {
+      "A": "131.125.94.11",
+      "B": "141.125.294.111",
+      "C": "201.93.93.93"
+    },
+    "poprawna": "A",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_b",
+    "tresc": "Liczba $2101$ oznacza",
+    "odpowiedzi": {
+      "A": "$13$ zapisane w systemie binarnym.",
+      "B": "$64$ zapisane w systemie trójkowym.",
+      "C": "$1099$ zapisane w systemie ósemkowym."
+    },
+    "poprawna": "B",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "systemy-liczbowe"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_d",
+    "tresc": "System operacyjny to",
+    "odpowiedzi": {
+      "A": "program umożliwiający szybką realizację operacji matematycznych.",
+      "B": "zbiór programów zarządzających pracą komputera.",
+      "C": "program służący wyłącznie do formatowania dysków i kopiowania plików."
+    },
+    "poprawna": "B",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "programowanie-sprzet-os"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_e",
+    "tresc": "Do metod ochrony poufności danych należy",
+    "odpowiedzi": {
+      "A": "systematyczne gromadzenie danych w pamięci operacyjnej.",
+      "B": "zabezpieczenie dostępu do danych przez hasło.",
+      "C": "stosowanie programów archiwizujących."
+    },
+    "poprawna": "B",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "bezpieczenstwo-szyfrowanie"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_f",
+    "tresc": "Portal internetowy to",
+    "odpowiedzi": {
+      "A": "program o funkcjach podobnych do programów Internet Explorer, Mozilla, Opera.",
+      "B": "inna nazwa otoczenia sieciowego.",
+      "C": "wielotematyczny serwis internetowy."
+    },
+    "poprawna": "C",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "sieci-internet"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_g",
+    "tresc": "Które z poniższych czynności są przykładami kodowania informacji?",
+    "odpowiedzi": {
+      "A": "Zastąpienie znaków tworzących tekst innymi znakami w sposób pozwalający odtworzyć tekst oryginalny.",
+      "B": "Usunięcie losowo wybranych liter z tekstu wiadomości.",
+      "C": "Ukrywanie przekazywanych wiadomości poprzez dobór odpowiednich uprawnień i atrybutów."
+    },
+    "poprawna": "A",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "reprezentacja-danych"
+  },
+  {
+    "id": "stara_pr_maj2006_z4_h",
+    "tresc": "Grafika rastrowa to sposób tworzenia i przechowywania w komputerze obrazów, które są reprezentowane w postaci",
+    "odpowiedzi": {
+      "A": "równań figur geometrycznych (odcinków, łuków, okręgów, elips).",
+      "B": "siatki niezależnie traktowanych pikseli.",
+      "C": "zbiorów odcinków."
+    },
+    "poprawna": "B",
+    "formula": "stara",
+    "poziom": "pr",
+    "rok": 2006,
+    "sesja": "maj",
+    "typ": "abcd",
+    "source": "CKE Model odpowiedzi maj 2006 (znak X w a1_inform_rozw.pdf) + weryfikacja logiczna",
+    "dzial": "grafika-multimedia"
   }
 ]
